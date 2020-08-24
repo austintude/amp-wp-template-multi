@@ -1,0 +1,16 @@
+{
+  "theme": {
+      "slug": "ampwpmulti",
+      "name": "AMP WordPress Multi",
+      "author": "Daniel Bisett - Austintatious Design",
+      "PHPNamespace": "WP_Rig\\WP_Rig"
+    },
+    "dev": {
+      "browserSync": {
+        "live": true,
+        "proxyURL": "ampwpmulti.local",
+        "bypassPort": "8181",
+        "https": false
+      }
+}
+}
