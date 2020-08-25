@@ -32,6 +32,19 @@ class Component implements Component_Interface {
 	 */
 	public function initialize() {
 		add_action( 'after_setup_theme', [ $this, 'action_add_service_worker_support' ] );
+		add_filter( 'web_app_manifest', function( $manifest ) {
+			$manifest['short_name'] = 'AMP WP Multi';
+			$manifest['icons'] = array_map(
+				function ( $icon ) {
+					if ( ! isset( $icon['purpose'] ) ) {
+						$icon['purpose'] = 'any maskable';
+					}
+					return $icon;
+				},
+				$manifest['icons']
+			);
+			return $manifest;
+		} );
 	}
 
 	/**

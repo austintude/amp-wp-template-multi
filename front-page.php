@@ -20,15 +20,28 @@ if ( is_home() ) {
 
 ?>
 	<main id="primary" class="site-main">
+	<?php the_content(); ?>
+	<?php
+			get_template_part( 'template-parts/content/blocka' );
+		?>
+	<!-- <?php $specialloop = new \WP_Query( array( 'post_type' => 'specials', 'orderby' => 'post_id', 'order' => 'ASC' ) );
+ $specialloop->the_post();
+$special_title	= get_field('special_title');
+?>
+<?php if( $special_title ): ?>
+	<?php
+			get_template_part( 'template-parts/content/block4' );
+		?>
+		<?php endif; ?> -->
+	<?php
+			get_template_part( 'template-parts/content/block2' );
+		?>
+	<?php
+			get_template_part( 'template-parts/content/block1' );
+		?>
+
 		<?php
-
-		while ( have_posts() ) {
-			the_post();
-
-			get_template_part( 'template-parts/content/entry', get_post_type() );
-		}
-
-		get_template_part( 'template-parts/content/pagination' );
+			get_template_part( 'template-parts/content/block3a' );
 		?>
 	</main><!-- #primary -->
 <?php

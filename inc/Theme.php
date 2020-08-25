@@ -153,6 +153,8 @@ class Theme {
 			new Customizer\Component(),
 			new Styles\Component(),
 			new Archive_Content\Component(),
+			new Custom_Shortcodes\Component(),
+			new Advanced_Custom_Blocks\Component(),
 		];
 
 		if ( defined( 'JETPACK__VERSION' ) ) {
