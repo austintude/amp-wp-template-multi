@@ -59,6 +59,8 @@ class Component implements Component_Interface {
 		);
 	}
 
+
+
 	/**
 	 * Outputs extra styles for the custom header, if necessary.
 	 */
