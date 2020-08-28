@@ -38,4 +38,3 @@ function my_acf_block_render_callback( $block ) {
 	}
 }
 ?>
-

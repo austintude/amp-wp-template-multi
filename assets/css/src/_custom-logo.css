@@ -1,0 +1,25 @@
+.custom-logo {
+	width: 25vw;
+    bottom: 1rem;
+    position: fixed;
+    left: 5vw;
+    z-index: 10;
+    background: rgba(255,255,255,.8);
+	padding: .5rem 2rem;
+	border-radius: 5rem;
+	top: auto;
+	@media (--content-query) {
+	width: 6rem;
+	top: 0.2em;
+	bottom: auto;
+	position: fixed;
+	left: 1.3em;
+	z-index: 6;
+	background: transparent;
+	border-radius: 0;
+	}
+}
+footer .custom-logo {
+	left: 0;
+	background: transparent;
+}

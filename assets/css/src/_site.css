@@ -1,0 +1,7 @@
+.site {
+	margin: 0 auto;
+	background: #f7f7f7;
+	@media (--content-query) {
+		margin: 4rem auto 0;
+	}
+}
