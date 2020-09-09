@@ -15,14 +15,14 @@ namespace WP_Rig\WP_Rig;
 $cta_in_hero	= get_field('cta_in_hero');
 ?>
 <?php  if( $cta_in_hero = 1 ): {
-	$x = 1;
+	$cta_hero_x = 1;
 }
 endif;
 ?>
 
 <?php endwhile; wp_reset_query(); ?>
-<?php  if( $x >= 1 ): { ?>
-<div class="heroButtons">
+<?php  if( $cta_hero_x >= 1 ): { ?>
+<div class="heroButtons <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
 <?php }
 else : ?>
 <div class="oneHeroButton">

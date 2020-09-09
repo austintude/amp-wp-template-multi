@@ -88,7 +88,62 @@ $wp_customize->add_setting('hero_text_color',
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
+  $wp_customize->add_setting('hero_video_select',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('hero_placement_select',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
 
+  $wp_customize->add_setting('hero_video',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('hero_clip_select',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
+
+  $wp_customize->add_setting('hero_text_grid_toggle',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('hero_title_grid_area',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('hero_tagline_grid_area',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('hero_cta_grid_area',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('main_margins',
+  [
+	'default' => '.5',
+      'transport' => 'refresh',
+  ]);
+
+  $wp_customize->add_control( 'main_margins',
+  [
+	'type' => 'number',
+	'section' => 'theme_options', // Add a default or your own section
+	'label' => __( '"Main" Left & Right Margins' ),
+	'description' => __( 'Set the size of the Left & Right margins wrapping.' )
+  ]
+);
 $wp_customize->add_control( 'sample_default_checkbox',
    [
       'label' => __( 'Default Checkbox Control', 'ephemeris' ),
@@ -122,7 +177,102 @@ $wp_customize->add_control( 'sample_default_textarea',
       ),
    ]
 );
+$wp_customize->add_control('hero_video_select',
+  [
+	  'description' => esc_html__( 'Display YouTube video overlay on or instead of Hero image :' ),
+	  'label' => __( 'Display YouTube video' ),
+      'section' => 'header_image',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+         '1' => __( 'No Video' ),
+		 '5' => __( 'Video ONLY (no Hero Image)' ),
+		 '8' => __( 'Video & Hero Image' ),
+  ]
+  ]);
+  $wp_customize->add_control('hero_placement_select',
+  [
+	  'description' => esc_html__( 'Display Customized Hero on:' ),
+      'section' => 'header_image',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+		'10' => __( 'None' ),
+		'5' => __( 'Front-Page Only' ),
+         '2' => __( 'All Pages' ),
+         '1' => __( 'All Posts' ),
+		 '3' => __( 'All Pages and Posts' )
+  ]
+  ]);
+$wp_customize->add_control('hero_video',
+  [
+	  'description' => esc_html__( 'YouTube video to overlay on Hero image on:' ),
+	  'label' => __( 'YouTube video ID' ),
+      'section' => 'header_image',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'text'
+  ]);
+$wp_customize->add_control('hero_clip_select',
+  [
+	  'description' => esc_html__( 'Display Customized Clip Path overlay on Hero image on:' ),
+	  'label' => __( 'Customized Clip Path' ),
+      'section' => 'header_image',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+         '10' => __( 'Default Clip' ),
+         '1' => __( 'No Clip' )
+  ]
+  ]);
 
+$wp_customize->add_control('hero_text_grid_toggle',
+[
+  'label' => __( 'Site Title Grid/No Grid (Default)' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'select',
+      'choices' => [ // Optional.
+         'grid' => __( 'Grid' ),
+         'no_grid' => __( 'No Grid' )
+	  ]
+]);
+$wp_customize->add_control('hero_title_grid_area',
+[
+  'label' => __( 'Site Title Location' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'select',
+      'choices' => [ // Optional.
+         'left' => __( 'Left Grid' ),
+         'center' => __( 'Center Grid' ),
+		 'right' => __( 'Right Grid' )
+	  ]
+]);
+$wp_customize->add_control('hero_tagline_grid_area',
+[
+  'label' => __( 'Site Title Location' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'select',
+      'choices' => [ // Optional.
+         'left' => __( 'Left Grid' ),
+         'center' => __( 'Center Grid' ),
+		 'right' => __( 'Right Grid' )
+	  ]
+]);
+
+$wp_customize->add_control('hero_cta_grid_area',
+[
+  'label' => __( 'CTAs in Hero Location' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'select',
+      'choices' => [ // Optional.
+         'left' => __( 'Left Grid' ),
+         'center' => __( 'Center Grid' ),
+		 'right' => __( 'Right Grid' )
+	  ]
+]);
 $wp_customize->add_control('hero_text_color',
 [
   'label' => __( 'Site Title Text Color' ),

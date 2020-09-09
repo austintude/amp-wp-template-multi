@@ -19,7 +19,7 @@ if ( is_home() ) {
 }
 
 ?>
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main" style="margin: auto  <?php echo get_theme_mod( 'main_margins', '0' ); ?>rem; @media screen and (min-width: 48em) {margin: auto  <?php echo get_theme_mod( 'main_margins', '5' ); ?>rem;} ">
 	<?php echo get_theme_mod( 'sample_default_textarea', 'blah' ); ?>
 	<?php the_content(); ?>
 	<?php
