@@ -1,0 +1,31 @@
+.site-footer {
+    display: flex;
+    display: grid;
+    margin: auto 2fr;
+    grid-template-rows: 1fr 60px;
+    color: #111;
+	text-align: center;
+	& .baseBlock {
+    bottom: 0;
+    position: absolute;
+	width: 100vw;
+
+	& #themeLogo {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		& img {
+			max-width: 100%;
+    margin-left: auto;
+    top: 2rem;
+	position: relative;
+	@media (--content-query) {
+			width: 5vw;
+	}
+		}
+	}
+	& .builtBy {
+		padding-top: .8rem;
+		width: 100vw;
+	}
+}
+}

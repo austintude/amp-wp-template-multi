@@ -6,32 +6,27 @@
  */
 
 namespace WP_Rig\WP_Rig;
-
+$hero_tagline_grid_area = get_theme_mod( 'hero_tagline_grid_area');
+$hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
 ?>
 
 <div class="site-branding">
-	<?php the_custom_logo(); ?>
+<div id="mobileTopBar">
+	&nbsp;
+</div>
+<?php the_custom_logo(); ?>
+<div class="titleTagWrapper heroText<?php echo get_theme_mod( 'hero_text_grid_toggle', '' ); ?>">
+<?php if( $hero_tagline_grid_area == $hero_title_grid_area ): { ?>
+<div class="<?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>gridHero">
+<?php } endif; ?>
 
-	<?php
-	if ( is_front_page() && is_home() ) {
-		?>
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1 class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_text_color', '#fff' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;"><?php bloginfo( 'name' ); ?></h1>
+		<h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_tagline_text_color', '#f7f7f7' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;"><?php bloginfo( 'description' ); ?></h2>
+		<?php if(  $hero_tagline_grid_area == $hero_title_grid_area ): { ?>
+</div>
+<?php } endif; ?>
 		<?php
-	} else {
-		?>
-		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php
-	}
-	?>
-
-	<?php
-	$wp_rig_description = get_bloginfo( 'description', 'display' );
-	if ( $wp_rig_description || is_customize_preview() ) {
-		?>
-		<p class="site-description">
-			<?php echo $wp_rig_description; /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
-		</p>
-		<?php
-	}
-	?>
+					get_template_part( 'template-parts/content/ctaHero' );
+			?>
+</div>
 </div><!-- .site-branding -->

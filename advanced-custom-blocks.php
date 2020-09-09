@@ -15,6 +15,16 @@ function my_acf_init() {
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'testimonial', 'quote' ),
 		));
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'card_block',
+			'title'				=> __('Block of Cards'),
+			'description'		=> __('A custom block for cards block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'cards', 'block' ),
+		));
 	}
 }
 function my_acf_block_render_callback( $block ) {
@@ -28,4 +38,3 @@ function my_acf_block_render_callback( $block ) {
 	}
 }
 ?>
-
