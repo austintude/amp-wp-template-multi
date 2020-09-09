@@ -13,8 +13,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 ?>
 
-
-<nav id="site-navigation" tabindex="0" class="main-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>"
+<nav id="site-navigation" class="main-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>"
 	<?php
 	if ( wp_rig()->is_amp() ) {
 		?>
@@ -37,8 +36,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 	}
 	?>
 
-
-	<button class="menu-toggle menuBottom" aria-label="<?php esc_attr_e( 'Open menu', 'wp-rig' ); ?>" aria-controls="primary-menu" aria-expanded="false"
+	<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open menu', 'wp-rig' ); ?>" aria-controls="primary-menu" aria-expanded="false"
 		<?php
 		if ( wp_rig()->is_amp() ) {
 			?>
@@ -48,19 +46,10 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 		}
 		?>
 	>
-
 		<?php esc_html_e( 'Menu', 'wp-rig' ); ?>
-
 	</button>
 
-
-
-
 	<div class="primary-menu-container">
-		<div class="closeX" role="button" tabindex="10" on="tap:AMP.setState( { siteNavigationMenu: { expanded: ! siteNavigationMenu.expanded } } )"
-			[aria-expanded]="siteNavigationMenu.expanded ? 'true' : 'false'" >
-			X
-	</div>
 		<?php wp_rig()->display_primary_nav_menu( [ 'menu_id' => 'primary-menu' ] ); ?>
 	</div>
 </nav><!-- #site-navigation -->

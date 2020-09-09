@@ -151,7 +151,7 @@ class Theme {
 			new Custom_Logo\Component(),
 			new Post_Thumbnails\Component(),
 			new Customizer\Component(),
-			new Theme_Mods\Component(),
+			new Header_Features\Component(),
 			new Custom_Footer\Component(),
 			new Styles\Component(),
 			new Archive_Content\Component(),

@@ -1,11 +1,11 @@
 <?php
 /**
- * WP_Rig\WP_Rig\theme_mods\Component class
+ * WP_Rig\WP_Rig\header_features\Component class
  *
  * @package wp_rig
  */
 
-namespace WP_Rig\WP_Rig\Theme_Mods;
+namespace WP_Rig\WP_Rig\Header_Features;
 
 use WP_Rig\WP_Rig\Component_Interface;
 use function WP_Rig\WP_Rig\wp_rig;
@@ -35,14 +35,14 @@ class Component implements Component_Interface {
 	 * @return string Component slug.
 	 */
 	public function get_slug() : string {
-		return 'theme_mods';
+		return 'header_features';
 	}
 
 	/**
 	 * Adds the action and filter hooks to integrate with WordPress.
 	 */
 	public function initialize() {
-		add_action( 'customize_register', [ $this, 'action_customize_register_theme_mods' ] );
+		add_action( 'customize_register', [ $this, 'action_customize_register_header_features' ] );
 	}
 
 	/**
@@ -50,10 +50,10 @@ class Component implements Component_Interface {
 	 *
 	 * @param WP_Customize_Manager $wp_customize Customizer manager instance.
 	 */
-	public function action_customize_register_theme_mods( WP_Customize_Manager $wp_customize ) {
-		$theme_mods_choices = [
-			'theme_mods'    => __( 'Header-Features on (default)', 'wp-rig' ),
-			'no-theme_mods' => __( 'Header-Features off', 'wp-rig' ),
+	public function action_customize_register_header_features( WP_Customize_Manager $wp_customize ) {
+		$header_features_choices = [
+			'header_features'    => __( 'Header-Features on (default)', 'wp-rig' ),
+			'no-header_features' => __( 'Header-Features off', 'wp-rig' ),
 		];
 
 		$wp_customize->add_setting( 'sample_default_checkbox',
@@ -70,24 +70,6 @@ $wp_customize->add_setting( 'sample_default_textarea',
       'sanitize_callback' => 'wp_filter_nohtml_kses'
    ]
 );
-$wp_customize->add_setting('hero_text_color',
-  [
-	'default' => '#f7f7f7',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('hero_tagline_text_color',
-  [
-	'default' => '#f7f7f7',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('hero_shadow_color',
-  [
-	'default' => '#333',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
 
 $wp_customize->add_control( 'sample_default_checkbox',
    [
@@ -122,30 +104,5 @@ $wp_customize->add_control( 'sample_default_textarea',
       ),
    ]
 );
-
-$wp_customize->add_control('hero_text_color',
-[
-  'label' => __( 'Site Title Text Color' ),
-  'section' => 'title_tagline',
-  'priority' => 20, // Optional. Order priority to load the control. Default: 10
-  'type' => 'color',
-  'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-]);
-$wp_customize->add_control('hero_tagline_text_color',
-[
-  'label' => __( 'Tag Line Text Color' ),
-  'section' => 'title_tagline',
-  'priority' => 20, // Optional. Order priority to load the control. Default: 10
-  'type' => 'color',
-  'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-]);
-$wp_customize->add_control('hero_shadow_color',
-[
-  'label' => __( 'Title & Tagline Shadow Color' ),
-  'section' => 'title_tagline',
-  'priority' => 20, // Optional. Order priority to load the control. Default: 10
-  'type' => 'color',
-  'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-]);
 	}
 }

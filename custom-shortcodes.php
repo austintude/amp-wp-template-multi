@@ -27,4 +27,6 @@ function cardbutton_function( $atts, $content = null ) {
 return get_template_part( 'template-parts/short-codes/gridCard.php' ) . '<button>' . do_shortcode($content) . '</button>';
 }
 add_shortcode('cardbutton', 'cardbutton_function');
+
 ?>
+

@@ -1,6 +1,0 @@
-footer {
-	& .customFooterleft {
-		display: grid;
-		grid-column-template: 1fr 1fr 1fr;
-	}
-}

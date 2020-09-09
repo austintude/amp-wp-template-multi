@@ -5,24 +5,7 @@
  * @link: https://drafts.csswg.org/mediaqueries-5/#custom-mq
  **/
 
- @custom-media --sm-mobile-menu-query screen and (max-width: 25.5em);
- @custom-media --narrow-portrait-menu-query screen and (max-width: 26.5em);
- @custom-media --lg-desktop-menu-query screen and (max-width: 37.5em);
- /* @custom-media --narrow-menu-query screen and (max-width: 48em); */
- @custom-media --mobile-landscape-menu-query screen and (max-width: 47.5em);
- @custom-media --ipad-portrait-menu-query screen and (max-width: 48.5em);
- @custom-media --iphone-x-landscape-menu-query screen and (max-width: 52em);
- @custom-media --tablet-menu-query screen and (max-width: 52em);
- @custom-media --ipad-landscape-menu-query screen and (max-width: 64.59em);
- @custom-media --mobile-menu-query screen and (max-width: 52em);
- @custom-media --mobile-nav-off-menu-query screen and (min-width: 48.1em);
- @custom-media --wide-menu-query screen and (min-width: 48.1em);
- /* @custom-media --content-query screen and (min-width: 48em); */
- /* @custom-media --sidebar-query screen and (min-width: 52.1em); */
- @custom-media --ipad-landscape-plus-menu-query screen and (min-width: 64em);
- @custom-media --ipad-landscape-plus-menu-query-max screen and (max-width: 64em);
- @custom-media --large-desktop-query screen and (min-width: 120em);
- @custom-media --narrow-menu-query screen and (max-width: 37.5em);
+@custom-media --narrow-menu-query screen and (max-width: 37.5em);
 @custom-media --wide-menu-query screen and (min-width: 37.5em);
 @custom-media --content-query screen and (min-width: 48em);
 @custom-media --sidebar-query screen and (min-width: 60em);
