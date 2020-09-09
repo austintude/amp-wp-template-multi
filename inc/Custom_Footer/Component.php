@@ -69,12 +69,12 @@ class Component implements Component_Interface {
   [
    'default'        => '',
   ]);
-
-  $wp_customize->add_setting('footer_text_size',
+  $wp_customize->add_setting('footer_logo_location_select',
   [
-	'default' => '.8',
+	'default' => '10',
       'transport' => 'refresh',
   ]);
+
   $wp_customize->add_setting('footer_text_color',
   [
 	'default' => '#f7f7f7',
@@ -94,14 +94,7 @@ class Component implements Component_Interface {
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
 
-  $wp_customize->add_control( 'footer_text_size',
-  [
-	'type' => 'number',
-	'section' => 'footer_settings_section', // Add a default or your own section
-	'label' => __( 'Footer Text Size' ),
-	'description' => __( 'Set the size of the footer text.' )
-  ]
-);
+
   $wp_customize->add_control('footer_text_select',
   [
 	  'description' => esc_html__( 'Display Customized Footer on:' ),
@@ -130,7 +123,18 @@ class Component implements Component_Interface {
 	'section' => 'footer_settings_section',
    'type'    => 'text',
   ]);
-
+  $wp_customize->add_control('footer_logo_location_select',
+  [
+	  'description' => esc_html__( 'Place footer logo:' ),
+      'section' => 'footer_settings_section',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+         'left' => __( 'Left' ),
+         'center' => __( 'Centered' ),
+		 'right' => __( 'Right' )
+		 ]
+  ]);
   $wp_customize->add_control('footer_text_color',
   [
 	'label' => __( 'Footer Text Color' ),

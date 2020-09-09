@@ -19,7 +19,6 @@ get_header();
 wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
-<section class="pageWrapper">
 	<main id="primary" class="site-main">
 		<?php
 		if ( have_posts() ) {
@@ -40,7 +39,6 @@ wp_rig()->print_styles( 'wp-rig-content' );
 		}
 		?>
 	</main><!-- #primary -->
-	<?php get_sidebar(); ?>
-	</section><!-- end .pageWrapper -->
 <?php
+get_sidebar();
 get_footer();

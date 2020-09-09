@@ -11,11 +11,11 @@ namespace WP_Rig\WP_Rig;
 
 <div class="footer-info" style="background:<?php echo get_theme_mod( 'footer_background_color', '#333' ); ?>; color: <?php echo get_theme_mod( 'footer_text_color', '#fff' ); ?>;">
 <?php if( get_theme_mod( 'footer_text_select') < 4 ): { ?>
-	<div class="baseBlock" style="background:<?php echo get_theme_mod( 'footer_background_color', '#333' ); ?>; color: <?php echo get_theme_mod( 'footer_text_color', '#fff' ); ?>;">
-		<div id="themeLogo" aria-label="custom logo link">
+<div class="customFooter<?php echo get_theme_mod( 'footer_url_setting', '' ); ?>">
+	<div class="footer<?php echo get_theme_mod( 'footer_url_setting', '' ); ?>">
 		<img src="<?php echo get_theme_mod( 'footer_url_setting', '' ); ?>">
 	</div>
-	<div class="builtBy" style="body {font-size:auto} .builtBy {font-size:<?php echo get_theme_mod( 'footer_text_size', '.8' ); ?>rem;} .builtBy a{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:hover {color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:active{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:focus{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:visited{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} ">
+	<div class="footerText footerTextColor" style=".footerText a{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .footerText a:hover {color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .footerText a:active{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .footerText a:focus{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .footerText a:visited{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} ">
 		<?php echo get_theme_mod( 'footer_text_setting', '' ); ?>
 	</div>
 </div>
