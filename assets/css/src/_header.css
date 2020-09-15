@@ -8,7 +8,7 @@
 	@media (--content-query) {
 		clip-path: polygon(84% 100%, 169% 0, -435% 0);
 		height: 40rem;
-
+		display: grid;
 		& img {
 		display: block;
 		margin: 0 auto;

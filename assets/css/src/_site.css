@@ -4,4 +4,39 @@
 	@media (--content-query) {
 		margin: 4rem auto 0;
 	}
+
+		& main._mobileMargin0 {
+			margin: auto 0;
+		}
+		& main._mobileMargin1 {
+			margin: auto 1rem;
+		}
+		& main._mobileMargin2 {
+			margin: auto 2rem;
+		}
+		& main._mobileMargin3 {
+			margin: auto 3rem;
+		}
+
+		@media (--content-query) {
+			& main._desktopMargin0 {
+				margin: auto 0;
+			}
+			& main._desktopMargin1 {
+				margin: auto 1rem;
+			}
+			& main._desktopMargin2 {
+				margin: auto 2rem;
+			}
+			& main._desktopMargin3 {
+				margin: auto 3rem;
+			}
+			& main._desktopMargin4 {
+				margin: auto 4rem;
+			}
+			& main._desktopMargin5 {
+				margin: auto 5rem;
+			}
+
+	}
 }
