@@ -56,20 +56,7 @@ class Component implements Component_Interface {
 			'no-theme_mods' => __( 'Header-Features off', 'wp-rig' ),
 		];
 
-		$wp_customize->add_setting( 'sample_default_checkbox',
-   [
-      'default' => 0,
-      'transport' => 'refresh',
-      'sanitize_callback' => 'skyrocket_switch_sanitization'
-   ]
-);
-$wp_customize->add_setting( 'sample_default_textarea',
-   [
-      'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'wp_filter_nohtml_kses'
-   ]
-);
+
 $wp_customize->add_setting('hero_text_color',
   [
 	'default' => '#f7f7f7',
@@ -92,6 +79,29 @@ $wp_customize->add_setting('hero_text_color',
   [
 	'default' => '10',
       'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('secondary_top_bar_toggle',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('top_bar_text_color',
+  [
+	'default' => '#f7f7f7',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('top_bar_anchor_text_color',
+  [
+	'default' => '#f7f7f7',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('top_bar_background_color',
+  [
+	'default' => '#333',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
   ]);
   $wp_customize->add_setting('hero_placement_select',
   [
@@ -132,7 +142,7 @@ $wp_customize->add_setting('hero_text_color',
   ]);
   $wp_customize->add_setting('main_margins',
   [
-	'default' => '.5',
+	'default' => '2',
       'transport' => 'refresh',
   ]);
 
@@ -141,42 +151,46 @@ $wp_customize->add_setting('hero_text_color',
 	'type' => 'number',
 	'section' => 'theme_options', // Add a default or your own section
 	'label' => __( '"Main" Left & Right Margins' ),
-	'description' => __( 'Set the size of the Left & Right margins wrapping.' )
+	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the block css and tag on the same margin number you add here. For example, fullWidth4 if you select a margin width of 4 here.' )
   ]
 );
-$wp_customize->add_control( 'sample_default_checkbox',
-   [
-      'label' => __( 'Default Checkbox Control', 'ephemeris' ),
-      'description' => esc_html__( 'Sample description' ),
-      'section'  => 'theme_options',
-      'priority' => 10, // Optional. Order priority to load the control. Default: 10
-      'type'=> 'checkbox',
-      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-   ],
-   [
-	'label' => __( 'Default Checkbox Control 2', 'ephemeris 2' ),
-	'description' => esc_html__( 'Sample description 2' ),
-	'section'  => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type'=> 'checkbox',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
- ]
-);
-$wp_customize->add_control( 'sample_default_textarea',
-   [
-      'label' => __( 'Default Textarea Control' ),
-      'description' => esc_html__( 'Sample description' ),
+
+$wp_customize->add_control('secondary_top_bar_toggle',
+  [
+	  'description' => esc_html__( 'Display secondary top menu bar in desktop view :' ),
+	  'label' => __( 'Secondary Top Bar' ),
       'section' => 'theme_options',
       'priority' => 10, // Optional. Order priority to load the control. Default: 10
-      'type' => 'textarea',
-      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-      'input_attrs' => array( // Optional.
-         'class' => 'my-custom-class',
-         'style' => 'border: 1px solid #999',
-         'placeholder' => __( 'Enter message...' ),
-      ),
-   ]
-);
+      'type' => 'select',
+      'choices' => [ // Optional.
+         '' => __( 'No Top Bar' ),
+		 'navSecondaryInc' => __( 'Yes Top Bar' ),
+  ]
+  ]);
+  $wp_customize->add_control('top_bar_text_color',
+  [
+	'label' => __( 'top_bar Text Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('top_bar_anchor_text_color',
+  [
+	'label' => __( 'top_bar Anchor Text Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('top_bar_background_color',
+  [
+	'label' => __( 'top_bar Background Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
 $wp_customize->add_control('hero_video_select',
   [
 	  'description' => esc_html__( 'Display YouTube video overlay on or instead of Hero image :' ),
@@ -199,9 +213,9 @@ $wp_customize->add_control('hero_video_select',
       'choices' => [ // Optional.
 		'10' => __( 'None' ),
 		'5' => __( 'Front-Page Only' ),
-         '2' => __( 'All Pages' ),
+         '3' => __( 'All Pages' ),
          '1' => __( 'All Posts' ),
-		 '3' => __( 'All Pages and Posts' )
+		 '2' => __( 'All Pages and Posts' )
   ]
   ]);
 $wp_customize->add_control('hero_video',

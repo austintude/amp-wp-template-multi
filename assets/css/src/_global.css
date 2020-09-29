@@ -176,12 +176,14 @@ select {
 
 .header-image {
 	margin: 0 auto;
+	color: inherit;
+	display: grid;
 }
-
+/*
 .header-image img {
 	display: block;
 	margin: 0 auto;
-}
+} */
 
 .custom-logo-link {
 	display: inline-block;

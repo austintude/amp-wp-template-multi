@@ -12,7 +12,7 @@ if ( ! has_header_image() ) {
 }
 
 ?>
-<h2>default header</h2>
+<h2>custom post header</h2>
 <?php if( get_theme_mod( 'hero_clip_select') < 4 ): { ?>
 <figure class="header-image no_clip heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 
@@ -22,34 +22,18 @@ else : ?>
 
 	<?php  ?>
 	<?php endif; ?>
-	<?php if( get_theme_mod( 'hero_video_select') > 4 ): { ?>
 
-
-		<div class="heroVideo">
-		<?php
-	if ( ! wp_rig()->is_amp() ) {
-		?>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_theme_mod( 'hero_video'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; " allowfullscreen></iframe>
-<?php
-	}
-	else { ?>
-
-		<amp-youtube width="480" height="270" layout="responsive" data-videoid="<?php echo get_theme_mod( 'hero_video'); ?>" loop=1 data-param-modestbranding="1" data-param-rel="1" autoplay>
-  </amp-youtube>
-<?php }  ?>
-</div>
 
 
 <?php if ( get_theme_mod( 'hero_video_select') > 7 ): {  ?>
-<div class="heroImg"><p>poopydoop</p>
-<?php if( get_theme_mod( 'hero_placement_select') < 10 ): { ?>
-		<?php the_header_image_tag(); ?>pickle
-<?php } else : ?> poop
+<div class="heroImg">
+<?php if( get_theme_mod( 'hero_placement_select') == 2 || get_theme_mod( 'hero_placement_select') == 1 ) : { ?>
+		<?php the_header_image_tag(); ?>
+<?php } else : ?>
 	<?php the_post_thumbnail(); ?>
 <?php endif; ?>
 		</div>
-		<?php }
-endif; ?>
+
 <?php }
 else : {?>
 <div class="heroImg">

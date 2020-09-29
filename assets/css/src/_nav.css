@@ -17,14 +17,14 @@
 }
 .menu-toggle.menuBottom {
 	top: auto;
-	bottom: 0.5rem;
+	bottom: 0;
 	width: 5.4rem;
 }
 .closeX {
     display: none;
 }
 .main-navigation {
-	width: 75vw;
+	width: 100vw;
 	& .menu {
 		/* padding-left: 17vw; */
 	}
@@ -109,6 +109,8 @@
 	height: 3.55rem;
 	}
 }
+
+
 .main-navigation {
 	max-width: 100vw;
 	& a {
@@ -173,7 +175,8 @@
 	& .menu {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		/* justify-content: center; */
+		justify-content: flex-end;
 	}
 }
 }

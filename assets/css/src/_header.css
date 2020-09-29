@@ -1,10 +1,13 @@
-.header-image {
+.site-header {
+	& figure {
 	display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas: "hero hero hero";
-	height: 14rem;
-	overflow: hidden;
-	clip-path: polygon(84% 100%, 169% 0, -435% 0);
+}
+display: grid;
+grid-template-rows: 1fr;
+grid-template-areas: "hero";
+}
+.header-image {
+
 	@media (--content-query) {
 		clip-path: polygon(84% 100%, 169% 0, -435% 0);
 		height: 40rem;
@@ -31,6 +34,8 @@
 		z-index: 2;
 		opacity: .3;
 	}
+	display: grid;
+	grid-area: hero;
 }
 .header-image.no_clip {
 	@media (--content-query) {
@@ -49,20 +54,20 @@
 	position: relative;
 	text-align: left;
 	width: 100vw;
-	margin-top: -12rem;
+	margin-top: -4rem;
 	z-index: 3;
 	@media (--content-query) {
-		margin-top: -18rem;
+		margin-top: -2rem;
 
 	}
 	@media (--sidebar-query) {
-		margin-top: -34rem;
+		margin-top: 8rem;
 	}
 	@media (--ipad-landscape-plus-menu-query-max) {
-		margin-top: -22rem;
+		margin-top: 2rem;
 	}
 	@media (--narrow-portrait-menu-query) {
-		margin-top: -14rem;
+		margin-top: -4rem;
 	}
 	& .site-branding .site-title {
 		top: 3rem;
@@ -95,7 +100,7 @@
 .site-branding {
 	padding-top: 2rem;
 	padding-bottom: 0;
-
+	grid-area: hero;
 	& .site-title {
 		font-size: 2.4rem;
 		width: 100vw;

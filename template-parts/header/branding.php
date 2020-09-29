@@ -10,7 +10,12 @@ $hero_tagline_grid_area = get_theme_mod( 'hero_tagline_grid_area');
 $hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
 ?>
 
-<div class="site-branding">
+<div class="site-branding <?php echo get_theme_mod( 'secondary_top_bar_toggle', '' ); ?>">
+<?php if (null != get_theme_mod( 'secondary_top_bar_toggle') ) : { ?>
+<div id="secondary-top-bar" style="background:<?php echo get_theme_mod( 'top_bar_background_color', '#333' ); ?>; color: <?php echo get_theme_mod( 'top_bar_text_color', '#fff' ); ?>;">
+        &nbsp;
+	</div>
+<?php } endif; ?>
 <div id="mobileTopBar">
 	&nbsp;
 </div>

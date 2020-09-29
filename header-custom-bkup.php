@@ -10,6 +10,7 @@
  */
 
 namespace WP_Rig\WP_Rig;
+$tagline			= get_field('tagline');
 
 ?>
 <!doctype html>
@@ -17,7 +18,11 @@ namespace WP_Rig\WP_Rig;
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="preconnect" href="https://cdn.ampproject.org">
+	<!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
 
 	<?php
 	if ( ! wp_rig()->is_amp() ) {
@@ -35,19 +40,11 @@ namespace WP_Rig\WP_Rig;
 
 <?php while( $analyticsloop->have_posts() ) : $analyticsloop->the_post();
 $google_tag_manager_id	= get_field('google_tag_manager_id');
-?>
-<?php if ($google_tag_manager_id != null): ?>
-<!-- Google Tag Manager -->
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id=<?php echo $google_tag_manager_id; ?>&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
-<!-- End Google Tag Manager -->
-<?php endif; ?>
-<?php endwhile; wp_reset_query(); ?>
-<?php $analyticsloop = new \WP_Query( array( 'post_type' => 'analytics', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
-
-<?php while( $analyticsloop->have_posts() ) : $analyticsloop->the_post();
 $facebook_pixel_id	= get_field('facebook_pixel_id');
 $facebook_pixel_triggers	= get_field('facebook_pixel_triggers');
 ?>
+<!-- Google Tag Manager -->
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id=<?php echo $google_tag_manager_id; ?>&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 <?php if ($facebook_pixel_id != null): ?>
 <!-- Begin "Facebook Pixel for AMP" || Help center -->
 <!-- Insert in Settings->HTML/CSS->Body -->
@@ -97,7 +94,9 @@ $trigger_event_name = get_sub_field('trigger_event_name');
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-rig' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<?php get_template_part( 'template-parts/header/custom_post-header' ); ?>
-		<?php get_template_part( 'template-parts/header/custom-post-branding' ); ?>
+		<?php get_template_part( 'template-parts/header/custom_page-header' ); ?>
+		<?php get_template_part( 'template-parts/header/custom-page-branding' ); ?>
+
+
 		<?php get_template_part( 'template-parts/header/navigation' ); ?>
 	</header><!-- #masthead -->

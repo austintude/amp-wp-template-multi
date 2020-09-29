@@ -98,6 +98,6 @@ $trigger_event_name = get_sub_field('trigger_event_name');
 
 	<header id="masthead" class="site-header">
 		<?php get_template_part( 'template-parts/header/custom_post-header' ); ?>
-		<?php get_template_part( 'template-parts/header/custom-post-branding' ); ?>
+		<?php get_template_part( 'template-parts/header/custom-single-post-branding' ); ?>
 		<?php get_template_part( 'template-parts/header/navigation' ); ?>
 	</header><!-- #masthead -->

@@ -14,7 +14,7 @@
 
 namespace WP_Rig\WP_Rig;
 
-get_header('custom');
+get_header('custom-page');
 
 wp_rig()->print_styles( 'wp-rig-content' );
 

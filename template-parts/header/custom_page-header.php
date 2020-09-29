@@ -12,44 +12,36 @@ if ( ! has_header_image() ) {
 }
 
 ?>
-
+<h2>custom page header</h2>
 <?php if( get_theme_mod( 'hero_clip_select') < 4 ): { ?>
-<figure class="header-image no_clip">
+<figure class="header-image no_clip heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 
 <?php }
 else : ?>
-<figure class="header-image">
+<figure class="header-image heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 
 	<?php  ?>
 	<?php endif; ?>
-	<?php if( get_theme_mod( 'hero_video_select') > 4 ): { ?>
 
-
-		<div class="heroVideo">
-		<?php
-	if ( ! wp_rig()->is_amp() ) {
-		?>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_theme_mod( 'hero_video'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<?php
-	}
-	else { ?>
-
-		<amp-youtube width="480" height="270" layout="responsive" data-videoid="<?php echo get_theme_mod( 'hero_video'); ?>" autoplay>
-  </amp-youtube>
-<?php }  ?>
-</div>
 
 
 <?php if ( get_theme_mod( 'hero_video_select') > 7 ): {  ?>
 <div class="heroImg">
-<?php the_post_thumbnail(); ?>
+<?php if( get_theme_mod( 'hero_placement_select') == 3 || get_theme_mod( 'hero_placement_select') == 2 ): { ?>
+		<?php the_header_image_tag(); ?>
+<?php } else : ?>
+	<?php the_post_thumbnail(); ?>
+<?php endif; ?>
 		</div>
-		<?php }
-endif; ?>
+
 <?php }
 else : {?>
 <div class="heroImg">
+<?php if( get_theme_mod( 'hero_placement_select') < 6 ): { ?>
 		<?php the_header_image_tag(); ?>
+<?php } else : ?>
+	<?php the_post_thumbnail(); ?>
+<?php endif; ?>
 		</div>
 		<?php }
 endif; ?>

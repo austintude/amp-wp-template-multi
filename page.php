@@ -1,15 +1,15 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package wp_rig
  */
 
 namespace WP_Rig\WP_Rig;
 
-get_header('single-post');
+get_header('custom-page');
 
 wp_rig()->print_styles( 'wp-rig-content' );
 
@@ -20,12 +20,13 @@ wp_rig()->print_styles( 'wp-rig-content' );
 		while ( have_posts() ) {
 			the_post();
 
-			get_template_part( 'template-parts/content/entry', get_post_type() );
+			the_content();
 		}
 
-		get_sidebar();
 		?>
 	</main><!-- #primary -->
+	<?php
+					get_template_part( 'template-parts/content/contentMiddleBlock2' );
+			?>
 <?php
-
 get_footer();
