@@ -64,3 +64,25 @@ require get_template_directory() . '/inc/functions.php';
 
 // Initialize the theme.
 call_user_func( 'WP_Rig\WP_Rig\wp_rig' );
+
+
+remove_filter('the_content', 'wpautop');
+remove_filter('the_content', 'wptexturize');
+
+function remove_auto_p_in_shortcode_formatter($content) {
+	$new_content = '';
+	$pattern_full = '{(\[raw\].*?\[/raw\])}is';
+	$pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
+	$pieces = preg_split($pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE);
+
+	foreach ($pieces as $piece) {
+		if (preg_match($pattern_contents, $piece, $matches)) {
+			$new_content .= $matches[1];
+		} else {
+			$new_content .= wptexturize(wpautop($piece));
+		}
+	}
+	return $new_content;
+}
+
+add_filter('the_content', 'remove_auto_p_in_shortcode_formatter', 99);
