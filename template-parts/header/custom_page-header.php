@@ -12,7 +12,6 @@ if ( ! has_header_image() ) {
 }
 
 ?>
-<h2>custom page header</h2>
 <?php if( get_theme_mod( 'hero_clip_select') < 4 ): { ?>
 <figure class="header-image no_clip heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 

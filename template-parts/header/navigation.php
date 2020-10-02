@@ -107,7 +107,7 @@ $social_icon = get_sub_field('social_icon');
 $social_label = get_sub_field('social_label');
 ?>
 	<li>
-		<a href="<?php echo $social_link; ?>">
+		<a href="<?php echo $social_link; ?>" target="_blank" rel="noopener" arial-label="<?php echo $social_label; ?>">
 		<?php  if( $social_icon == null ):  { ?>
 			<?php  if( $social_label != null ):  { ?><?php echo $social_label; ?><?php } endif; ?>
 		<?php } endif; ?>

@@ -28,6 +28,18 @@ namespace WP_Rig\WP_Rig;
 	?>
 
 	<?php wp_head(); ?>
+	<?php $analyticsloop = new \WP_Query( array( 'post_type' => 'analytics', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+
+	<?php while( $analyticsloop->have_posts() ) : $analyticsloop->the_post();
+$google_tag_manager_id	= get_field('google_tag_manager_id');
+$facebook_pixel_id	= get_field('facebook_pixel_id');
+?>
+<?php if ($google_tag_manager_id != null || $facebook_pixel_id != null) : ?>
+<!-- Google Tag Manager -->
+	<script src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js" async="" custom-element="amp-analytics"></script>
+	<!-- End Google Tag Manager -->
+<?php endif; ?>
+<?php endwhile; wp_reset_query(); ?>
 </head>
 
 <body <?php body_class(); ?>>

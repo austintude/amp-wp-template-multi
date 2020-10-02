@@ -12,7 +12,7 @@ if ( ! has_header_image() ) {
 }
 
 ?>
-<h2>default header</h2>
+
 <?php if( get_theme_mod( 'hero_clip_select') < 4 ): { ?>
 <figure class="header-image no_clip heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 
@@ -41,10 +41,10 @@ else : ?>
 
 
 <?php if ( get_theme_mod( 'hero_video_select') > 7 ): {  ?>
-<div class="heroImg"><p>poopydoop</p>
+<div class="heroImg">
 <?php if( get_theme_mod( 'hero_placement_select') < 10 ): { ?>
-		<?php the_header_image_tag(); ?>pickle
-<?php } else : ?> poop
+		<?php the_header_image_tag(); ?>
+<?php } else : ?>
 	<?php the_post_thumbnail(); ?>
 <?php endif; ?>
 		</div>

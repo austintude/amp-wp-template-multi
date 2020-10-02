@@ -22,7 +22,7 @@ namespace WP_Rig\WP_Rig;
 <?php }
 else : ?>
 
-	<a href="<?php echo esc_url( __( 'https://austintatiousdesign.co/', 'wp-rig' ) ); ?>">
+	<a href="<?php echo esc_url( __( 'https://austintatiousdesign.co/', 'wp-rig' ) ); ?>" rel="noopener">
 		<?php
 		/* translators: %s: CMS name, i.e. WordPress. */
 		printf( esc_html__( 'Theme Proudly powered by %s', 'wp-rig' ), 'Austintatious Design' );
