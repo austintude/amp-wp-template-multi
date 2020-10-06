@@ -27,7 +27,7 @@ grid-template-areas: "hero";
 	& .heroImg {
 		grid-area: hero;
 		z-index: 1;
-		height: 40rem;
+		/* height: 40rem; */
 	}
 	& .heroVideo {
 		grid-area: hero;

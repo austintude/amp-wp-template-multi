@@ -1,16 +1,19 @@
-.gridCardLoop.cardmulti {
+.gridCardLoop {
     display: grid;
-	grid-gap: 1rem;
+	grid-gap: 2rem;
 	margin: auto 2vw auto auto;
 	/* width: 96vw; */
 	grid-template-columns: 1fr;
+	margin: 1rem auto;
 	@media (--content-query) {
-		grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
 		/* margin: auto 5vw;
 		width: 90vw; */
 	}
 	@media (--sidebar-query) {
-	grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	margin: 2rem auto;
 	}
 
 	& .cardContent {
@@ -19,11 +22,13 @@
 			font-weight: 300;
 			color: #4a4a4a;
 			background: #f9f7f7;
-			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 1px -1px rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-			padding: 1rem;
+			box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .14), 0 1px 1px -1px rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 			display: grid;
 			align-self: flex-start;
-
+			align-self: auto;
+& figure {
+	margin: 0 0 .5em 0;
+}
 			& h3 {
 				font-size: 1.2rem;
 				font-weight: 300;
@@ -32,11 +37,13 @@
 
 			& p {
 				font-size: 1.1rem;
+				padding: 0 2rem;
 			}
 			@media (--wide-screen-query) {
 			align-self: stretch;
 			}
 		}
+
 		& .cardtypeshort {
 			grid-row-end: span 1;
 		}
@@ -92,3 +99,38 @@
 	}
 }
 
+
+.gridCardLoop.cardverysmall {
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.gridCardLoop.cardsmall {
+		@media (--sidebar-query) {
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	margin: 2rem auto;
+	}
+}
+
+.gridCardLoop.card {
+	@media (--sidebar-query) {
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+margin: 2rem auto;
+}
+}
+
+.gridCardLoop.cardmedium {
+	@media (--sidebar-query) {
+grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+}
+
+.gridCardLoop.cardlarge {
+	@media (--sidebar-query) {
+grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+}
+}
+.gridCardLoop.cardxtralarge {
+	@media (--sidebar-query) {
+grid-template-columns: repeat(auto-fit, minmax(850px, 1fr));
+}
+}

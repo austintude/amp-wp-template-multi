@@ -1,13 +1,21 @@
 .site-footer {
     display: flex;
     display: grid;
-    margin: auto 2fr;
-    grid-template-rows: 1fr 60px;
+    /* margin: auto 2fr; */
+    grid-template-rows: 1fr 4.53rem;
     color: #111;
 	text-align: center;
+	padding: 0;
+	@media (--content-query) {
+		grid-template-rows: 1fr;
+		& .baseBlock {
+			/* bottom: 0;
+			position: absolute; */
+		}
+	}
 	& .baseBlock {
-    bottom: 0;
-    position: absolute;
+    /* bottom: 0;
+    position: absolute; */
 	width: 100vw;
 
 	& #themeLogo {
