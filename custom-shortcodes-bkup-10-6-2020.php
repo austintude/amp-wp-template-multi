@@ -43,11 +43,48 @@ function singlecard_function( $atts = array(), $singlecardcontent = null ) {
 extract(shortcode_atts(array(
 	'cardtype' => 'short',
 	'cardanimationid' => '1',
-	'cardanimation' => 'yes',
-	'ampfx' => ''
+	'cardanimation' => 'yes'
    ), $atts));
-	return "<div class=\"cardContent cardtype$cardtype $cardanimation-animation animationid$cardanimationid\" $ampfx>" . do_shortcode($singlecardcontent) . '</div>';
+	return "<div class=\"cardContent cardtype$cardtype $cardanimation-animation animationid$cardanimationid\">" . do_shortcode($singlecardcontent) . '</div>';
 }
 add_shortcode('singlecard', 'singlecard_function');
+
+
+
+function animation_function( $atts = array(), $animationcontent = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'type' => 'forwards',
+		'id' => '1',
+		'easing' => 'ease-out',
+		'duration' => '1200ms',
+		'iterations' => '1',
+		'transformstart' => '40',
+		'transformend' => '0',
+		'translatexy' => 'x'
+	   ), $atts));
+		return "<amp-position-observer on=\"enter:slideTransition$id.start;\" intersection-ratios=\"1\"
+		layout=\"nodisplay\"></amp-position-observer>
+		<amp-animation id=\"slideTransition$id\" layout=\"nodisplay\"> <script type=\"application/json\">{
+			\"duration\": \"$duration\",
+				\"fill\": \"$type\",
+				\"easing\": \"$easing\",
+				\"iterations\": \"$iterations\",
+				\"animations\": [
+			{
+				\"selector\": \".yes-animation.animationid$id\",
+				\"keyframes\": [
+					{ \"transform\": \"translate$translatexy($transformstart%)\" },
+					{ \"transform\": \"translate$translatexy($transformend%)\" }
+					]
+			}
+			]
+		}</script> </amp-animation>
+			<div class=\"yes-animation animationid$id\">" . do_shortcode($animationcontent) . "</div>";
+	}
+	add_shortcode('animation', 'animation_function');
+
+
+
 
 ?>
