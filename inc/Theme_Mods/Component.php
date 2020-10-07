@@ -234,7 +234,8 @@ $wp_customize->add_control('hero_clip_select',
       'priority' => 10, // Optional. Order priority to load the control. Default: 10
       'type' => 'select',
       'choices' => [ // Optional.
-         '10' => __( 'Default Clip' ),
+		 '10' => __( 'Default Clip' ),
+		 '5' => __( 'Wave Clip' ),
          '1' => __( 'No Clip' )
   ]
   ]);
