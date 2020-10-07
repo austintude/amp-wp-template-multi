@@ -50,4 +50,13 @@ extract(shortcode_atts(array(
 }
 add_shortcode('singlecard', 'singlecard_function');
 
+function ampfxwrapper_function( $atts = array(), $ampfxwrappercontent = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'ampfx' => ''
+	   ), $atts));
+		return "<section class=\"ampFxWrapper\" $ampfx>" . do_shortcode($ampfxwrappercontent) . '</section>';
+	}
+	add_shortcode('ampfxwrapper', 'ampfxwrapper_function');
+
 ?>

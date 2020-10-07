@@ -2,26 +2,26 @@
 	margin: 0 auto;
 	background: #f7f7f7;
 	@media (--content-query) {
-		margin: 4rem auto 0;
+		margin: 4% auto 0;
 	}
 
 		& main._mobileMargin0 {
 			margin: auto 0;
 		}
 		& main._mobileMargin1 {
-			margin: auto 1rem;
+			margin: auto 1%;
 		}
 		& main._mobileMargin2 {
-			margin: auto 2rem;
+			margin: auto 2%;
 		}
 		& main._mobileMargin3 {
-			margin: auto 3rem;
+			margin: auto 3%;
 		}
 		& main._mobileMargin4 {
-			margin: auto 4rem;
+			margin: auto 4%;
 		}
 		& main._mobileMargin5 {
-			margin: auto 5rem;
+			margin: auto 5%;
 		}
 		& .fullWidth {
 			margin: auto 0;
@@ -30,19 +30,24 @@
 			margin: auto 0;
 		}
 		& .fullWidth1 {
-			margin: auto -1rem;
+			margin: auto -1%;
+			min-width: 104%;
 		}
 		& .fullWidth2 {
-			margin: auto -2rem;
+			margin: auto -2%;
+			min-width: 106%;
 		}
 		& .fullWidth3 {
-			margin: auto -3rem;
+			margin: auto -3%;
+			min-width: 108%;
 		}
 		& .fullWidth4 {
-			margin: auto -4rem;
+			margin: auto -4%;
+			min-width: 110%;
 		}
 		& .fullWidth5 {
-			margin: auto -5rem;
+			margin: auto -5%;
+			min-width: 112%;
 		}
 		& .paddingLeft0 {
 			padding-left: 0;
@@ -365,19 +370,19 @@
 				margin: auto 0;
 			}
 			& main._desktopMargin1 {
-				margin: auto 1rem;
+				margin: auto 1%;
 			}
 			& main._desktopMargin2 {
-				margin: auto 2rem;
+				margin: auto 2%;
 			}
 			& main._desktopMargin3 {
-				margin: auto 3rem;
+				margin: auto 3%;
 			}
 			& main._desktopMargin4 {
-				margin: auto 4rem;
+				margin: auto 4%;
 			}
 			& main._desktopMargin5 {
-				margin: auto 5rem;
+				margin: auto 5%;
 			}
 
 	}
