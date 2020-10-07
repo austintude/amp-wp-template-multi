@@ -25,7 +25,7 @@ $hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
 <div class="<?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>gridHero">
 <?php } endif; ?>
 
-<h1 class="site-title">
+<h1 class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_text_color', '#fff' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;">
 		<?php the_title(); ?>
 	</h1>
 	<h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_tagline_text_color', '#f7f7f7' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;">
