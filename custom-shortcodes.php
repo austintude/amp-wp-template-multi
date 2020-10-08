@@ -59,4 +59,57 @@ function ampfxwrapper_function( $atts = array(), $ampfxwrappercontent = null ) {
 	}
 	add_shortcode('ampfxwrapper', 'ampfxwrapper_function');
 
+function lightbox_function( $atts = array(), $lightboxcontent = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'id' => ''
+		), $atts));
+		return "<amp-lightbox id=\"my-lightbox-$id\" layout=\"nodisplay\">" . do_shortcode($lightboxcontent) . ' </amp-lightbox>';
+	}
+	add_shortcode('lightbox', 'lightbox_function');
+
+function lightboxitem_function( $atts = array(), $lightboxitemcontent = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'id' => ''
+		), $atts));
+		return "<div class=\"lightbox\" on=\"tap:my-lightbox-$id.close\" role=\"button\" tabindex=\"0\">" . do_shortcode($lightboxitemcontent) . '</div>';
+	}
+	add_shortcode('lightboxitem', 'lightboxitem_function');
+
+
+function lightboxbutton_function( $atts = array(), $lightboxbuttoncontent = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'id' => '',
+		'styles' => '',
+		'classes' => '',
+		'divclasses' => '',
+		'divstyles' => ''
+		), $atts));
+		return "<div class=\"$divclasses\" style=\"$divstyles\"><button on=\"tap:my-lightbox-$id\" class=\"$classes\" style=\"$styles\">" . do_shortcode($lightboxbuttoncontent) . '</button></div>';
+	}
+	add_shortcode('lightboxbutton', 'lightboxbutton_function');
+
+
+	remove_filter('the_content', 'wpautop');
+remove_filter('the_content', 'wptexturize');
+
+function remove_auto_p_in_shortcode_formatter($content) {
+	$new_content = '';
+	$pattern_full = '{(\[raw\].*?\[/raw\])}is';
+	$pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
+	$pieces = preg_split($pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE);
+
+	foreach ($pieces as $piece) {
+		if (preg_match($pattern_contents, $piece, $matches)) {
+			$new_content .= $matches[1];
+		} else {
+			$new_content .= wptexturize(wpautop($piece));
+		}
+	}
+	return $new_content;
+}
+
+add_filter('the_content', 'remove_auto_p_in_shortcode_formatter', 99);
 ?>

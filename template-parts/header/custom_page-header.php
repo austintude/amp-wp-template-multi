@@ -16,9 +16,11 @@ if ( ! has_header_image() ) {
 <figure class="header-image no_clip heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 
 <?php }
+elseif ( get_theme_mod( 'hero_clip_select') < 6 )  : { ?>
+<figure class="header-image wave heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
+<?php }
 else : ?>
-<figure class="header-image heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
-
+<figure class="header-image polygon heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 	<?php  ?>
 	<?php endif; ?>
 
