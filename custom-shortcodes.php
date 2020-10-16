@@ -12,7 +12,6 @@ function dotirating_function( $atts = array() ) {
 	extract(shortcode_atts(array(
 	 'rating' => '5'
 	), $atts));
-
 	return "<img src=\"//dayoftheindie.com/wp-content/uploads/$rating-star.png\"
 	alt=\"doti-rating\" width=\"130\" height=\"188\" class=\"left-align\" />";
   }
@@ -53,32 +52,33 @@ add_shortcode('singlecard', 'singlecard_function');
 function ampfxwrapper_function( $atts = array(), $ampfxwrappercontent = null ) {
 	// set up default parameters
 	extract(shortcode_atts(array(
-		'ampfx' => ''
+		'ampfx' => '',
+		'styles' => ''
 	   ), $atts));
-		return "<section class=\"ampFxWrapper\" $ampfx>" . do_shortcode($ampfxwrappercontent) . '</section>';
+		return "<section class=\"ampFxWrapper $styles\" $ampfx>" . do_shortcode($ampfxwrappercontent) . '</section>';
 	}
 	add_shortcode('ampfxwrapper', 'ampfxwrapper_function');
 
-function lightbox_function( $atts = array(), $lightboxcontent = null ) {
+function lightbox_function( $atts = array(), $content = null ) {
 	// set up default parameters
 	extract(shortcode_atts(array(
 		'id' => ''
 		), $atts));
-		return "<amp-lightbox id=\"my-lightbox-$id\" layout=\"nodisplay\">" . do_shortcode($lightboxcontent) . ' </amp-lightbox>';
+		return "<amp-lightbox id=\"my-lightbox-$id\" layout=\"nodisplay\">" . do_shortcode($content) . '</section></amp-lightbox>';
 	}
 	add_shortcode('lightbox', 'lightbox_function');
 
-function lightboxitem_function( $atts = array(), $lightboxitemcontent = null ) {
+function lightboxitem_function( $atts = array(), $content = null ) {
 	// set up default parameters
 	extract(shortcode_atts(array(
 		'id' => ''
 		), $atts));
-		return "<div class=\"lightbox\" on=\"tap:my-lightbox-$id.close\" role=\"button\" tabindex=\"0\">" . do_shortcode($lightboxitemcontent) . '</div>';
+		return "<div class=\"lightbox\" on=\"tap:my-lightbox-$id.close\" role=\"button\" tabindex=\"0\"><section class=\"lightBoxiFrame\">" . do_shortcode($content) . '</div>';
 	}
 	add_shortcode('lightboxitem', 'lightboxitem_function');
 
 
-function lightboxbutton_function( $atts = array(), $lightboxbuttoncontent = null ) {
+function lightboxbutton_function( $atts = array(), $content = null ) {
 	// set up default parameters
 	extract(shortcode_atts(array(
 		'id' => '',
@@ -87,9 +87,13 @@ function lightboxbutton_function( $atts = array(), $lightboxbuttoncontent = null
 		'divclasses' => '',
 		'divstyles' => ''
 		), $atts));
-		return "<div class=\"$divclasses\" style=\"$divstyles\"><button on=\"tap:my-lightbox-$id\" class=\"$classes\" style=\"$styles\">" . do_shortcode($lightboxbuttoncontent) . '</button></div>';
+		return "<div class=\"$divclasses\" style=\"$divstyles\"><button on=\"tap:my-lightbox-$id\" class=\"$classes\" style=\"$styles\">" . do_shortcode($content) . '</button></div>';
 	}
 	add_shortcode('lightboxbutton', 'lightboxbutton_function');
+
+
+
+
 
 
 	remove_filter('the_content', 'wpautop');

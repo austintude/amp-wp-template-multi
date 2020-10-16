@@ -62,7 +62,10 @@ if ( file_exists( get_template_directory() . '/vendor/autoload.php' ) ) {
 // Load the `wp_rig()` entry point function.
 require get_template_directory() . '/inc/functions.php';
 
-function remove_auto_p_in_shortcode_formatter_again($content) {
+remove_filter('the_content', 'wpautop');
+remove_filter('the_content', 'wptexturize');
+
+function remove_auto_p_in_shortcode_formatter_three($content) {
 	$new_content = '';
 	$pattern_full = '{(\[raw\].*?\[/raw\])}is';
 	$pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
@@ -78,7 +81,7 @@ function remove_auto_p_in_shortcode_formatter_again($content) {
 	return $new_content;
 }
 
-add_filter('the_content', 'remove_auto_p_in_shortcode_formatter_again', 99);
+add_filter('the_content', 'remove_auto_p_in_shortcode_formatter_three', 99);
 
 // Initialize the theme.
 call_user_func( 'WP_Rig\WP_Rig\wp_rig' );

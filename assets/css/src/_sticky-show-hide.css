@@ -1,0 +1,128 @@
+  .animateWrapper {
+	  position: sticky;
+	  bottom: 0;
+	  right: 0;
+	  /* height: fit-content; */
+  }
+  .popUpWrapper {
+	& .slideInPopUp {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: "formiFrame";
+		align-self: center;
+		grid-gap: .3rem;
+		background-image: linear-gradient(#CCD805, #CCD805);
+		color: #000;
+		right: 0;
+		padding: .8rem 0 0 .8rem;
+		width: 100vw;
+		height: fit-content;
+		font-size: 1rem;
+		border-bottom: 4px solid #5f0068;
+		z-index: 20;
+		transition: 2s;
+		@media (--content-query) {
+			grid-template-columns: 2fr 3fr;
+			grid-template-areas: "formiFrame formImage";
+			width: 500px;
+			height: 400px;
+			padding: 1rem 0 0 1rem;
+			opacity: 1;
+		}
+	& .formiFrame {
+		grid-area: formiFrame;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-areas:
+		"popUpTitle"
+		"popUpForm";
+
+		& h3 {
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			font-weight: 700;
+			margin: 1rem 0 0 0;
+			@media (--content-query) {
+				font-size: 1.5rem;
+			}
+		}
+
+		& h4 {
+			font-size: .9rem;
+			margin: 1rem 0 0 0;
+			@media (--content-query) {
+				font-size: 1.1rem;
+			}
+		}
+
+		& .popUpTitle {
+			grid-area: popUpTitle;
+		}
+		& .popUpForm {
+			grid-area: popUpForm;
+		}
+	}
+	& .formImage {
+		grid-area: formImage;
+		align-self: center;
+	}
+	  }
+
+	  /* & button {
+		margin-top:  1rem;
+		margin-left: 1rem;
+	  } */
+  }
+
+  .visible {
+	opacity: 1;
+	z-index: 2;
+  }
+.invisible {
+	opacity: 0;
+	z-index: 1;
+  }
+  .moveLeft {
+	transform: translatex(0rem);
+	opacity: 1;
+  }
+  .moveRight {
+	transform: translatex(495px);
+	opacity: 0.2;
+  }
+
+  .open, .close {
+	position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	top: 0;
+	right: 0rem;
+	/* margin-left:-10px; */
+	color: #fff;
+	font-weight: bold;
+	background: #5f0068;
+	border: 0;
+	outline: 1px;
+	z-index:10;
+	padding: .3rem;
+ }
+ .close {
+   /*display:none;*/
+   /* opacity:1; */
+   /* transform: translateX(-40%); */
+ }
+  .open {
+	/* transform: translatex(20rem); */
+	transition: 5s;
+	border-top-left-radius: 100%;
+border-bottom-left-radius: 100%;
+  }
+  .open.visible {
+	opacity: 1;
+	transition: 5s;
+  }
+  .close {
+	/* transform: translatex(0rem); */
+	transition: 5s;
+
+  }

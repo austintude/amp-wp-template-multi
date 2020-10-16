@@ -44,7 +44,7 @@
 	font-weight: 400;
 	& a:hover {
 		color: #ffffff;
-		background-color: #711eaf;
+		background-color: #09bbfe;
 	}
 }
 }
@@ -125,7 +125,7 @@
 			content: "";
 			display: block;
 			height: 4px;
-			background: linear-gradient(90deg, #711EAF 0, #db00ca);
+			background: linear-gradient(90deg, #5845ed 0, #09bbfe);
 		}
 	}
 	& a:hover {

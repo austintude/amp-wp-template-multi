@@ -153,6 +153,7 @@ class Theme {
 			new Customizer\Component(),
 			new Theme_Mods\Component(),
 			new Custom_Footer\Component(),
+			new Pop_Up_Box\Component(),
 			new Styles\Component(),
 			new Archive_Content\Component(),
 			new Custom_Shortcodes\Component(),

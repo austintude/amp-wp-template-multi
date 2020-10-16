@@ -10,6 +10,7 @@ namespace WP_Rig\WP_Rig;
 ?>
 
 <div class="footer-info" style="background:<?php echo get_theme_mod( 'footer_background_color', '#333' ); ?>; color: <?php echo get_theme_mod( 'footer_text_color', '#fff' ); ?>;">
+
 <?php if( get_theme_mod( 'footer_text_select') < 4 ): { ?>
 	<div class="baseBlock" style="background:<?php echo get_theme_mod( 'footer_background_color', '#333' ); ?>; color: <?php echo get_theme_mod( 'footer_text_color', '#fff' ); ?>;">
 		<div id="themeLogo" aria-label="custom logo link">

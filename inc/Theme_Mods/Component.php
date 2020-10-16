@@ -57,6 +57,7 @@ class Component implements Component_Interface {
 		];
 
 
+
 $wp_customize->add_setting('hero_text_color',
   [
 	'default' => '#f7f7f7',
@@ -103,6 +104,7 @@ $wp_customize->add_setting('hero_text_color',
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
+
   $wp_customize->add_setting('hero_placement_select',
   [
 	'default' => '10',

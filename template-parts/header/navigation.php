@@ -18,7 +18,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 	<?php
 	if ( wp_rig()->is_amp() ) {
 		?>
-		[class]=" siteNavigationMenu.expanded ? 'main-navigation nav--toggle-sub nav--toggle-small nav--toggled-on' : 'main-navigation nav--toggle-sub nav--toggle-small' "
+		[class]=" siteNavigationMenu.expanded ? 'main-navigation nav--toggle-sub nav--toggle-small nav--toggled-on' : 'main-navigation nav--toggle-sub nav--toggle-small <?php echo get_theme_mod( "secondary_top_bar_toggle", "" ); ?>' "
 		<?php
 	}
 	?>
