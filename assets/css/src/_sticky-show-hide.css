@@ -1,8 +1,11 @@
   .animateWrapper {
 	  position: fixed;
-	  bottom: 0;
+	  bottom: 4rem;
 	  right: 0;
 	  z-index: 20;
+	  @media (--content-query) {
+		  bottom: 0;
+	  }
 	  /* height: fit-content; */
   }
   .popUpWrapper {
@@ -17,7 +20,7 @@
 		right: 0;
 		padding: .8rem 0 0 .8rem;
 		width: 100vw;
-		height: fit-content;
+		height: 270px;
 		font-size: 1rem;
 		border-bottom: 4px solid #5f0068;
 		z-index: 20;
