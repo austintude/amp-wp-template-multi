@@ -1,8 +1,10 @@
   .animateWrapper {
-	  position: fixed;
-	  bottom: 4rem;
+	  position: sticky;
+	  bottom: 0;
 	  right: 0;
-	  z-index: 20;
+	  z-index: 1;
+	  max-width: 500px;
+	  margin-left: auto;
 	  @media (--content-query) {
 		  bottom: 0;
 	  }
@@ -91,16 +93,19 @@
 	opacity: 1;
   }
   .moveRight {
-	transform: translatex(495px);
+	transform: translatex(98%);
 	opacity: 0.2;
+	@media (--content-query) {
+		transform: translatex(495px);
+	}
   }
 
-  .open, .close {
+ .popUpWrapper button {
 	position: absolute;
 	width: 1.3rem;
 	height: 1.3rem;
 	top: 0;
-	right: 0rem;
+	left: 0;
 	/* margin-left:-10px; */
 	color: #fff;
 	font-weight: bold;
@@ -109,24 +114,36 @@
 	outline: 1px;
 	z-index:10;
 	padding: .3rem;
+	@media (--content-query) {
+		right: 0rem;
+		left: auto;
+	}
  }
- .close {
+ button.close {
    /*display:none;*/
    /* opacity:1; */
    /* transform: translateX(-40%); */
  }
-  .open {
+  button.open {
 	/* transform: translatex(20rem); */
 	transition: 5s;
 	border-top-left-radius: 100%;
 border-bottom-left-radius: 100%;
   }
-  .open.visible {
+  button.open.visible {
 	opacity: 1;
+	transition: 2s;
+	transform: translatex(96vw);
+	z-index: 5;
+	@media (--content-query) {
+		transition: 5s;
+	transform: translatex(0);
+	}
+  }
+  button.close {
+	/* transform: translatex(0); */
 	transition: 5s;
   }
-  .close {
-	/* transform: translatex(0rem); */
-	transition: 5s;
-
+  button.invisible {
+	  z-index: -1;
   }

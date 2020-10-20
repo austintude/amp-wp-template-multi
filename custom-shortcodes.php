@@ -92,7 +92,12 @@ function lightboxbutton_function( $atts = array(), $content = null ) {
 	add_shortcode('lightboxbutton', 'lightboxbutton_function');
 
 
-
+	function popupbox_function( $attr ) {
+		ob_start();
+		get_template_part( 'template-parts/content/popUpBox' );
+		return ob_get_clean();
+	}
+	add_shortcode( 'popupbox', 'popupbox_function' );
 
 
 

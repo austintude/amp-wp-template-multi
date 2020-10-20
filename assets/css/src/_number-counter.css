@@ -1,0 +1,17 @@
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+ .numberBlock .countMe {
+    transition: --num 5s;
+    counter-set: num var(--num);
+    font: 800 40px system-ui;
+  }
+ .numberBlock .countMe::after {
+    content: counter(num);
+  }
+ .numberBlock .countMe:hover {
+    --num: 13492;
+  }

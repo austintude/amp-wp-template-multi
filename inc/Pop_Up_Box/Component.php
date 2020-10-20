@@ -81,6 +81,11 @@ $wp_customize->add_section( 'pop_up_box_options',[
 	'default' => '',
 	  'transport' => 'refresh',
   ]);
+  $wp_customize->add_setting('pop_up_box_open_toggle',
+  [
+	'default' => 'moveLeft',
+	  'transport' => 'refresh',
+  ]);
   $wp_customize->add_setting('pop_up_box_title_setting',
   [
    'default'        => 'Stay in touch!',
@@ -102,6 +107,12 @@ $wp_customize->add_section( 'pop_up_box_options',[
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
   $wp_customize->add_setting('pop_up_box_background_color',
+  [
+	'default' => '#333',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('pop_up_box_bottom_border_and_arrow_color',
   [
 	'default' => '#333',
       'transport' => 'refresh',
@@ -135,6 +146,18 @@ $wp_customize->add_control('pop_up_box_toggle',
       'choices' => [ // Optional.
          '' => __( 'No Pop Up Box' ),
 		 'navSecondaryInc' => __( 'Yes Pop Up Box' ),
+  ]
+  ]);
+  $wp_customize->add_control('pop_up_box_open_toggle',
+  [
+	  'description' => esc_html__( 'Select if Pop-Up Box is Opened / Closed on page load :' ),
+	  'label' => __( 'Pop Up Box Open/Close' ),
+      'section' => 'pop_up_box_settings_section',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+         'moveLeft' => __( 'Open' ),
+		 'moveRight' => __( 'Close' ),
   ]
   ]);
   $wp_customize->add_control( 'pop_up_box_text_size',
@@ -175,6 +198,14 @@ $wp_customize->add_control('pop_up_box_title_setting',
   $wp_customize->add_control('pop_up_box_background_color',
   [
 	'label' => __( 'pop_up_box Background Color' ),
+	'section' => 'pop_up_box_settings_section',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('pop_up_box_bottom_border_and_arrow_color',
+  [
+	'label' => __( 'pop_up_box Border & Close/Open Button Color' ),
 	'section' => 'pop_up_box_settings_section',
 	'priority' => 10, // Optional. Order priority to load the control. Default: 10
 	'type' => 'color',
