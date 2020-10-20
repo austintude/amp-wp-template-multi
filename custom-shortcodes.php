@@ -92,10 +92,10 @@ function lightboxbutton_function( $atts = array(), $content = null ) {
 	add_shortcode('lightboxbutton', 'lightboxbutton_function');
 
 
-	function popupbox_function( $attr ) {
+	function popupbox_function( $attr, $content = null  ) {
 		ob_start();
 		get_template_part( 'template-parts/content/popUpBox' );
-		return ob_get_clean();
+		return ob_get_clean() . do_shortcode($content) . "<div class=\"reduceGap\">&nbsp;</div>";
 	}
 	add_shortcode( 'popupbox', 'popupbox_function' );
 

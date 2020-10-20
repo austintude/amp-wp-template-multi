@@ -147,3 +147,6 @@ border-bottom-left-radius: 100%;
   button.invisible {
 	  z-index: -1;
   }
+.reduceGap {
+	margin-top: -270px;
+}
