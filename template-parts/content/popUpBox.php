@@ -22,7 +22,7 @@
   </amp-state>
 <section class="animateWrapper" style="margin-right: calc(<?php echo get_theme_mod( 'main_margins', '0' ); ?>% / .5 * -1)">
   <div class="popUpWrapper">
-  <div [class]="magicBox.animateBox " class="slideInPopUp <?php echo get_theme_mod( "pop_up_box_open_toggle", "moveLeft" ); ?>" style="background:<?php echo get_theme_mod( "pop_up_box_background_color", "auto" ); ?> border-color: <?php echo get_theme_mod( "pop_up_box_bottom_border_and_arrow_color", "auto" ); ?>">
+  <div [class]="magicBox.animateBox " class="slideInPopUp <?php echo get_theme_mod( "pop_up_box_open_toggle", "moveLeft" ); ?>" style="background:<?php echo get_theme_mod( "pop_up_box_background_color", "auto" ); ?>; border-color: <?php echo get_theme_mod( "pop_up_box_bottom_border_and_arrow_color", "auto" ); ?>">
 	  <div class="formiFrame">
 		  <div class="popUpTitle">
 			  <h3><?php echo get_theme_mod( "pop_up_box_title_setting", "Stay in touch!" ); ?></h3>
@@ -49,7 +49,7 @@
 	</div><!-- end formImage -->
   </div>
 	<div> <button on="tap:AMP.setState({magicBox: {animateBox: 'slideInPopUp moveLeft', animateBoxclose: 'close visble', animateBoxopen: 'invisible'}})" [class]="magicBox.animateBoxopen " class="open <?php if (get_theme_mod( 'pop_up_box_open_toggle') == 'moveRight') : { ?>visible<?php } else : ?>invisible<?php endif; ?>" style="background:<?php echo get_theme_mod( "pop_up_box_bottom_border_and_arrow_color", "auto" ); ?>">&lt;&lt;</button>
-  <button on="tap:AMP.setState({magicBox: {animateBox: 'slideInPopUp moveRight', animateBoxopen: 'open visible', animateBoxclose: 'invisible'}})" [class]="magicBox.animateBoxclose " class="close <?php if (get_theme_mod( 'pop_up_box_open_toggle') == 'moveLeft') : { ?>visible<?php } else : ?>invisible<?php endif; ?>">X</button>
+  <button on="tap:AMP.setState({magicBox: {animateBox: 'slideInPopUp moveRight', animateBoxopen: 'open visible', animateBoxclose: 'invisible'}})" [class]="magicBox.animateBoxclose " class="close <?php if (get_theme_mod( 'pop_up_box_open_toggle') == 'moveLeft') : { ?>visible<?php } else : ?>invisible<?php endif; ?>" style="background:<?php echo get_theme_mod( "pop_up_box_bottom_border_and_arrow_color", "auto" ); ?>">X</button>
 	</div>
 </div>
   </section>
