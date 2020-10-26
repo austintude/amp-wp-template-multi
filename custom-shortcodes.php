@@ -31,9 +31,10 @@ add_shortcode('cardbutton', 'cardbutton_function');
 function cardblock_function( $atts = array(), $cardcontent = null ) {
 // set up default parameters
 extract(shortcode_atts(array(
-	'cardid' => ''
+	'cardid' => '',
+	'style' => ''
    ), $atts));
-	return "<div class=\"gridCardLoop card$cardid\" id=\"\">" . do_shortcode($cardcontent) . '</div>';
+	return "<div class=\"gridCardLoop card$cardid\" id=\"\" style=\"$style\" >" . do_shortcode($cardcontent) . '</div>';
 }
 add_shortcode('cardblock', 'cardblock_function');
 
