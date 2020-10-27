@@ -669,6 +669,9 @@
 		& .padding3_9 {
 			padding: 3.9rem;
 		}
+		.padding4 {
+			padding: 4rem;
+		}
 		& .marginLeft0 {
 			margin-left: 0;
 		}
@@ -2515,6 +2518,9 @@
 			}
 			& .desktopPadding3_9 {
 				padding: 3.9rem;
+			}
+			& .desktopPadding4 {
+				padding: 4rem;
 			}
 			& .desktopMarginLeft0 {
 				margin-left: 0;

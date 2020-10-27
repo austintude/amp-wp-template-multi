@@ -6,6 +6,9 @@
 		background: #711eaf;
 		color: #ffffff;
 		font-size: 1.4rem;
+		& a {
+			text-decoration: none;
+		}
 	}
 
 }

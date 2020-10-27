@@ -20,6 +20,9 @@ if ( is_home() ) {
 
 ?>
 <main id="primary" class="site-main _mobileMargin<?php echo get_theme_mod( 'main_margins_mobile', '0' ); ?> _desktopMargin<?php echo get_theme_mod( 'main_margins', '0' ); ?>">
+<?php
+			get_template_part( 'template-parts/header/hero-amp-carousel' );
+		?>
 	<?php the_content(); ?>
 	<?php
 			get_template_part( 'template-parts/content/blocka' );

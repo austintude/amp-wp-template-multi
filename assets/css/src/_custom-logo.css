@@ -1,5 +1,5 @@
 .custom-logo {
-	width: 6.5rem;
+	height: 3rem;
     bottom: 0.5rem;
     position: fixed;
     left: 5vw;
@@ -9,7 +9,7 @@
 	border-radius: 5rem;
 	top: auto;
 	@media (--content-query) {
-	width: 6rem;
+	height: 3rem;
 	top: 0.2em;
 	bottom: auto;
 	position: fixed;

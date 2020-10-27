@@ -45,7 +45,17 @@ else : ?>
 <?php if ( get_theme_mod( 'hero_video_select') > 7 ): {  ?>
 <div class="heroImg">
 <?php if( get_theme_mod( 'hero_placement_select') < 10 ): { ?>
+	<?php if (null != get_theme_mod( 'hero_carousel_toggle') ) : { ?>
+		<?php
+			get_template_part( 'template-parts/header/hero-amp-carousel' );
+		?>
+<?php } else : ?>
+
 		<?php the_header_image_tag(); ?>
+		<?php endif;
+?>
+
+
 <?php } else : ?>
 	<?php the_post_thumbnail(); ?>
 <?php endif; ?>

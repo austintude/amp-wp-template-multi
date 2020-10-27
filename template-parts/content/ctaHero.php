@@ -32,6 +32,7 @@ endif;
 <?php $ctalinksloop = new \WP_Query( array( 'post_type' => 'cta_links', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $ctalinksloop->have_posts() ) : $ctalinksloop->the_post();
+$cta_text_color = '#fff';
 $ctahero_cta_text	= get_field('ctahero_cta_text');
 $ctahero_cta_url	= get_field('ctahero_cta_url');
 $cta_loading_image	= get_field('cta_loading_image');
@@ -39,6 +40,7 @@ $cta_in_hero	= get_field('cta_in_hero');
 $cta_color	= get_field('cta_color');
 $cta_text_color	= get_field('cta_text_color');
 $cta_unique_id	= get_field('cta_unique_id');
+$cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_count = 0;
 ?>
 <?php  if( $cta_in_hero != '0' ): { ?>
@@ -46,7 +48,7 @@ $cta_count = 0;
 	<div class="ctaHero">
 <div class="ctaButtonLink">
 
-
+<?php  if( $cta_lightbox_toggle != 0 ): { ?>
 			<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
@@ -60,7 +62,13 @@ $cta_count = 0;
   </amp-iframe>
     </div>
   </amp-lightbox>
-		</div><!-- ctaButton -->
+  <?php }
+else : ?>
+			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;" ><a href="<?php echo $ctahero_cta_url; ?>" style="color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</a></button>
+<?php
+endif;
+?>
+		</div><!-- ctaButtonLink -->
 </div> <!-- ctaHero -->
 		<?php
 }

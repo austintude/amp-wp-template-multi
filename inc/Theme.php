@@ -154,6 +154,7 @@ class Theme {
 			new Theme_Mods\Component(),
 			new Custom_Footer\Component(),
 			new Pop_Up_Box\Component(),
+			new Hero_Carousel\Component(),
 			new Styles\Component(),
 			new Archive_Content\Component(),
 			new Custom_Shortcodes\Component(),

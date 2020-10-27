@@ -13,6 +13,109 @@
 			position: absolute; */
 		}
 	}
+
+	& .topBlock {
+		display: flex;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 0.5rem;
+		/* margin: 0 2rem 8rem; */
+		background: #fff;
+		color: #000;
+		& a,
+		& a:hover,
+		& a:visited,
+		& a:active {
+			color: blue;
+			text-decoration: none;
+		}
+		& ul {
+			margin: 0;
+			padding: 0;
+		& li {
+			list-style: none;
+			margin: 0;
+		}
+	}
+		@media (--content-query) {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-gap: 2rem;
+			/* padding: 0 2rem; */
+			/* margin: 0 5rem 8rem; */
+		}
+
+	& .leftBlock {
+		display:flex;
+		display: grid;
+		grid-template-columns: 1fr;
+		text-align: left;
+
+	}
+
+	& .middleBlock,
+	& .rightBlock {
+		display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 5rem 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: .5rem;
+		& .blockTitle {
+			& h5 {
+				font-size: 1rem;
+				font-weight: 600;
+			}
+		}
+		& #businessSocial {
+			grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+			display: grid;
+		}
+		& img {
+			/* width: 100%; */
+			@media (--content-query) {
+				/* height: 10rem; */
+			}
+		}
+	}
+
+	& .blockImages {
+		display: flex;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1.5rem;
+		text-align: left;
+		padding-left: 2rem;
+		& amp-img {
+
+			/* width: 100%; */
+			@media (--content-query) {
+				/* height: 10rem; */
+			}
+			@media (--large-desktop-query) {
+				/* height: 100%; */
+			}
+		}
+		@media (--content-query) {
+			/* grid-template-columns: 1fr 1fr; */
+			/* max-height: 50rem; */
+			grid-gap: 0.5rem;
+		}
+		& amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img {
+			object-fit: cover;
+		}
+	}
+	& .rightBlock .blockImages amp-img {
+		/* height: 50rem; */
+	}
+
+	& .middleBlock .row2,
+	& .rightBlock .row2 {
+		display:flex;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	}
+}
+
 	& .baseBlock {
     /* bottom: 0;
     position: absolute; */
@@ -27,7 +130,7 @@
     top: 2rem;
 	position: relative;
 	@media (--content-query) {
-			width: 5vw;
+			height: 5vw;
 	}
 		}
 	}

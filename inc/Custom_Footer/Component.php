@@ -93,6 +93,11 @@ class Component implements Component_Interface {
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
+  $wp_customize->add_setting('footer_map_toggle',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
 
   $wp_customize->add_control( 'footer_text_size',
   [
@@ -155,6 +160,25 @@ class Component implements Component_Interface {
 	'type' => 'color',
 	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
+
+  $wp_customize->add_control('footer_map_toggle',
+  [
+	  'description' => esc_html__( 'Display Google Map in footer : **IMPORTANT**, if you select this option, you must RELOAD the Customizer for the new Carousel Images Section to be viewable' ),
+	  'label' => __( 'Footer Map Option' ),
+      'section' => 'footer_settings_section',
+      'priority' => 5, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+         '' => __( 'No Map in Footer' ),
+		 'heroCarousel' => __( 'Yes Map in Footer' ),
+  ]
+  ]);
+
+  if (get_theme_mod( 'footer_map_toggle') != null) : {
+
+  }
+endif;
+
 	}
 
 }
