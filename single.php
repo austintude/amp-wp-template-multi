@@ -14,6 +14,7 @@ get_header('single-post');
 wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
+<section class="pageWrapper">
 	<main id="primary" class="site-main">
 		<?php
 
@@ -22,10 +23,10 @@ wp_rig()->print_styles( 'wp-rig-content' );
 
 			get_template_part( 'template-parts/content/entry', get_post_type() );
 		}
-
-		get_sidebar();
 		?>
 	</main><!-- #primary -->
+	<?php get_sidebar(); ?>
+	</section><!-- end .pageWrapper -->
 <?php
 
 get_footer();

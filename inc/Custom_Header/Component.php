@@ -53,6 +53,7 @@ class Component implements Component_Interface {
 					'width'              => 1600,
 					'height'             => 250,
 					'flex-height'        => true,
+					'flex-width'		=> true,
 					'wp-head-callback'   => [ $this, 'wp_head_callback' ],
 				]
 			)

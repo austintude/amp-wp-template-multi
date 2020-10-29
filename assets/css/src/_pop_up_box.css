@@ -1,6 +1,6 @@
   .animateWrapper {
 	  position: sticky;
-	  bottom: 0;
+	  bottom: 2.8rem;
 	  right: 0;
 	  z-index: 1;
 	  max-width: 500px;

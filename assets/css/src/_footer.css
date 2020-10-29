@@ -71,11 +71,17 @@
 			display: grid;
 		}
 		& img {
-			/* width: 100%; */
+			max-height: 6rem;
+			max-width: 6rem;
+			margin-top: 1rem;
+
 			@media (--content-query) {
 				/* height: 10rem; */
 			}
 		}
+	}
+	& .blockTitle {
+		text-align: center;
 	}
 
 	& .blockImages {
@@ -85,6 +91,7 @@
 		grid-gap: 1.5rem;
 		text-align: left;
 		padding-left: 2rem;
+		padding-right: 2rem;
 		& amp-img {
 
 			/* width: 100%; */
@@ -124,6 +131,9 @@
 	& #themeLogo {
 		margin-top: 0;
 		margin-bottom: 1rem;
+		max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
 		& img {
 			max-width: 100%;
     margin-left: auto;

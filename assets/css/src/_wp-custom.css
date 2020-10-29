@@ -1,0 +1,7 @@
+.wp-block-latest-posts.is-grid {
+	margin: 0;
+	border: none;
+}
+.wp-block-latest-posts p {
+    text-align: center;
+}

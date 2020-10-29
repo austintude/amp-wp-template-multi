@@ -79,14 +79,15 @@ namespace WP_Rig\WP_Rig;
 	<address property="address" typeof="PostalAddress">
 	<h5>
 	<?php echo $business_name; ?>
-	</h5>
-	<h5><span property="streetAddress"><?php echo $contact_us_street; ?>
+	<br>
+	<span property="streetAddress"><?php echo $contact_us_street; ?>
 <br>
 <?php echo $contact_us_street_suite; ?></span>
-	<br>
+
 	<span property="addressLocality"><?php echo $contact_us_city; ?></span>,
 
-	<span property="addressRegion"><?php echo $contact_us_state; ?></span> <?php echo $contact_us_zip; ?></h5>
+	<span property="addressRegion"><?php echo $contact_us_state; ?></span> <?php echo $contact_us_zip; ?>
+</h5>
 </address>
 </div>
 <div id="phone">
@@ -95,21 +96,19 @@ namespace WP_Rig\WP_Rig;
 </section>
 <div id="hours">
 
-			<ul>
-				<li>
+			<h5>
 				<time itemprop="openingHours" datetime="<?php echo $contact_us_open_datetime; ?>"><?php echo $contact_us_open_days_times; ?></time>
-				</li>
+				<br>
 				<?php if ($contact_us_open_datetime_extra != null) { ?>
-				<li>
+
 				<time itemprop="openingHours" datetime="<?php echo $contact_us_open_datetime_extra; ?>"><?php echo $contact_us_open_days_times_extra; ?></time>
-				</li>
+				<br>
 				<?php } ?>
 				<?php if( $contact_us_closed != null ): { ?>
-				<li>
+
 				 <?php echo $contact_us_closed; ?> - Closed
-				</li>
+				</h5>
 				<?php } endif;?>
-			</ul>
 
         </div>
 

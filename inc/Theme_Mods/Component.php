@@ -112,13 +112,26 @@ class Component implements Component_Interface {
 	'default' => '2',
       'transport' => 'refresh',
   ]);
+  $wp_customize->add_setting('main_margins_mobile',
+  [
+	'default' => '2',
+      'transport' => 'refresh',
+  ]);
 
 
   $wp_customize->add_control( 'main_margins',
   [
 	'type' => 'number',
 	'section' => 'theme_options', // Add a default or your own section
-	'label' => __( '"Main" Left & Right Margins' ),
+	'label' => __( '"Desktop" Left & Right Margins' ),
+	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the block css and tag on the same margin number you add here. For example, fullWidth4 if you select a margin width of 4 here.' )
+  ]
+);
+$wp_customize->add_control( 'main_margins_mobile',
+  [
+	'type' => 'number',
+	'section' => 'theme_options', // Add a default or your own section
+	'label' => __( '"Mobile" Left & Right Margins' ),
 	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the block css and tag on the same margin number you add here. For example, fullWidth4 if you select a margin width of 4 here.' )
   ]
 );
@@ -217,7 +230,7 @@ $wp_customize->add_control('hero_clip_select',
   $wp_customize->add_control('hero_cta_grid_area',
 [
   'label' => __( 'CTAs in Hero Location' ),
-  'section' => 'title_tagline',
+  'section' => 'header_image',
   'priority' => 20, // Optional. Order priority to load the control. Default: 10
   'type' => 'select',
       'choices' => [ // Optional.

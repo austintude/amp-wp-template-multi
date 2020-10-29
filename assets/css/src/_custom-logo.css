@@ -2,13 +2,15 @@
 	height: 3rem;
     bottom: 0.5rem;
     position: fixed;
-    left: 5vw;
+    left: 0;
     z-index: 10;
     background: rgba(255,255,255,.8);
-	padding: .5rem 2rem;
+	padding: .5rem .5rem;
 	border-radius: 5rem;
 	top: auto;
+	max-width: 8rem;
 	@media (--content-query) {
+		padding: .5rem 2rem;
 	height: 3rem;
 	top: 0.2em;
 	bottom: auto;
@@ -17,6 +19,7 @@
 	z-index: 6;
 	background: transparent;
 	border-radius: 0;
+	max-width: 12rem;
 	}
 }
 footer .custom-logo {

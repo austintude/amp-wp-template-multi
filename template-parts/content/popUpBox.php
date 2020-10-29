@@ -25,8 +25,8 @@
   <div [class]="magicBox.animateBox " class="slideInPopUp <?php echo get_theme_mod( "pop_up_box_open_toggle", "moveLeft" ); ?>" style="background:<?php echo get_theme_mod( "pop_up_box_background_color", "auto" ); ?>; border-color: <?php echo get_theme_mod( "pop_up_box_bottom_border_and_arrow_color", "auto" ); ?>">
 	  <div class="formiFrame">
 		  <div class="popUpTitle">
-			  <h3><?php echo get_theme_mod( "pop_up_box_title_setting", "Stay in touch!" ); ?></h3>
-			  <h4><?php echo get_theme_mod( "pop_up_box_sub_title_setting", "Sign up for news and events emails." ); ?></h4>
+			  <h3 style="color: <?php echo get_theme_mod( "pop_up_box_text_color", "#fff" ); ?>"><?php echo get_theme_mod( "pop_up_box_title_setting", "Stay in touch!" ); ?></h3>
+			  <h4 style="color: <?php echo get_theme_mod( "pop_up_box_text_color", "#fff" ); ?>"><?php echo get_theme_mod( "pop_up_box_sub_title_setting", "Sign up for news and events emails." ); ?></h4>
 	</div>
 	<div class="popUpForm">
 	<div class="showOnDesktop">

@@ -28,6 +28,7 @@
 			z-index: 6;
 			background: transparent;
 			border-radius: 0;
+			max-width: 12rem;
 		}
 	}
 }
