@@ -87,6 +87,48 @@ class Component implements Component_Interface {
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
+  $wp_customize->add_setting('main_nav_text_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('main_nav_current_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('current_gradient_color_start',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('current_gradient_color_end',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('drop_down_background_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('drop_down_hover_background_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('drop_down_hover_text_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
 
   $wp_customize->add_setting('hero_placement_select',
   [
@@ -172,6 +214,63 @@ $wp_customize->add_control('secondary_top_bar_toggle',
 	'type' => 'color',
 	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
+  $wp_customize->add_control('main_nav_text_color',
+  [
+	'label' => __( 'Main Nav Text Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('main_nav_current_color',
+  [
+	'label' => __( 'Main Nav Current Selected Page Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('current_gradient_color_start',
+  [
+	'label' => __( 'Current Selected Page Gradient Underline Starting Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('current_gradient_color_end',
+  [
+	'label' => __( 'Current Selected Page Gradient Underline Ending Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('drop_down_background_color',
+  [
+	'label' => __( 'Main Nav Dropdown Background Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('drop_down_hover_background_color',
+  [
+	'label' => __( 'Main Nav Dropdown Hover Background Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('drop_down_hover_text_color',
+  [
+	'label' => __( 'Main Nav Dropdown Text Hover Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+
 $wp_customize->add_control('hero_video_select',
   [
 	  'description' => esc_html__( 'Display YouTube video overlay on or instead of Hero image :' ),

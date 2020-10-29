@@ -5,7 +5,7 @@
 	& main {
 		display: grid;
 	grid-template-columns: 1fr;
-	margin: 5rem auto auto;
+	margin: 0 auto auto;
 
 	& aside {
 		  grid-row: 100;
@@ -43,3 +43,10 @@
 	}
 }
 
+.single main {
+	margin-top: 0;
+	& header,
+	& article {
+		width: 100vw;
+	}
+}
