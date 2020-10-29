@@ -92,7 +92,104 @@ class Component implements Component_Interface {
   }
 endif;
 
+if (get_theme_mod( 'hero_carousel_toggle') == '') :  {
+	$wp_customize->add_setting('hero_text_color',
+	[
+	  'default' => '#f7f7f7',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color'
+	]);
+	$wp_customize->add_setting('hero_tagline_text_color',
+	[
+	  'default' => '#f7f7f7',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color'
+	]);
+	$wp_customize->add_setting('hero_shadow_color',
+	[
+	  'default' => '#333',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color'
+	]);
+	$wp_customize->add_setting('hero_text_grid_toggle',
+	[
+	  'default' => '10',
+		'transport' => 'refresh',
+	]);
+	$wp_customize->add_setting('hero_title_grid_area',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('hero_tagline_grid_area',
+  [
+	'default' => '10',
+      'transport' => 'refresh',
+  ]);
 
+	  $wp_customize->add_control('hero_text_grid_toggle',
+	  [
+		'label' => __( 'Site Title Grid/No Grid (Default)' ),
+		'section' => 'title_tagline',
+		'priority' => 20, // Optional. Order priority to load the control. Default: 10
+		'type' => 'select',
+			'choices' => [ // Optional.
+			   'grid' => __( 'Grid' ),
+			   'no_grid' => __( 'No Grid' )
+			]
+	  ]);
+	  $wp_customize->add_control('hero_title_grid_area',
+[
+  'label' => __( 'Site Title Location' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'select',
+      'choices' => [ // Optional.
+         'left' => __( 'Left Grid' ),
+         'center' => __( 'Center Grid' ),
+		 'right' => __( 'Right Grid' )
+	  ]
+]);
+$wp_customize->add_control('hero_tagline_grid_area',
+[
+  'label' => __( 'Site Title Location' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'select',
+      'choices' => [ // Optional.
+         'left' => __( 'Left Grid' ),
+         'center' => __( 'Center Grid' ),
+		 'right' => __( 'Right Grid' )
+	  ]
+]);
+
+
+
+$wp_customize->add_control('hero_text_color',
+[
+  'label' => __( 'Site Title Text Color' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'color',
+  'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+]);
+$wp_customize->add_control('hero_tagline_text_color',
+[
+  'label' => __( 'Tag Line Text Color' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'color',
+  'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+]);
+$wp_customize->add_control('hero_shadow_color',
+[
+  'label' => __( 'Title & Tagline Shadow Color' ),
+  'section' => 'title_tagline',
+  'priority' => 20, // Optional. Order priority to load the control. Default: 10
+  'type' => 'color',
+  'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+]);
+	  } endif;
 	}
 
 }

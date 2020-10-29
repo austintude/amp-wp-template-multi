@@ -2,6 +2,9 @@
 	display: none;
 }
 .navSecondaryInc {
+	& #secondary-top-bar {
+		display: none;
+	}
 	@media (--content-query) {
 		& #secondary-top-bar {
 			top: 0;

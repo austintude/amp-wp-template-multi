@@ -20,18 +20,30 @@ $hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
 	&nbsp;
 </div>
 <?php the_custom_logo(); ?>
-<div class="titleTagWrapper heroText<?php echo get_theme_mod( 'hero_text_grid_toggle', '' ); ?>">
-<?php if( $hero_tagline_grid_area == $hero_title_grid_area ): { ?>
-<div class="<?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>gridHero">
-<?php } endif; ?>
-
-		<h1 class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_text_color', '#fff' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;"><?php bloginfo( 'name' ); ?></h1>
-		<h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_tagline_text_color', '#f7f7f7' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;"><?php bloginfo( 'description' ); ?></h2>
-		<?php if(  $hero_tagline_grid_area == $hero_title_grid_area ): { ?>
-</div>
-<?php } endif; ?>
+<div class="titleTagWrapper
+<?php if (null != get_theme_mod( 'hero_carousel_toggle') ) : { ?>
+	heroTextno_grid
+<?php } else : ?>
+	heroText<?php echo get_theme_mod( 'hero_text_grid_toggle', '' ); ?>
+<?php endif; ?>">
+	<?php if( $hero_tagline_grid_area == $hero_title_grid_area ): { ?>
+		<div class="<?php echo get_theme_mod( 'hero_title_grid_area', 'center' ); ?>gridHero">
+	<?php } endif; ?>
+	<?php if (null != get_theme_mod( 'hero_carousel_toggle') ) : { ?>
 		<?php
+			get_template_part( 'template-parts/header/hero-amp-carousel-hero-text' );
+		?>
+		<?php } else : ?>
+			<h1 class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_text_color', '#fff' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;"><?php bloginfo( 'name' ); ?></h1>
+			<h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo get_theme_mod( 'hero_tagline_text_color', '#f7f7f7' ); ?>; text-shadow: 1px 1px <?php echo get_theme_mod( 'hero_shadow_color', '#000' ); ?>;"><?php bloginfo( 'description' ); ?></h2>
+
+	<?php endif; ?>
+
+	<?php if(  $hero_tagline_grid_area == $hero_title_grid_area ): { ?>
+		</div>
+	<?php } endif; ?>
+	<?php
 					get_template_part( 'template-parts/content/ctaHero' );
 			?>
-</div>
+	</div>
 </div><!-- .site-branding -->
