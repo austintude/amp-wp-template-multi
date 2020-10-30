@@ -59,7 +59,7 @@ figure.header-image {
 			margin: 0 auto;
 			margin-top: -10rem;
 			width: 100vw;
-			height: 50rem;
+			height: 40rem;
 		}
 & amp-img.amp-wp-enforced-sizes[layout=responsive]>img {
 		object-fit: cover;
