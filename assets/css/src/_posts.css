@@ -5,8 +5,10 @@
 	& main {
 		display: grid;
 	grid-template-columns: 1fr;
-	margin: 0 auto auto;
-
+	margin: 4rem auto auto;
+	@media (--narrow-portrait-menu-query) {
+		margin: 1rem auto auto;
+	}
 	& aside {
 		  grid-row: 100;
 	}

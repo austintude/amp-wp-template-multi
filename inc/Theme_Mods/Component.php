@@ -87,6 +87,12 @@ class Component implements Component_Interface {
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
+  $wp_customize->add_setting('nav_bar_background_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
   $wp_customize->add_setting('main_nav_text_color',
   [
 	'default' => '',
@@ -209,6 +215,14 @@ $wp_customize->add_control('secondary_top_bar_toggle',
   $wp_customize->add_control('top_bar_background_color',
   [
 	'label' => __( 'top_bar Background Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('nav_bar_background_color',
+  [
+	'label' => __( 'Nav Bar Background Color' ),
 	'section' => 'theme_options',
 	'priority' => 10, // Optional. Order priority to load the control. Default: 10
 	'type' => 'color',

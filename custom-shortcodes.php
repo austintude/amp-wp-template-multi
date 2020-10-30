@@ -92,6 +92,38 @@ function lightboxbutton_function( $atts = array(), $content = null ) {
 	}
 	add_shortcode('lightboxbutton', 'lightboxbutton_function');
 
+function reviewbody_function( $atts = array(), $content = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'id' => '',
+		'styles' => '',
+		'classes' => '',
+		'divclasses' => '',
+		'divstyles' => ''
+		), $atts));
+		return "<div class=\"reviewBody\"><span itemprop=\"itemReviewed\" itemtype=\"http://schema.org/localBusiness\"> <span itemprop=\"reviewBody\">" . do_shortcode($content) . "</span></span></div>";
+	}
+	add_shortcode('reviewbody', 'reviewbody_function');
+
+function reviewauthor_function( $atts = array(), $content = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'date' => '',
+		'author' => ''
+		), $atts));
+		return "<div class=\"reviewAuthor\"><cite class=\"testimonialsQuote\"><span itemprop=\"itemReviewed\" itemtype=\"http://schema.org/localBusiness\"> -<span itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\"> $author <meta itemprop=\"datePublished\" content=\"$date\"></span></span></cite></div>";
+	}
+	add_shortcode('reviewauthor', 'reviewauthor_function');
+
+function starrating_function( $atts = array(), $content = null ) {
+	// set up default parameters
+	extract(shortcode_atts(array(
+		'rating' => '5',
+		'outof' => '5'
+		), $atts));
+		return "<div class=\"starRating\"><span itemprop=\"itemReviewed\" itemtype=\"http://schema.org/localBusiness\"> <span itemprop=\"reviewRating\" itemscope itemtype=\"http://schema.org/Rating\"> <meta itemprop=\"worstRating\" content=\"0\"> <span itemprop=\"ratingValue\">$rating</span> / <span itemprop=\"bestRating\">$outof</span></span></div>";
+	}
+	add_shortcode('starrating', 'starrating_function');
 
 	function popupbox_function( $attr, $content = null  ) {
 		ob_start();
@@ -99,6 +131,13 @@ function lightboxbutton_function( $atts = array(), $content = null ) {
 		return ob_get_clean() . do_shortcode($content) . "<div class=\"reduceGap\">&nbsp;</div>";
 	}
 	add_shortcode( 'popupbox', 'popupbox_function' );
+
+	function testimonial_slider_function( $attr, $content = null  ) {
+		ob_start();
+		get_template_part( 'template-parts/content/homeTestimonialQuotes' );
+		return ob_get_clean() . do_shortcode($content) . "<div class=\"reduceGap\">&nbsp;</div>";
+	}
+	add_shortcode( 'testimonial_slider', 'testimonial_slider_function' );
 
 
 

@@ -5,3 +5,10 @@
 .wp-block-latest-posts p {
     text-align: center;
 }
+
+.site main .wp-block-columns:first-child {
+	margin-top: 3rem;
+	@media (--content-query) {
+ margin-top: 0;
+	}
+}

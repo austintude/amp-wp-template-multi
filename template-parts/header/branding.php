@@ -16,7 +16,7 @@ $hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
         &nbsp;
 	</div>
 <?php } endif; ?>
-<div id="mobileTopBar">
+<div id="mobileTopBar" <?php if (null != get_theme_mod( 'nav_bar_background_color') ) : { ?>style="background:<?php echo get_theme_mod( 'nav_bar_background_color', '' ); ?>;"<?php } endif; ?>>
 	&nbsp;
 </div>
 <?php the_custom_logo(); ?>

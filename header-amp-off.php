@@ -29,6 +29,44 @@ namespace WP_Rig\WP_Rig;
 
 	<?php wp_head(); ?>
 	<!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+<?php while( $analyticsloop->have_posts() ) : $analyticsloop->the_post();
+$google_tag_manager_id	= get_field('google_tag_manager_id');
+$facebook_pixel_id	= get_field('facebook_pixel_id');
+?>
+<?php if ($google_tag_manager_id != null || $facebook_pixel_id != null) : ?>
+<!-- Google Tag Manager -->
+<script src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js" async="" custom-element="amp-analytics"></script>
+<!-- End Google Tag Manager -->
+<?php endif; ?>
+<?php endwhile; wp_reset_query(); ?>
+<?php if (null != get_theme_mod( 'main_nav_text_color')) : { ?>
+<style amp-custom>
+	.main-navigation a {
+color: <?php echo get_theme_mod( 'main_nav_text_color') ?>;
+}
+.main-navigation ul li.current-menu-item a {
+color: <?php echo get_theme_mod( 'main_nav_current_color') ?>;
+}
+<?php if (null != get_theme_mod( 'current_gradient_color_start')) : { ?>
+.main-navigation ul li.current-menu-item a:after {
+background: linear-gradient(90deg,<?php echo get_theme_mod( 'current_gradient_color_start') ?>,<?php echo get_theme_mod( 'current_gradient_color_end') ?>);
+}
+<?php } endif; ?>
+<?php if (null != get_theme_mod( 'drop_down_background_color')) : { ?>
+		.nav--toggle-sub ul ul {
+			background:<?php echo get_theme_mod( 'drop_down_background_color') ?>
+		}
+	<?php } endif; ?>
+<?php if (null != (get_theme_mod( 'drop_down_hover_background_color') || get_theme_mod( 'drop_down_hover_text_color'))): { ?>
+.main-navigation ul ul li a:hover {
+background: <?php echo get_theme_mod( 'drop_down_hover_background_color') ?>;
+color: <?php echo get_theme_mod( 'drop_down_hover_text_color') ?>;
+}
+<?php } endif; ?>
+
+	</style>
+<?php } endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
