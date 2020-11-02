@@ -18,7 +18,7 @@ $more_testimonials_link_txt			= get_field('more_testimonials_link_txt');
 <section id="testimonialsBlock">
     <div class="testimonialsBlockTitle">
 
-    <h2><?php echo $testimonials_block_title; ?></h2>
+    <h2>Testimonials</h2>
 </div>
     <ol class="testimonialsList testimonialsList">
         <!-- insert acf sub-repeater here -->
@@ -41,32 +41,29 @@ $testimonial_date = get_field('testimonial_date');
 $overall = get_field('overall');
 ?>
             <li>
-            <blockquote class="blockquote testimonialsCard" itemscope itemtype="http://schema.org/Review">
-                <div class="testimonialsContent">
-                    <span itemprop="itemReviewed" itemtype="http://schema.org/localBusiness" width="100%" height="100%" >
-						<amp-fit-text width="1" height="1" layout="responsive">
-							<div class="quotes" itemprop="reviewBody">
-								<?php echo $testimonial_quote; ?>
-							</div>
-							</amp-fit-text>
-							<div class="starRating">
-									<h5>Star Rating:</h5>
+			<div class="starRating">
+									Star Rating:
 									<div class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                                         <meta itemprop="worstRating" content="0">
                                             <div itemprop="ratingValue">
-                                           <h6> <?php echo $overall; ?></h6>
-</div> <h6>/</h6>
+                                            <?php echo $overall; ?>
+</div> <div>/</div>
                                             <div itemprop="bestRating">
-                                            <h6><?php echo $overall; ?></h6>
+                                            <?php echo $overall; ?>
 </div>
 </div>
                              </div>
+            <blockquote class="blockquote testimonialsCard" itemscope itemtype="http://schema.org/Review">
+                <div class="testimonialsContent">
+					<span itemprop="itemReviewed" itemtype="http://schema.org/localBusiness" width="100%" height="100%" >
 
-					</span>
-
-                </div>
-
-                <cite class="testimonialsQuote">
+						<!-- <amp-fit-text width="1" height="1" layout="responsive"> -->
+							<div class="quotes" itemprop="reviewBody">
+								<?php echo $testimonial_quote; ?>
+							</div>
+							<!-- </amp-fit-text> -->
+							<div class="authorAndRating">
+							<cite class="testimonialsQuote">
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <?php echo $testimonial_author; ?>
                     </span>
@@ -76,6 +73,14 @@ $overall = get_field('overall');
                     </span>
 
                 </cite>
+
+							 </div>
+
+					</span>
+
+                </div>
+
+
 
             </blockquote>
 

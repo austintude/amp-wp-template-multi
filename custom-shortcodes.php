@@ -134,7 +134,7 @@ function starrating_function( $atts = array(), $content = null ) {
 
 	function testimonial_slider_function( $attr, $content = null  ) {
 		ob_start();
-		get_template_part( 'template-parts/content/homeTestimonialQuotes' );
+		get_template_part( 'template-parts/content/testimonialBlock' );
 		return ob_get_clean() . do_shortcode($content) . "<div class=\"reduceGap\">&nbsp;</div>";
 	}
 	add_shortcode( 'testimonial_slider', 'testimonial_slider_function' );

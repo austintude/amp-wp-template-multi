@@ -1,72 +1,76 @@
 .site {
-	margin: 4rem auto 0;
+	margin: 0 auto 0;
 	background: #f7f7f7;
+	& main {
+		margin-top: 4rem;
+	}
 	@media (--content-query) {
 		margin: 4% auto 0;
 	}
 
 		& main._mobileMargin0 {
-			margin: auto 0;
+			margin: inherit 0;
 		}
 		& main._mobileMargin1 {
-			margin: auto 1%;
+			margin: inherit 1%;
 		}
 		& main._mobileMargin2 {
-			margin: auto 2%;
+			margin: inherit 2%;
 		}
 		& main._mobileMargin3 {
-			margin: auto 3%;
+			margin: inherit 3%;
 		}
 		& main._mobileMargin4 {
-			margin: auto 4%;
+			margin: inherit 4%;
 		}
 		& main._mobileMargin5 {
-			margin: auto 5%;
+			margin: inherit 5%;
 		}
 		& .fullWidth {
-			margin: auto 0;
+			min-width: 100vw;
+			margin: inherit 0;
 		}
 		& .fullWidth0 {
-			margin: auto 0;
+			margin: inherit 0;
 		}
 		& .fullWidth1 {
-			margin: auto -2%;
+			margin: inherit -2%;
 			min-width: 104%;
 		}
 		& .fullWidth2 {
-			margin: auto -3%;
+			margin: inherit -3%;
 			min-width: 106%;
 		}
 		& .fullWidth3 {
-			margin: auto -4%;
+			margin: inherit -4%;
 			min-width: 108%;
 		}
 		& .fullWidth4 {
-			margin: auto -5%;
+			margin: inherit -5%;
 			min-width: 110%;
 		}
 		& .fullWidth5 {
-			margin: auto -6%;
+			margin: inherit -6%;
 			min-width: 112%;
 		}
 		& .fullWidth6 {
-			margin: auto -7%;
+			margin: inherit -7%;
 			min-width: 114%;
 		}
 		& .fullWidth7 {
-			margin: auto -8%;
+			margin: inherit -8%;
 			min-width: 116%;
 		}
 		& .fullWidth8 {
-			margin: auto -9%;
+			margin: inherit -9%;
 			min-width: 118%;
 		}
 		& .fullWidth9 {
-			margin: auto -12%;
+			margin: inherit -12%;
 			min-width: 124%;
 		}
 		& .fullWidth10 {
-			margin: auto -13%;
+			margin: inherit -13%;
 			min-width: 126%;
 		}
 		& .paddingLeft0 {
@@ -1881,37 +1885,37 @@
 
 		@media (--content-query) {
 			& main._desktopMargin0 {
-				margin: auto 0;
+				margin: inherit 0;
 			}
 			& main._desktopMargin1 {
-				margin: auto 1%;
+				margin: inherit 1%;
 			}
 			& main._desktopMargin2 {
-				margin: auto 2%;
+				margin: inherit 2%;
 			}
 			& main._desktopMargin3 {
-				margin: auto 3%;
+				margin: inherit 3%;
 			}
 			& main._desktopMargin4 {
-				margin: auto 4%;
+				margin: inherit 4%;
 			}
 			& main._desktopMargin5 {
-				margin: auto 5%;
+				margin: inherit 5%;
 			}
 			& main._desktopMargin6 {
-				margin: auto 6%;
+				margin: inherit 6%;
 			}
 			& main._desktopMargin7 {
-				margin: auto 7%;
+				margin: inherit 7%;
 			}
 			& main._desktopMargin8 {
-				margin: auto 8%;
+				margin: inherit 8%;
 			}
 			& main._desktopMargin9 {
-				margin: auto 9%;
+				margin: inherit 9%;
 			}
 			& main._desktopMargin10 {
-				margin: auto 10%;
+				margin: inherit 10%;
 			}
 			& .showOnDesktop {
 				display: grid;
