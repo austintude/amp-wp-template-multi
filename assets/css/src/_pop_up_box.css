@@ -93,9 +93,10 @@
 	opacity: 1;
   }
   .moveRight {
-	transform: translatex(94vw);
+	transform: translatex(95vw);
 	opacity: 0.3;
 	@media (--content-query) {
+		transform: translatex(98%);
 		transform: translatex(495px);
 	}
   }
