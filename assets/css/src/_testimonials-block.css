@@ -31,7 +31,7 @@
     margin-bottom: 0rem;
 	align-items: stretch;
 	@media (--content-query) {
-		height: 40rem;
+		height: 27rem;
 		grid-template-rows: 1fr;
 		align-items: baseline;
 		margin-bottom: 5rem;
