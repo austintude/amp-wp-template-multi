@@ -93,8 +93,8 @@
 	opacity: 1;
   }
   .moveRight {
-	transform: translatex(98%);
-	opacity: 0.2;
+	transform: translatex(94vw);
+	opacity: 0.3;
 	@media (--content-query) {
 		transform: translatex(495px);
 	}
@@ -133,7 +133,7 @@ border-bottom-left-radius: 100%;
   button.open.visible {
 	opacity: 1;
 	transition: 2s;
-	transform: translatex(96vw);
+	transform: translatex(91vw);
 	z-index: 5;
 	@media (--content-query) {
 		transition: 5s;

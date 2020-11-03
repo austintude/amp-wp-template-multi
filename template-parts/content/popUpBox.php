@@ -20,7 +20,7 @@
       }
     </script>
   </amp-state>
-<section class="animateWrapper" style="margin-right: calc(<?php echo get_theme_mod( 'main_margins', '0' ); ?>% / .5 * -1)">
+<section class="animateWrapper" style="margin-right: calc(<?php echo get_theme_mod( 'main_margins', '0' ); ?>vw / 1.5 * -1)">
   <div class="popUpWrapper">
   <div [class]="magicBox.animateBox " class="slideInPopUp <?php echo get_theme_mod( "pop_up_box_open_toggle", "moveLeft" ); ?>" style="background:<?php echo get_theme_mod( "pop_up_box_background_color", "auto" ); ?>; border-color: <?php echo get_theme_mod( "pop_up_box_bottom_border_and_arrow_color", "auto" ); ?>">
 	  <div class="formiFrame">
