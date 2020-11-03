@@ -16,10 +16,7 @@ $more_testimonials_link_txt			= get_field('more_testimonials_link_txt');
 ?>
 
 <section id="testimonialsBlock">
-    <div class="testimonialsBlockTitle">
 
-    <h2>Testimonials</h2>
-</div>
     <ol class="testimonialsList testimonialsList">
         <!-- insert acf sub-repeater here -->
         <amp-carousel height="3"

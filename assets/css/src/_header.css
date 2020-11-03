@@ -14,7 +14,7 @@ grid-template-areas: "hero";
 }
 
 figure.header-image {
-	align-content: flex-start;
+	/* align-content: start; */
 	@media (--narrow-menu-query) {
 		position: absolute;
     top: 0;
@@ -52,13 +52,14 @@ figure.header-image {
 }
 .header-image {
 	@media (--content-query) {
-		height: 40rem;
+		height: 30rem;
 		display: grid;
+		margin: 0;
 		& .heroImg img {
 			display: block;
 			margin: 0 auto;
 			margin-top: -10rem;
-			width: 100vw;
+			/* width: 100vw; */
 			height: 40rem;
 		}
 & amp-img.amp-wp-enforced-sizes[layout=responsive]>img {

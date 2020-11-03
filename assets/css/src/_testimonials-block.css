@@ -1,14 +1,23 @@
-body {
+.site {
 	left: 0;
+    position: relative;
 	& .overZindex {
 		z-index: 1000;
 	}
-	& .testimonialWrapper .wp-block-cover__inner-container {
+	& .testimonialWrapper {
+		margin-top: 4rem;
+		max-height: 50rem;
+		max-width: 100vw;
+		@media (--content-query) {
+		max-height: 40rem;
+		}
+		& .wp-block-cover__inner-container {
 		z-index: 1000;
 		margin-left: 0;
 		margin-right: 0;
 		width: 100vw;
 	}
+}
 	& .wp-block-cover__inner-container> #testimonialsBlock {
 		max-width: 100vw;
 			}
@@ -39,11 +48,11 @@ body {
 
 		& .testimonialBlockBackground {
 			grid-column: 1/1;
-			grid-row: 1;
+			grid-row: 1/1;
 			z-index: 1;
 			display: grid;
 			@media (--content-query) {
-				grid-row: 1/4;
+				/* grid-row: 1/4; */
 			}
 & img {
     opacity: .4;
@@ -55,11 +64,11 @@ body {
 
 		& .testimonialsBlockTitle {
 			display: grid;
-			grid-column: 1;
+			grid-column: 1/1;
 			grid-row: 1/1;
 			z-index: 2;
 			@media (--content-query) {
-				grid-row: 1;
+				grid-row: 1/1;
 			}
 		}
 
@@ -79,14 +88,13 @@ body {
 			grid-template-columns: 1fr;
 			grid-template-rows: 10px 1fr;
 			display: grid;
-    grid-column: 1;
+    grid-column: 1/1;
     grid-row: 2/3;
 	z-index: 3;
 	@media (--content-query) {
-		grid-row: 1;
 		grid-template-columns: 1fr;
-		grid-column: 1;
-		grid-row: 1;
+		grid-column: 1/1;
+		grid-row: 1/1;
 		min-height: 30rem;
 		grid-template-rows: 30px 1fr;
 	}
@@ -304,22 +312,7 @@ body {
 				/* height: 33rem; */
 			}
 
-			& amp-fit-text {
-				display: grid;
-				/* grid-row: 1/4; */
-				grid-template-rows: 5fr 1fr;
-				width: 100%;
-				/* height: 20rem; */
-				& .reviewBody {
-					/* display: grid; */
-					grid-row: 1/5;
-				}
-				& .testimonialContentBlocks {
-					/* display: grid; */
-					grid-row: 5/6;
-				}
 
-			}
 			& .quotes {
 				width: 90vw;
 				@media (--content-query) {
