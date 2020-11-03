@@ -2,7 +2,7 @@
 	left: 0;
     position: relative;
 	& .overZindex {
-		z-index: 1000;
+		z-index: 10;
 	}
 	& .testimonialWrapper {
 		margin-top: 4rem;
@@ -12,7 +12,7 @@
 		max-height: 40rem;
 		}
 		& .wp-block-cover__inner-container {
-		z-index: 1000;
+		z-index: 10;
 		margin-left: 0;
 		margin-right: 0;
 		width: 100vw;
