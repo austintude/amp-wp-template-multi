@@ -36,14 +36,17 @@ $testimonial_author = get_field('testimonial_author');
 $description_of_work = get_field('description_of_work');
 $testimonial_date = get_field('testimonial_date');
 $overall = get_field('overall');
+$testimonial_in_carousel	= get_field('testimonial_in_carousel');
+$star_rating	= get_field('star_rating');
 ?>
+<?php  if( $testimonial_in_carousel >= 1 ): { ?>
             <li>
 			<div class="starRating">
 									Star Rating:
 									<div class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                                         <meta itemprop="worstRating" content="0">
                                             <div itemprop="ratingValue">
-                                            <?php echo $overall; ?>
+                                            <?php echo $star_rating; ?>
 </div> <div>/</div>
                                             <div itemprop="bestRating">
                                             <?php echo $overall; ?>
@@ -82,7 +85,8 @@ $overall = get_field('overall');
             </blockquote>
 
 
-            </li>
+			</li>
+			<?php } endif; ?>
             <?php endwhile; wp_reset_query();?>
             </amp-carousel>
 
