@@ -138,7 +138,7 @@ class Component implements Component_Interface {
 
   $wp_customize->add_setting('hero_placement_select',
   [
-	'default' => '10',
+	'default' => '0',
       'transport' => 'refresh',
   ]);
 
@@ -309,7 +309,8 @@ $wp_customize->add_control('hero_video_select',
 		'5' => __( 'Front-Page Only' ),
          '3' => __( 'All Pages' ),
          '1' => __( 'All Posts' ),
-		 '2' => __( 'All Pages and Posts' )
+		 '2' => __( 'All Pages and Posts' ),
+		 '0' => __('Front-Page and Posts Only')
   ]
   ]);
 $wp_customize->add_control('hero_video',

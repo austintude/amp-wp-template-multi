@@ -31,17 +31,17 @@ else : ?>
 <?php if( (get_theme_mod( 'hero_placement_select') == 2) || (get_theme_mod( 'hero_placement_select') == 3 )): { ?>
 		<?php the_header_image_tag(); ?>
 <?php } else : ?>
-	<?php the_post_thumbnail(); ?>
+<?php if (null != has_post_thumbnail() ) : { the_post_thumbnail(); } else : { the_header_image_tag(); } endif; ?>
 <?php endif; ?>
 		</div>
 
 <?php }
-else : {?>
+else : { ?>
 <div class="heroImg">
 <?php if( (get_theme_mod( 'hero_placement_select') == 2) || (get_theme_mod( 'hero_placement_select') == 3 )): { ?>
 		<?php the_header_image_tag(); ?>
 <?php } else : ?>
-	<?php the_post_thumbnail(); ?>
+	<?php if (null != has_post_thumbnail() ) : { the_post_thumbnail(); } else : { the_header_image_tag(); } endif; ?>
 <?php endif; ?>
 		</div>
 		<?php }
