@@ -28,7 +28,7 @@ else : ?>
 
 <?php if ( get_theme_mod( 'hero_video_select') > 7 ): {  ?>
 <div class="heroImg">
-<?php if( get_theme_mod( 'hero_placement_select') == 2 || get_theme_mod( 'hero_placement_select') == 1 ) : { ?>
+<?php if( (get_theme_mod( 'hero_placement_select')) == 2 || (get_theme_mod( 'hero_placement_select') == 1 )) : { ?>
 		<?php the_header_image_tag(); ?>
 <?php } else : ?>
 	<?php the_post_thumbnail(); ?>
@@ -38,7 +38,7 @@ else : ?>
 <?php }
 else : {?>
 <div class="heroImg">
-<?php if( get_theme_mod( 'hero_placement_select') < 6 ): { ?>
+<?php if((get_theme_mod( 'hero_placement_select')) == 2 || (get_theme_mod( 'hero_placement_select') == 1 )) : { ?>
 		<?php the_header_image_tag(); ?>
 <?php } else : ?>
 	<?php the_post_thumbnail(); ?>

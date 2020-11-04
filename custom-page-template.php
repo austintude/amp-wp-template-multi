@@ -20,7 +20,7 @@ wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main _mobileMargin<?php echo get_theme_mod( 'main_margins_mobile', '0' ); ?> _desktopMargin<?php echo get_theme_mod( 'main_margins', '0' ); ?>">
 		<?php
 
 		while ( have_posts() ) {
@@ -31,8 +31,6 @@ wp_rig()->print_styles( 'wp-rig-content' );
 
 		?>
 	</main><!-- #primary -->
-	<?php
-					get_template_part( 'template-parts/content/contentMiddleBlock2' );
-			?>
+
 <?php
 get_footer();

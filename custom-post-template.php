@@ -15,12 +15,12 @@
 
 namespace WP_Rig\WP_Rig;
 
-get_header();
+get_header('custom');
 
 wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main _mobileMargin<?php echo get_theme_mod( 'main_margins_mobile', '0' ); ?> _desktopMargin<?php echo get_theme_mod( 'main_margins', '0' ); ?>">
 		<?php
 
 		while ( have_posts() ) {
