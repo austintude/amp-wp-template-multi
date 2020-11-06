@@ -64,7 +64,11 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 	color: <?php echo get_theme_mod( 'drop_down_hover_text_color') ?>;
 }
 <?php } endif; ?>
-
+<?php if (null != (get_theme_mod( 'site_text_color') || get_theme_mod( 'site_background_color'))): { ?>
+.site { color: <?php echo get_theme_mod( 'site_text_color', '' ); ?>;
+	background: <?php echo get_theme_mod( 'site_background_color', '' ); ?>
+}
+<?php } endif; ?>
 		</style>
 <?php } endif; ?>
 </head>

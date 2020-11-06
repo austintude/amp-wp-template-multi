@@ -135,7 +135,18 @@ class Component implements Component_Interface {
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
-
+  $wp_customize->add_setting('site_text_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
+  $wp_customize->add_setting('site_background_color',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ]);
   $wp_customize->add_setting('hero_placement_select',
   [
 	'default' => '0',
@@ -195,6 +206,22 @@ $wp_customize->add_control('secondary_top_bar_toggle',
          '' => __( 'No Top Bar' ),
 		 'navSecondaryInc' => __( 'Yes Top Bar' ),
   ]
+  ]);
+  $wp_customize->add_control('site_text_color',
+  [
+	'label' => __( 'Site Wide Text Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+  ]);
+  $wp_customize->add_control('site_background_color',
+  [
+	'label' => __( 'Site Wide Background Color' ),
+	'section' => 'theme_options',
+	'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
   $wp_customize->add_control('top_bar_text_color',
   [

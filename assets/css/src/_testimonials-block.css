@@ -27,7 +27,6 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 20px 1fr;
 	height: 40rem;
-
     margin-bottom: 0rem;
 	align-items: stretch;
 	@media (--content-query) {
@@ -46,7 +45,9 @@
             /* min-height: 35rem; */
             /* max-height: 35rem; */
 		}
-
+& cite {
+	color: #ffffff;
+}
 		& .testimonialBlockBackground {
 			grid-column: 1/1;
 			grid-row: 1/1;
@@ -439,7 +440,7 @@
 	& cite {
 		font-family: var(--highlight-font-family);
 		font-size: 2rem;
-		color: #fff;
+		/* color: #fff; */
 	}
 	& .authorAndRating {
 		font-size: 2rem;
