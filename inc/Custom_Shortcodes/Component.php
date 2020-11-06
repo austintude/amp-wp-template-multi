@@ -30,6 +30,7 @@ class Component implements Component_Interface {
 		// TODO: Add actions and filters here.
 		include get_theme_file_path( '/custom-shortcodes.php' );
 	}
+
 }
 
 

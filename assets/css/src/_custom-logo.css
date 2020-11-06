@@ -3,7 +3,7 @@
     bottom: 0.5rem;
     position: fixed;
     left: 0;
-    z-index: 14;
+    z-index: 15;
     background: rgba(255,255,255,.8);
 	padding: .5rem .5rem;
 	border-radius: 5rem;
@@ -16,7 +16,7 @@
 	bottom: auto;
 	position: fixed;
 	left: 1.3em;
-	z-index: 14;
+	z-index: 15;
 	background: transparent;
 	border-radius: 0;
 	max-width: 12rem;

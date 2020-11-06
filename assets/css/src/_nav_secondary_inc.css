@@ -13,7 +13,7 @@
 			width: 100vw;
 			display: grid;
 			position: fixed;
-			z-index: 12;
+			z-index: 14;
 		}
 		& #mobileTopBar {
 			top: 2rem;
@@ -25,7 +25,7 @@
 			bottom: auto;
 			position: fixed;
 			left: 1.3em;
-			z-index: 14;
+			z-index: 15;
 			background: transparent;
 			border-radius: 0;
 			max-width: 12rem;
@@ -53,7 +53,7 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 			font-size: .4rem;
-			place-items: center;
+			place-items: baseline;
 			& li {
 				font-size: .62rem;
 			}

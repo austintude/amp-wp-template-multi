@@ -357,3 +357,4 @@ $wp_customize->add_control('hero_clip_select',
 
 	}
 }
+

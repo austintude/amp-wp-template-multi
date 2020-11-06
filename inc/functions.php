@@ -43,6 +43,7 @@ function remove_auto_p_in_shortcode_formatter_three($content) {
 }
 
 add_filter('the_content', 'remove_auto_p_in_shortcode_formatter_three', 99);
+
 }
 
 

@@ -58,6 +58,7 @@ namespace WP_Rig\WP_Rig;
         <iframe width="600" height="450" layout="responsive"
 			  sandbox="allow-scripts allow-same-origin allow-popups"
 			  frameborder="0"
+			  title="Google Map"
               src="<?php echo $google_map; ?>">
 
   </iframe>
@@ -132,7 +133,7 @@ $social_label = get_sub_field('social_label');
 ?>
 
 		<div id="socialIcon<?php echo $social_label; ?>">
-		<a href="<?php echo $social_link; ?>" target="_blank" rel="noopener" arial-label="<?php echo $social_label; ?>">
+		<a href="<?php echo $social_link; ?>" target="_blank" rel="noopener" arial-label="<?php echo $social_label; ?>" style="color: <?php echo $contact_footer_link_color; '#fff'; ?>;">
 		<?php  if( $social_icon == null ):  { ?>
 			<?php  if( $social_label != null ):  { ?><?php echo $social_label; ?><?php } endif; ?>
 		<?php } endif; ?>

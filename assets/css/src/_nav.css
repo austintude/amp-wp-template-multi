@@ -64,13 +64,19 @@
 	z-index: 14;
     width: 100vw;
     height: 90vh;
-    padding: 7vh 20vw 0vh 20vw;
+    padding: 7vh 10vw 0vh 10vw;
 	& .menu-toggle.menuTop {
 		top: -5.4rem;
 		clear: both;
 
 	}
-
+	& .menu-item-has-children {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		& .menu-item-has-children {
+		grid-template-columns: 1fr;
+		}
+	}
 	& .closeX {
 		display: block;
 		position: absolute;
@@ -80,8 +86,9 @@
 		color: #000;
 	}
 	& ul ul::before {
-		content: ">";
+		content: ">>>";
 		transform: rotate(90deg);
+		padding: 0.4rem 0.2rem;
 	}
 	& ul ul li {
 		display: none;
@@ -93,6 +100,12 @@
 		display: none;
 	}
 	& ul ul li:hover ul li {
+		display: block;
+	}
+	& ul ul ul ul li {
+		display: none;
+	}
+	& ul ul ul li:hover ul li {
 		display: block;
 	}
 }

@@ -21,6 +21,9 @@ if ( version_compare( $GLOBALS['wp_version'], WP_RIG_MINIMUM_WP_VERSION, '<' ) |
 // Include WordPress shims.
 require get_template_directory() . '/inc/wordpress-shims.php';
 
+// Include Require Plugins Admin Message.
+require get_template_directory() . '/inc/Required_Plugins/Component.php';
+
 // Setup autoloader (via Composer or custom).
 if ( file_exists( get_template_directory() . '/vendor/autoload.php' ) ) {
 	require get_template_directory() . '/vendor/autoload.php';
@@ -82,6 +85,8 @@ function remove_auto_p_in_shortcode_formatter_three($content) {
 }
 
 add_filter('the_content', 'remove_auto_p_in_shortcode_formatter_three', 99);
+
+
 
 // Initialize the theme.
 call_user_func( 'WP_Rig\WP_Rig\wp_rig' );
