@@ -32,13 +32,13 @@
 	<div class="showOnDesktop">
 	  <iframe media="(min-width: 641px)" width="200" height="250" scrolling="no"
                             sandbox="allow-scripts allow-forms allow-same-origin allow-popups" layout="responsive" allowfullscreen
-                            frameborder="0" src="<?php echo get_theme_mod( "pop_up_box_form_url", "" ); ?>">
+                            frameborder="0" src="<?php echo get_theme_mod( "pop_up_box_form_url", "" ); ?>" title="popUpBox">
 	</iframe>
 	</div>
 	<div class="showOnMobile">
 	<iframe media="(max-width: 640px)" width="360" height="240" scrolling="no"
                             sandbox="allow-scripts allow-forms allow-same-origin allow-popups" layout="responsive" allowfullscreen
-                            frameborder="0" src="<?php echo get_theme_mod( "pop_up_box_form_url_mobile", "" ); ?>">
+                            frameborder="0" src="<?php echo get_theme_mod( "pop_up_box_form_url_mobile", "" ); ?>" title="popUpBox">
 	</iframe>
 	</div>
 	</div>

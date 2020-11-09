@@ -69,6 +69,20 @@ class Component implements Component_Interface {
 	'default' => '',
       'transport' => 'refresh',
   ]);
+  $wp_customize->add_setting('site_font_selection_1',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('site_font_selection_2',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('footer_url_setting',
+  [
+   'default'        => '',
+  ]);
   $wp_customize->add_setting('top_bar_text_color',
   [
 	'default' => '#f7f7f7',
@@ -206,6 +220,33 @@ $wp_customize->add_control('secondary_top_bar_toggle',
          '' => __( 'No Top Bar' ),
 		 'navSecondaryInc' => __( 'Yes Top Bar' ),
   ]
+  ]);
+  $wp_customize->add_control('site_font_selection_google_toggle',
+  [
+	  'description' => esc_html__( 'Toggle on/off Google font changes from default fonts :' ),
+	  'label' => __( 'Google Fonts' ),
+      'section' => 'theme_options',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+         '' => __( 'Use Default' ),
+		 'changeFonts' => __( 'Change Defaults' ),
+  ]
+  ]);
+
+  $wp_customize->add_control('site_font_selection_1',
+  [
+	'description' => esc_html__( 'Name of the Google Font must fit the format First%20Second :' ),
+   'label'   => 'Google Font Selection 1',
+	'section' => 'theme_options',
+   'type'    => 'text',
+  ]);
+  $wp_customize->add_control('site_font_selection_2',
+  [
+	'description' => esc_html__( 'Name of the Google Font must fit the format First%20Second :' ),
+   'label'   => 'Google Font Selection 2',
+	'section' => 'theme_options',
+   'type'    => 'text',
   ]);
   $wp_customize->add_control('site_text_color',
   [

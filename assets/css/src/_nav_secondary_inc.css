@@ -55,7 +55,8 @@
 			font-size: .4rem;
 			place-items: baseline;
 			& li {
-				font-size: .62rem;
+				font-size: .8rem;
+				padding-top: .3rem;
 			}
 		}
 
@@ -70,6 +71,7 @@
 			direction: rtl;
 			& li {
 				font-size: .8rem;
+				padding-top: .1rem;
 				margin: 0;
 				& img {
 					width: 1.5rem;

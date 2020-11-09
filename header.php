@@ -40,6 +40,9 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 	<!-- End Google Tag Manager -->
 <?php endif; ?>
 <?php endwhile; wp_reset_query(); ?>
+<?php if (null != get_theme_mod( 'site_font_selection_google_toggle')) : { ?>
+<link crossorigin="anonymous" rel="stylesheet" id="ampwpmulti-fonts-css" href="https://fonts.googleapis.com/css?family=<?php echo get_theme_mod( 'site_font_selection_1') ?>:ital,wght@1,100..700&family=<?php echo get_theme_mod( 'site_font_selection_2') ?>:400,400i,600,600i&amp;display=swap" type="text/css" media="all">
+<?php } endif; ?>
 <?php if (null != get_theme_mod( 'main_nav_text_color')) : { ?>
 	<style amp-custom>
 		.main-navigation a {
