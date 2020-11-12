@@ -46,17 +46,38 @@ function austintatious_plugin_manager() {
 	 */
 	$plugins = apply_filters( 'austintatious_plugins', array(
 		array(
-			'name'    => 'Advanced Custom Fields Pro',
+			'name'    => '**Advanced Custom Fields Pro**',
 			'slug'    => 'advanced-custom-fields-pro',
 			'version' => '5.8+',
-			'url'     => 'https://github.com/austintude/wprig-wp-options/raw/master/plugins/advanced-custom-fields-pro.zip', // Only for non wp.org plugins.
+			// 'url'     => 'https://github.com/austintude/wprig-wp-options/raw/master/plugins/advanced-custom-fields-pro.zip', // Only for non wp.org plugins.
 		),
 		array(
-			'name'    => 'AMP',
+			'name'    => '**AMP**',
 			'slug'    => 'amp',
 			'version' => '1.5+',
-			'url'     => 'https://github.com/austintude/wprig-wp-options/raw/master/plugins/amp.zip', // Only for non wp.org plugins.
+			// 'url'     => 'https://github.com/austintude/wprig-wp-options/raw/master/plugins/amp.zip', // Only for non wp.org plugins.
 		),
+		array(
+			'name'    => 'Jetpack',
+			'slug'    => 'jetpack',
+			'version' => '9.1+',
+		),
+		array(
+			'name'    => 'TranslatePress – Translate Multilingual sites',
+			'slug'    => 'translatepress-multilingual',
+			'version' => '1.8+',
+		),
+		array(
+			'name'    => 'Yoast SEO',
+			'slug'    => 'wordpress-seo',
+			'version' => '15.2+',
+		),
+		array(
+			'name'    => 'WordFence',
+			'slug'    => 'wordfence',
+			'version' => '7.4+',
+		),
+
 		// array(
 		// 	'name'    => 'Custom Post Type UI',
 		// 	'slug'    => 'custom-post-type-ui',
@@ -84,7 +105,7 @@ function austintatious_plugin_manager() {
 	 * class for full documentation on what you can pass in here.
 	 */
 	$args = array(
-		'page_title' => __( 'Required Plugins', 'austintatious' ),
+		'page_title' => __( '**Required** & Recommended Plugins', 'austintatious' ),
 		'menu_slug'  => 'austintatious-required-plugins',
 	);
 
