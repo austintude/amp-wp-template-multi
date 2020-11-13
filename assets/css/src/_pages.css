@@ -1,0 +1,9 @@
+.page {
+	& main#primary {
+    margin-top: 0rem;
+	position: relative;
+	@media (--content-query) {
+	margin-top: -10rem;
+	}
+}
+}

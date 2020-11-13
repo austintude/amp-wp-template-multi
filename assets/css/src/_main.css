@@ -1,0 +1,7 @@
+main#primary {
+    margin-top: -6rem;
+	position: relative;
+	@media (--content-query) {
+		margin-top: -10rem;
+	}
+}

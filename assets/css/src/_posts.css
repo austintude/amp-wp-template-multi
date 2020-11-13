@@ -40,11 +40,15 @@
 		}
 	}
 	}
-	.site-footer {
+	& .site-footer {
 		position: absolute;
 	}
 }
-
+.blog {
+	& main#primary {
+		margin-top: 0rem;
+	}
+}
 .single main {
 	margin-top: 0;
 	& header,

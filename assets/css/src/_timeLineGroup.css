@@ -1,0 +1,38 @@
+.timeLineGroup {
+    content: '';
+    padding-left: 2rem;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+    border-left-width: 5px;
+    border-left-style: solid;
+	border-left-color: rgba(222,241,240, 1);
+	padding-bottom: 3rem;
+	& .wp-block-group__inner-container {
+		margin-top: -4rem;
+	}
+	& h3:after {
+		content: "";
+		border-width: 2px;
+		background-color: #ee9631;
+		width: 3rem;
+		display: block;
+		margin-left: 0;
+		position: relative;
+	}
+
+}
+
+.timeLineGroup:before {
+    content: '';
+    border-radius: 100%;
+    /* border-color: rgb(222, 241, 240); */
+    border-width: 2rem;
+    background-color: skyblue;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    margin-left: -3.2rem;
+    /* top: 4rem; */
+    position: relative;
+}

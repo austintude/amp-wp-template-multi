@@ -1,6 +1,9 @@
 .site {
 	margin: 0 auto 0;
 	background: #f7f7f7;
+	@media (--content-query) {
+		margin: 4% auto 0;
+	}
 	@media (--narrow-menu-query) {
 		& .fullWidthMobile {
 			margin-left: 0;
@@ -65,6 +68,36 @@
 	}
 	@media (--content-query) {
 		margin: 4vw auto 0;
+		& .maxHeightDesktop5 {
+			max-height: 5rem
+		}
+		& .maxHeightDesktop10 {
+			max-height: 10rem
+		}
+		& .maxHeightDesktop15 {
+			max-height: 15rem
+		}
+		& .maxHeightDesktop20 {
+			max-height: 20rem
+		}
+		& .maxHeightDesktop25 {
+			max-height: 25rem
+		}
+		& .maxHeightDesktop30 {
+			max-height: 30rem
+		}
+		& .maxHeightDesktop35 {
+			max-height: 35rem
+		}
+		& .maxHeightDesktop40 {
+			max-height: 40rem
+		}
+		& .maxHeightDesktop45 {
+			max-height: 45rem
+		}
+		& .maxHeightDesktop50 {
+			max-height: 50rem
+		}
 		& .fullWidthDesktop {
 			margin-left: 0;
 			margin-right: 0;
@@ -2716,124 +2749,124 @@
 			& .desktopPadding4 {
 				padding: 4rem;
 			}
-			& .desktopMarginLeft0 {
+			& .marginLeftDesktop0 {
 				margin-left: 0;
 			}
-			& .desktopMarginLeft0_1 {
+			& .marginLeftDesktop0_1 {
 				margin-left: 0.1rem;
 			}
-			& .desktopMarginLeft0_2 {
+			& .marginLeftDesktop0_2 {
 				margin-left: 0.2rem;
 			}
-			& .desktopMarginLeft0_3 {
+			& .marginLeftDesktop0_3 {
 				margin-left: 0.3rem;
 			}
-			& .desktopMarginLeft0_4 {
+			& .marginLeftDesktop0_4 {
 				margin-left: 0.4rem;
 			}
-			& .desktopMarginLeft0_5 {
+			& .marginLeftDesktop0_5 {
 				margin-left: 0.5rem;
 			}
-			& .desktopMarginLeft0_6 {
+			& .marginLeftDesktop0_6 {
 				margin-left: 0.6rem;
 			}
-			& .desktopMarginLeft0_7 {
+			& .marginLeftDesktop0_7 {
 				margin-left: 0.7rem;
 			}
-			& .desktopMarginLeft0_8 {
+			& .marginLeftDesktop0_8 {
 				margin-left: 0.8rem;
 			}
-			& .desktopMarginLeft0_9 {
+			& .marginLeftDesktop0_9 {
 				margin-left: 0.9rem;
 			}
-			& .desktopMarginLeft1 {
+			& .marginLeftDesktop1 {
 				margin-left: 1rem;
 			}
-			& .desktopMarginLeft1_1 {
+			& .marginLeftDesktop1_1 {
 				margin-left: 1.1rem;
 			}
-			& .desktopMarginLeft1_2 {
+			& .marginLeftDesktop1_2 {
 				margin-left: 1.2rem;
 			}
-			& .desktopMarginLeft1_3 {
+			& .marginLeftDesktop1_3 {
 				margin-left: 1.3rem;
 			}
-			& .desktopMarginLeft1_4 {
+			& .marginLeftDesktop1_4 {
 				margin-left: 1.4rem;
 			}
-			& .desktopMarginLeft1_5 {
+			& .marginLeftDesktop1_5 {
 				margin-left: 1.5rem;
 			}
-			& .desktopMarginLeft1_6 {
+			& .marginLeftDesktop1_6 {
 				margin-left: 1.6rem;
 			}
-			& .desktopMarginLeft1_7 {
+			& .marginLeftDesktop1_7 {
 				margin-left: 1.7rem;
 			}
-			& .desktopMarginLeft1_8 {
+			& .marginLeftDesktop1_8 {
 				margin-left: 1.8rem;
 			}
-			& .desktopMarginLeft1_9 {
+			& .marginLeftDesktop1_9 {
 				margin-left: 1.9rem;
 			}
-			& .desktopMarginLeft2 {
+			& .marginLeftDesktop2 {
 				margin-left: 2rem;
 			}
-			& .desktopMarginLeft2_1 {
+			& .marginLeftDesktop2_1 {
 				margin-left: 2.1rem;
 			}
-			& .desktopMarginLeft2_2 {
+			& .marginLeftDesktop2_2 {
 				margin-left: 2.2rem;
 			}
-			& .desktopMarginLeft2_3 {
+			& .marginLeftDesktop2_3 {
 				margin-left: 2.3rem;
 			}
-			& .desktopMarginLeft2_4 {
+			& .marginLeftDesktop2_4 {
 				margin-left: 2.4rem;
 			}
-			& .desktopMarginLeft2_5 {
+			& .marginLeftDesktop2_5 {
 				margin-left: 2.5rem;
 			}
-			& .desktopMarginLeft2_6 {
+			& .marginLeftDesktop2_6 {
 				margin-left: 2.6rem;
 			}
-			& .desktopMarginLeft2_7 {
+			& .marginLeftDesktop2_7 {
 				margin-left: 2.7rem;
 			}
-			& .desktopMarginLeft2_8 {
+			& .marginLeftDesktop2_8 {
 				margin-left: 2.8rem;
 			}
-			& .desktopMarginLeft2_9 {
+			& .marginLeftDesktop2_9 {
 				margin-left: 2.9rem;
 			}
-			& .desktopMarginLeft3 {
+			& .marginLeftDesktop3 {
 				margin-left: 3rem;
 			}
-			& .desktopMarginLeft3_1 {
+			& .marginLeftDesktop3_1 {
 				margin-left: 3.1rem;
 			}
-			& .desktopMarginLeft3_2 {
+			& .marginLeftDesktop3_2 {
 				margin-left: 3.2rem;
 			}
-			& .desktopMarginLeft3_3 {
+			& .marginLeftDesktop3_3 {
 				margin-left: 3.3rem;
 			}
-			& .desktopMarginLeft3_4 {
+			& .marginLeftDesktop3_4 {
 				margin-left: 3.4rem;
 			}
-			& .desktopMarginLeft3_5 {
+			& .marginLeftDesktop3_5 {
 				margin-left: 3.5rem;
 			}
-			& .desktopMarginLeft3_6 {
+			& .marginLeftDesktop3_6 {
 				margin-left: 3.6rem;
 			}
-			& .desktopMarginLeft3_7 {
+			& .marginLeftDesktop3_7 {
 				margin-left: 3.7rem;
 			}
-			& .desktopMarginLeft3_8 {
+			& .marginLeftDesktop3_8 {
 				margin-left: 3.8rem;
 			}
-			& .desktopMarginLeft3_9 {
+			& .marginLeftDesktop3_9 {
 				margin-left: 3.9rem;
 			}
 			& .desktopMarginRight0 {

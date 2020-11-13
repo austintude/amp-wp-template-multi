@@ -242,6 +242,9 @@ figure.header-image {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: "left center right";
+	width: 96vw;
+    margin-left: auto;
+    margin-right: auto;
 & .site-title {
     width: 100%;
     margin-left: auto;

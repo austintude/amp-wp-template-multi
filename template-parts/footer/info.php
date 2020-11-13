@@ -43,6 +43,14 @@ namespace WP_Rig\WP_Rig;
 			$left_footer_grid_title	= get_field('left_footer_grid_title');
 			$middle_footer_grid_title	= get_field('middle_footer_grid_title');
 			$right_footer_grid_title	= get_field('right_footer_grid_title');
+			$physical_and_pobox	= get_field('physical_and_pobox');
+			$first_address_title	= get_field('first_address_title');
+			$second_address_title	= get_field('second_address_title');
+			$second_contact_us_street	= get_field('second_contact_us_street');
+			$second_contact_us_street_suite	= get_field('second_contact_us_street_suite');
+			$second_contact_us_city	= get_field('second_contact_us_city');
+			$second_contact_us_state	= get_field('second_contact_us_state');
+			$second_contact_us_zip	= get_field('second_contact_us_zip');
 			?>
 
 
@@ -80,14 +88,38 @@ namespace WP_Rig\WP_Rig;
 	<address property="address" typeof="PostalAddress">
 	<h5>
 	<?php echo $business_name; ?>
+	<?php if( $physical_and_pobox != null ): { ?>
+		- <em><?php echo $first_address_title; ?> </em>
+		<?php } endif; ?>
 	<br>
 	<span property="streetAddress"><?php echo $contact_us_street; ?>
-<br>
-<?php echo $contact_us_street_suite; ?></span>
+	<br>
+	<?php if( $contact_us_street_suite != null ): { ?>
 
+<?php echo $contact_us_street_suite; ?>
+<br>
+<?php } endif; ?>
+</span>
 	<span property="addressLocality"><?php echo $contact_us_city; ?></span>,
 
 	<span property="addressRegion"><?php echo $contact_us_state; ?></span> <?php echo $contact_us_zip; ?>
+	<?php if( $physical_and_pobox != null ): { ?>
+		<br>
+		<br>
+		<em><?php echo $second_address_title; ?> </em>
+		<br>
+	<span property="streetAddress"><?php echo $second_contact_us_street; ?>
+	<br>
+	<?php if( $second_contact_us_street_suite != null ): { ?>
+
+<?php echo $second_contact_us_street_suite; ?>
+<br>
+<?php } endif; ?>
+</span>
+	<span property="addressLocality"><?php echo $second_contact_us_city; ?></span>,
+
+	<span property="addressRegion"><?php echo $second_contact_us_state; ?></span> <?php echo $second_contact_us_zip; ?>
+		<?php } endif; ?>
 </h5>
 </address>
 </div>

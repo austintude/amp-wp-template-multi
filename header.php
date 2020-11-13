@@ -17,15 +17,7 @@ namespace WP_Rig\WP_Rig;
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<!-- <?php if (null != get_theme_mod( 'translation_locale_1')) : { ?>
-	<link rel="alternate" hreflang="<?php get_theme_mod( 'translation_slug_1'); ?>" href="<?php get_theme_mod( 'translation_locale_1'); ?>" />
-	<?php } endif; ?>
-	<?php if (null != get_theme_mod( 'translation_locale_2')) : { ?>
-	<link rel="alternate" hreflang="<?php get_theme_mod( 'translation_slug_2'); ?>" href="<?php get_theme_mod( 'translation_locale_2'); ?>" />
-	<?php } endif; ?>
-	<?php if (null != get_theme_mod( 'translation_locale_3')) : { ?>
-	<link rel="alternate" hreflang="<?php get_theme_mod( 'translation_slug_1'); ?>" href="<?php get_theme_mod( 'translation_locale_1'); ?>" />
-	<?php } endif; ?> -->
+
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php

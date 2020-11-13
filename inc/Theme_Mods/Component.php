@@ -197,7 +197,7 @@ class Component implements Component_Interface {
 	'type' => 'number',
 	'section' => 'theme_options', // Add a default or your own section
 	'label' => __( '"Desktop" Left & Right Margins' ),
-	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the block css and tag on the same margin number you add here. For example, fullWidth4 if you select a margin width of 4 here.' )
+	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth or fullWidthDesktop to the block css and tag on the same margin number you add here. For example, fullWidth4 if you select a margin width of 4 here.' )
   ]
 );
 $wp_customize->add_control( 'main_margins_mobile',
@@ -205,7 +205,7 @@ $wp_customize->add_control( 'main_margins_mobile',
 	'type' => 'number',
 	'section' => 'theme_options', // Add a default or your own section
 	'label' => __( '"Mobile" Left & Right Margins' ),
-	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the block css and tag on the same margin number you add here. For example, fullWidth4 if you select a margin width of 4 here.' )
+	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth or fullWidthMobile to the block css and tag on the same margin number you add here. For example, fullWidthMobile4 if you select a margin width of 4 here.' )
   ]
 );
 
