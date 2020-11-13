@@ -22,6 +22,7 @@ namespace WP_Rig\WP_Rig;
 
 			$business_name			= get_field('business_name');
 			$contact_us_phone			= get_field('contact_us_phone');
+			$contact_us_phone_title			= get_field('contact_us_phone_title');
 			$contact_us_phone_link			= get_field('contact_us_phone_link');
 			$contact_us_street			= get_field('contact_us_street');
 			$contact_us_street_suite			= get_field('contact_us_street_suite');
@@ -124,6 +125,9 @@ namespace WP_Rig\WP_Rig;
 </address>
 </div>
 <div id="phone">
+<?php if ($contact_us_phone_title != null): { ?>
+	<h5><?php echo $contact_us_phone_title; ?></h5>
+	<?php } endif;?>
 			<span property="telephone"><a href="tel:<?php echo $contact_us_phone_link; ?>" style="color: <?php echo $contact_footer_link_color; '#fff'; ?>;"><?php echo $contact_us_phone; ?></a></span>
 		</div>
 </section>
