@@ -11,6 +11,7 @@ $testimonials_block_title			= get_field('testimonials_block_title');
 $more_testimonials_link			= get_field('more_testimonials_link');
 $more_testimonials_link_txt			= get_field('more_testimonials_link_txt');
 
+$review_count = 0;
 // insert acf repeater here
 
 ?>
@@ -38,45 +39,58 @@ $testimonial_date = get_field('testimonial_date');
 $overall = get_field('overall');
 $testimonial_in_carousel	= get_field('testimonial_in_carousel');
 $star_rating	= get_field('star_rating');
+$review_count = $review_count + 1;
+
 ?>
 <?php  if( $testimonial_in_carousel >= 1 ): { ?>
+
             <li>
+			<script type="text/plain" target="amp-script" id="review_id_<?php echo $review_count; ?>">
+{
+    "review" : [ {
+    "@type" : "Review",
+    "author" : {
+      "@type" : "Person",
+      "name" : "<?php echo $testimonial_author; ?>"
+    },
+    "reviewRating" : {
+      "@type" : "Rating",
+      "ratingValue" : "<?php echo $overall; ?>",
+      "bestRating" : "5",
+      "worstRating" : "0"
+    },
+    "reviewBody" : "<?php echo $testimonial_quote; ?>"
+  } ]
+}
+</script>
 			<div class="starRating">
 									Star Rating:
-									<div class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                                        <meta itemprop="worstRating" content="0">
-                                            <div itemprop="ratingValue">
+									<div class="rating" >
+                                            <div >
                                             <?php echo $star_rating; ?>
 </div> <div>/</div>
-                                            <div itemprop="bestRating">
+                                            <div>
                                             <?php echo $overall; ?>
 </div>
 </div>
                              </div>
-            <blockquote class="blockquote testimonialsCard" itemscope itemtype="http://schema.org/Review">
+            <blockquote class="blockquote testimonialsCard" >
                 <div class="testimonialsContent">
-					<span itemprop="itemReviewed" itemtype="http://schema.org/localBusiness" width="100%" height="100%" >
-
-						<!-- <amp-fit-text width="1" height="1" layout="responsive"> -->
-							<div class="quotes" itemprop="reviewBody">
+							<div class="quotes">
 								<?php echo $testimonial_quote; ?>
 							</div>
-							<!-- </amp-fit-text> -->
 							<div class="authorAndRating">
 							<cite class="testimonialsQuote">
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <?php echo $testimonial_author; ?>
-                    </span>
-                    <meta itemprop="datePublished" content="<?php echo $testimonial_date; ?>">
-                    <span class="testimonialDate">
+                                        <div class="testimonialDate">
                         <?php echo $testimonial_date; ?>
-                    </span>
+                    </div>
 
                 </cite>
 
 							 </div>
 
-					</span>
+					<!-- </span> -->
 
                 </div>
 

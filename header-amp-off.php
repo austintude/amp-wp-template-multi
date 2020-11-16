@@ -71,6 +71,7 @@ color: <?php echo get_theme_mod( 'drop_down_hover_text_color') ?>;
 <?php } endif; ?>
 	</style>
 <?php } endif; ?>
+<?php get_template_part( 'template-parts/content/schema' ); ?>
 </head>
 
 <body <?php body_class(); ?>>

@@ -69,32 +69,33 @@ $contact_us_state	= get_field('contact_us_state');
 $social_link_dets	= get_field('social_link_dets');
 ?>
 
-<ul id="leftRow" vocab="http://schema.org/" typeof="LocalBusiness">
+<ul id="leftRow" >
 <?php  if( $contact_us_phone != null ):  { ?>
 	<li>
 		<a href="tel:<?php echo $contact_us_phone_link; ?>">Phone:
-			<span class="strong" property="telephone">
+			<!-- <span class="strong" property="telephone"> -->
 			<?php echo $contact_us_phone; ?>
-			</span>
+			<!-- </span> -->
 		</a>
 	</li>
 <?php }
 endif;
 ?>
 	<li>
-		<span class="strong" property="address" typeof="PostalAddress">
-			<span property="streetAddress">
+		<!-- <span class="strong" property="address" typeof="PostalAddress"> -->
+			<!-- <span property="streetAddress"> -->
 				<?php echo $contact_us_street; ?>
 				<?php  if( $contact_us_phone != null ):  { ?> <?php echo $contact_us_street_suite; ?> <?php } endif; ?>
-			</span>
-			<span property="addressLocality">
+			<!-- </span> -->
+			<!-- <span property="addressLocality"> -->
 				<?php echo $contact_us_city; ?>
-			</span>,
-			<span property="addressRegion">
+			<!-- </span> -->
+			,
+			<!-- <span property="addressRegion"> -->
 				<?php echo $contact_us_state; ?>
-			</span>
+			<!-- </span> -->
 				<?php echo $contact_us_zip; ?>
-		</span>
+		<!-- </span> -->
 	</li>
 </ul>
 <?php  if( $social_link_dets != null ):  { ?>

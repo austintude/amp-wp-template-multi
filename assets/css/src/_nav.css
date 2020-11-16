@@ -59,12 +59,15 @@
 	/* top: 4em; */
 	top: 0;
 	right: 0;
+	bottom: 0;
 	position: fixed;
 	background: rgba(255, 255, 255, 1);
 	z-index: 14;
     width: 100vw;
     height: 90vh;
-    padding: 7vh 10vw 0vh 10vw;
+	padding: 7vh 10vw 0vh 10vw;
+	overflow-y: scroll;
+    overflow-x: hidden;
 	& .menu-toggle.menuTop {
 		top: -5.4rem;
 		clear: both;
@@ -72,9 +75,52 @@
 	}
 	& .menu-item-has-children {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 2fr;
+		padding-bottom: 1rem;
+		& ul li {
+			display: none;
+		}
+		& li:hover ul li {
+			display: block;
+			transition: 0.2s 1s;
+		}
+		& ul ul li {
+			display: none;
+		}
+		& ul li:hover ul li {
+			display: block;
+			transition: 0.2s 1s;
+		}
+		& ul ul ul li {
+			display: none;
+		}
+		& ul ul li:hover ul li {
+			display: block;
+			transition: 0.2s 1s;
+		}
 		& .menu-item-has-children {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 2fr;
+		& ul li {
+			display: none;
+		}
+		& li:hover ul li {
+			display: block;
+			transition: 0.2s 1s;
+		}
+		& ul ul li {
+			display: none;
+		}
+		& ul li:hover ul li {
+			display: block;
+			transition: 0.2s 1s;
+		}
+		& ul ul ul li {
+			display: none;
+		}
+		& ul ul li:hover ul li {
+			display: block;
+			transition: 0.2s 1s;
+		}
 		}
 	}
 	& .closeX {
@@ -89,24 +135,28 @@
 		content: ">>>";
 		transform: rotate(90deg);
 		padding: 0.4rem 0.2rem;
+		line-height: 3rem;
 	}
 	& ul ul li {
 		display: none;
 	}
 	& ul li:hover ul li {
 		display: block;
+		transition: 1s;
 	}
 	& ul ul ul li {
 		display: none;
 	}
 	& ul ul li:hover ul li {
 		display: block;
+		transition: 1s;
 	}
 	& ul ul ul ul li {
 		display: none;
 	}
 	& ul ul ul li:hover ul li {
 		display: block;
+		transition: 1s;
 	}
 }
 

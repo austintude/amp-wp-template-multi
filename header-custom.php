@@ -71,6 +71,7 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 <?php } endif; ?>
 		</style>
 <?php } endif; ?>
+<?php get_template_part( 'template-parts/content/schema' ); ?>
 </head>
 
 <body <?php body_class(); ?>>
