@@ -134,7 +134,7 @@ class Component implements Component_Interface {
   [
 	'type' => 'number',
 	'section' => 'footer_settings_section', // Add a default or your own section
-	'label' => __( 'Footer Image Width' ),
+	'label' => __( 'Footer Image Height' ),
 	'description' => __( 'Set the height of the footer logo. [use caution, this sets the height for BOTH mobile AND desktop which may not be ideal.]' )
   ]);
   $wp_customize->add_control('footer_text_setting',

@@ -126,6 +126,11 @@ $wp_customize->add_setting('global_styles_options',
 	'default' => '2',
       'transport' => 'refresh',
   ]);
+  $wp_customize->add_setting('desktop_logo_height_adj',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
   $wp_customize->add_control('global_styles_options',
   [
 	  'description' => esc_html__( 'Modify Global Styles like font family, sizes and colors : (Please note, that many of these items - font-size, color, etc - are manually determined within the block so may not change as a result of these modifications)' ),
@@ -188,6 +193,14 @@ $wp_customize->add_control( 'main_margins_mobile',
 	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
 	'label' => __( '"Mobile" Left & Right Margins' ),
 	'description' => __( 'Set the size of the Left & Right margins for mobile devices. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the element in the Additional CSS field in the corresponding Gutenberg block.' )
+  ]
+);
+$wp_customize->add_control( 'desktop_logo_height_adj',
+  [
+	'type' => 'number',
+	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
+	'label' => __( 'Dektop logo height adjustment' ),
+	'description' => __( 'Set the height for the logo that appears in the nav bar (top left corner) on tablet and desktop devices.' )
   ]
 );
   $wp_customize->add_control('global-font-color',
