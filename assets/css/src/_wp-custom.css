@@ -13,3 +13,6 @@
 	}
 }
 
+.wp-block-cover.alignfull {
+	height: auto;
+}
