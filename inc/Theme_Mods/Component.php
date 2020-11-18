@@ -83,6 +83,11 @@ class Component implements Component_Interface {
   [
    'default'        => '',
   ]);
+  $wp_customize->add_setting('top_bar_font_size',
+  [
+	'default' => '',
+      'transport' => 'refresh'
+  ]);
   $wp_customize->add_setting('top_bar_text_color',
   [
 	'default' => '#f7f7f7',
@@ -190,6 +195,13 @@ $wp_customize->add_control('secondary_top_bar_toggle',
 		 'changeFonts' => __( 'Change Defaults' ),
   ]
   ]);
+  $wp_customize->add_control( 'top_bar_font_size',
+  [
+	'type' => 'number',
+	'section' => 'theme_options', // Add a default or your own section
+	'label' => __( 'Top Nav Bar Font-Size adjustment' )
+	  ]
+);
   $wp_customize->add_control('top_bar_text_color',
   [
 	'label' => __( 'top_bar Text Color' ),

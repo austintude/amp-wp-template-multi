@@ -75,6 +75,12 @@
 		height:<?php echo get_theme_mod( 'footer-image-height', '' );?>vh;
 }
 	<?php } endif; ?>
+	<?php if (null != get_theme_mod( 'top_bar_font_size')) : { ?>
+	.secondary-menu-container ul#leftRow li, .secondary-menu-container ul#rightRow li,
+	{
+		font-size:<?php echo get_theme_mod( 'top_bar_font_size', '' );?>rem;
+	}
+		<?php } endif; ?>
 <?php if (null != get_theme_mod( 'main_nav_text_color')) : { ?>
 		.main-navigation a {
     color: <?php echo get_theme_mod( 'main_nav_text_color') ?>;
