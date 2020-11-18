@@ -74,56 +74,56 @@ $wp_customize->add_setting('global_styles_options',
   ]);
   $wp_customize->add_setting('highlight-font-family',
   [
-   'default'        => 'Crimson Text',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('global_font_family',
   [
-   'default'        => 'Roboto Condensed',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('global-font-color',
   [
-   'default'        => '#333',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('color-theme-primary',
   [
-   'default'        => '#e36d60',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('color-theme-secondary',
   [
-   'default'        => '#41848f',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('color-link',
   [
-   'default'        => ' #0073aa',
+   'default'        => ' ',
   ]);
   $wp_customize->add_setting('color-link-visited',
   [
-   'default'        => '#333',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('color-link-active',
   [
-   'default'        => ' #00a0d2',
+   'default'        => ' ',
   ]);
   $wp_customize->add_setting('global-font-size',
   [
-   'default'        => '20',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('global-font-line-height',
   [
-   'default'        => '1.4',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('content-width',
   [
-   'default'        => '45',
+   'default'        => '',
   ]);
   $wp_customize->add_setting('main_margins',
   [
-	'default' => '2',
+	'default' => '',
       'transport' => 'refresh',
   ]);
   $wp_customize->add_setting('main_margins_mobile',
   [
-	'default' => '2',
+	'default' => '',
       'transport' => 'refresh',
   ]);
   $wp_customize->add_setting('desktop_logo_height_adj',

@@ -65,7 +65,7 @@
 <?php } endif; ?>
 <?php if (null != get_theme_mod( 'desktop_logo_height_adj')) : { ?>
 	@media screen and (min-width: 48.1em) {
-.navSecondaryInc .custom-logo {
+		.navSecondaryInc .custom-logo {
 	height: <?php echo get_theme_mod( 'desktop_logo_height_adj', '3' ); ?>rem;
 }
 	}
