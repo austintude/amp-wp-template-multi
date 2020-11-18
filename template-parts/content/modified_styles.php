@@ -37,7 +37,32 @@
 		<?php } endif; ?>
 	}
 <?php } endif; ?>
-
+<?php if (null != get_theme_mod( 'main_margins_mobile')) : { ?>
+.site main#primary {
+	margin-left: <?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
+	margin-right: <?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
+	width: calc(100vw - calc(<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw * 2));
+}
+.site .fullWidth {
+	margin-left: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
+	margin-right: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
+	min-width: 100vw;
+}
+<?php } endif; ?>
+<?php if (null != get_theme_mod( 'main_margins')) : { ?>
+ @media screen and (min-width: 48.1em) {
+	.site main#primary {
+	margin-left: <?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
+	margin-right: <?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
+	width: calc(100vw - calc(<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw * 2));
+	}
+	.site .fullWidth {
+	margin-left: -<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
+	margin-right: -<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
+	min-width: 100vw;
+}
+}
+<?php } endif; ?>
 <?php if (null != get_theme_mod( 'main_nav_text_color')) : { ?>
 		.main-navigation a {
     color: <?php echo get_theme_mod( 'main_nav_text_color') ?>;

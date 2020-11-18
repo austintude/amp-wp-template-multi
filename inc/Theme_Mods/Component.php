@@ -149,18 +149,6 @@ class Component implements Component_Interface {
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
-  $wp_customize->add_setting('site_text_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('site_background_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
   $wp_customize->add_setting('hero_placement_select',
   [
 	'default' => '0',
@@ -177,37 +165,6 @@ class Component implements Component_Interface {
 	'default' => '10',
       'transport' => 'refresh',
   ]);
-
-
-
-  $wp_customize->add_setting('main_margins',
-  [
-	'default' => '2',
-      'transport' => 'refresh',
-  ]);
-  $wp_customize->add_setting('main_margins_mobile',
-  [
-	'default' => '2',
-      'transport' => 'refresh',
-  ]);
-
-
-  $wp_customize->add_control( 'main_margins',
-  [
-	'type' => 'number',
-	'section' => 'theme_options', // Add a default or your own section
-	'label' => __( '"Desktop" Left & Right Margins' ),
-	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth or fullWidthDesktop to the block css and tag on the same margin number you add here. For example, fullWidth4 if you select a margin width of 4 here.' )
-  ]
-);
-$wp_customize->add_control( 'main_margins_mobile',
-  [
-	'type' => 'number',
-	'section' => 'theme_options', // Add a default or your own section
-	'label' => __( '"Mobile" Left & Right Margins' ),
-	'description' => __( 'Set the size of the Left & Right margins wrapping. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth or fullWidthMobile to the block css and tag on the same margin number you add here. For example, fullWidthMobile4 if you select a margin width of 4 here.' )
-  ]
-);
 
 $wp_customize->add_control('secondary_top_bar_toggle',
   [
@@ -232,37 +189,6 @@ $wp_customize->add_control('secondary_top_bar_toggle',
          '' => __( 'Use Default' ),
 		 'changeFonts' => __( 'Change Defaults' ),
   ]
-  ]);
-
-  $wp_customize->add_control('site_font_selection_1',
-  [
-	'description' => esc_html__( 'Name of the Google Font must fit the format First%20Second :' ),
-   'label'   => 'Google Font Selection 1',
-	'section' => 'theme_options',
-   'type'    => 'text',
-  ]);
-  $wp_customize->add_control('site_font_selection_2',
-  [
-	'description' => esc_html__( 'Name of the Google Font must fit the format First%20Second :' ),
-   'label'   => 'Google Font Selection 2',
-	'section' => 'theme_options',
-   'type'    => 'text',
-  ]);
-  $wp_customize->add_control('site_text_color',
-  [
-	'label' => __( 'Site Wide Text Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('site_background_color',
-  [
-	'label' => __( 'Site Wide Background Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
   $wp_customize->add_control('top_bar_text_color',
   [

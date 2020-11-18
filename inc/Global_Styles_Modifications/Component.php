@@ -74,11 +74,11 @@ $wp_customize->add_setting('global_styles_options',
   ]);
   $wp_customize->add_setting('highlight-font-family',
   [
-   'default'        => 'Roboto Condensed',
+   'default'        => 'Crimson Text',
   ]);
   $wp_customize->add_setting('global_font_family',
   [
-   'default'        => 'Crimson Text',
+   'default'        => 'Roboto Condensed',
   ]);
   $wp_customize->add_setting('global-font-color',
   [
@@ -116,9 +116,19 @@ $wp_customize->add_setting('global_styles_options',
   [
    'default'        => '45',
   ]);
+  $wp_customize->add_setting('main_margins',
+  [
+	'default' => '2',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('main_margins_mobile',
+  [
+	'default' => '2',
+      'transport' => 'refresh',
+  ]);
   $wp_customize->add_control('global_styles_options',
   [
-	  'description' => esc_html__( 'Modify Global Styles like font family, sizes and colors :' ),
+	  'description' => esc_html__( 'Modify Global Styles like font family, sizes and colors : (Please note, that many of these items - font-size, color, etc - are manually determined within the block so may not change as a result of these modifications)' ),
 	  'label' => __( 'Modify Global Styles' ),
       'section' => 'global_styles_modifications_settings_section',
       'priority' => 10, // Optional. Order priority to load the control. Default: 10
@@ -163,6 +173,23 @@ $wp_customize->add_setting('global_styles_options',
 	'label' => __( 'Global Content Width' ),
 	'description' => __( 'Set the default width of the content across the entire site.' )
   ]);
+
+  $wp_customize->add_control( 'main_margins',
+  [
+	'type' => 'number',
+	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
+	'label' => __( '"Desktop" Left & Right Margins' ),
+	'description' => __( 'Set the size of the Left & Right margins for tablet and desktop devices. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the element in the Additional CSS field in the corresponding Gutenberg block.' )
+  ]
+);
+$wp_customize->add_control( 'main_margins_mobile',
+  [
+	'type' => 'number',
+	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
+	'label' => __( '"Mobile" Left & Right Margins' ),
+	'description' => __( 'Set the size of the Left & Right margins for mobile devices. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the element in the Additional CSS field in the corresponding Gutenberg block.' )
+  ]
+);
   $wp_customize->add_control('global-font-color',
   [
 	'label' => __( 'Global Font Color' ),

@@ -55,7 +55,7 @@ figure.header-image {
 		height: 15rem;
 	}
 	@media (--content-query) {
-		height: 30rem;
+		height: 38rem;
 		display: grid;
 		margin: 0;
 		& .heroImg img {

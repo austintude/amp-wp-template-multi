@@ -23,6 +23,7 @@ use function remove_filter;
 use function is_feed;
 use function is_preview;
 use function wp_kses_hair;
+use WP_Customize_Image_Control;
 
 /**
  * Class for managing lazy-loading images.
@@ -98,6 +99,10 @@ class Component implements Component_Interface {
 	'default' => '',
       'transport' => 'refresh',
   ]);
+  $wp_customize->add_setting('footer-image-height',
+  [
+   'default'        => '',
+  ]);
 
   $wp_customize->add_control( 'footer_text_size',
   [
@@ -120,20 +125,23 @@ class Component implements Component_Interface {
 		 '3' => __( 'All Pages and Posts' )
   ]
   ]);
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_url_setting', [
+	'label' => 'Footer Image',
+	// 'settings'  => 'carousel_img_settings',
+	'section'   => 'footer_settings_section'
+ ] ));
+ $wp_customize->add_control( 'footer-image-height',
+  [
+	'type' => 'number',
+	'section' => 'footer_settings_section', // Add a default or your own section
+	'label' => __( 'Footer Image Width' ),
+	'description' => __( 'Set the height of the footer logo. [use caution, this sets the height for BOTH mobile AND desktop which may not be ideal.]' )
+  ]);
   $wp_customize->add_control('footer_text_setting',
   [
    'label'   => 'Footer Text Here',
 	'section' => 'footer_settings_section',
    'type'    => 'textarea',
-  ]);
-
-
-
-  $wp_customize->add_control('footer_url_setting',
-  [
-   'label'   => 'Footer Image URL',
-	'section' => 'footer_settings_section',
-   'type'    => 'text',
   ]);
 
   $wp_customize->add_control('footer_text_color',
