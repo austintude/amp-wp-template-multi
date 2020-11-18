@@ -11,6 +11,8 @@
 			$contact_us_city			= get_field('contact_us_city');
 			$contact_us_state			= get_field('contact_us_state');
 			$contact_us_zip			= get_field('contact_us_zip');
+			$business_hours_open			= get_field('business_hours_open');
+			$business_hours_close_at			= get_field('business_hours_close_at');
 			$contact_us_open_datetime			= get_field('contact_us_open_datetime');
 			$contact_us_open_datetime_extra			= get_field('contact_us_open_datetime_extra');
 			$contact_us_open_days_times			= get_field('contact_us_open_days_times');
@@ -37,13 +39,14 @@
 			?>
 
 
-<script type="text/plain" target="amp-script">
+<script type="text/plain" target="amp-script" id="schemaMarkup">
 {
   "@context" : "http://schema.org",
   "@type" : "LocalBusiness",
   "name" : "<?php echo $business_name; ?>",
-  "image" : "<?php echo $cta_loading_image; ?>",
+  "image" : "<?php echo $cta_loading_image['url']; ?>",
   "telephone" : "<?php echo $contact_us_phone; ?>",
+  "hasMap" : "<?php echo $google_map; ?>",
   "address" : {
     "@type" : "PostalAddress",
     "streetAddress" : "<?php echo $contact_us_street; ?> <?php echo $contact_us_street_suite; ?> ",
@@ -57,8 +60,8 @@
       "@type" : "DayOfWeek",
       "name" : "Monday through Saturday"
     },
-    "opens" : "<?php echo $contact_us_open_days_times; ?>",
-    "closes" : "<?php echo $contact_us_closed; ?>"
+    "opens" : "<?php echo $business_hours_open; ?>",
+    "closes" : "<?php echo $business_hours_close_at; ?>"
   },
   <?php $testimonial_quotesloop = new \WP_Query( array( 'post_type' => 'testimonial_quotes', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
@@ -85,9 +88,14 @@ $review_count = $review_count + 1;
       "@type" : "Rating",
       "ratingValue" : "<?php echo $overall; ?>",
       "bestRating" : "5",
-      "worstRating" : "0"
+      "worstRating" : "0",
+	  "reviewAspect": "Service"
     },
-    "reviewBody" : "<?php echo $testimonial_quote; ?>"
+    "reviewBody" : "<?php echo $testimonial_quote; ?>",
+	"itemReviewed": {
+    "@type": "Restaurant",
+    "name": "<?php echo $business_name; ?>"
+  },
   } ]
   <?php endwhile; wp_reset_query();?>
 }

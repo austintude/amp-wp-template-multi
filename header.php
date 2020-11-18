@@ -44,37 +44,7 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 <?php if (null != get_theme_mod( 'site_font_selection_google_toggle')) : { ?>
 <link crossorigin="anonymous" rel="stylesheet" id="ampwpmulti-fonts-css" href="https://fonts.googleapis.com/css?family=<?php echo get_theme_mod( 'site_font_selection_1') ?>:ital,wght@1,100..700&family=<?php echo get_theme_mod( 'site_font_selection_2') ?>:400,400i,600,600i&amp;display=swap" type="text/css" media="all">
 <?php } endif; ?>
-<?php if (null != get_theme_mod( 'main_nav_text_color')) : { ?>
-	<style amp-custom>
-		.main-navigation a {
-    color: <?php echo get_theme_mod( 'main_nav_text_color') ?>;
-}
-.main-navigation ul li.current-menu-item a {
-    color: <?php echo get_theme_mod( 'main_nav_current_color') ?>;
-}
-<?php if (null != get_theme_mod( 'current_gradient_color_start')) : { ?>
-.main-navigation ul li.current-menu-item a:after {
-    background: linear-gradient(90deg,<?php echo get_theme_mod( 'current_gradient_color_start') ?>,<?php echo get_theme_mod( 'current_gradient_color_end') ?>);
-}
-<?php } endif; ?>
-<?php if (null != get_theme_mod( 'drop_down_background_color')) : { ?>
-			.nav--toggle-sub ul ul {
-				background:<?php echo get_theme_mod( 'drop_down_background_color') ?>
-			}
-		<?php } endif; ?>
-<?php if (null != (get_theme_mod( 'drop_down_hover_background_color') || get_theme_mod( 'drop_down_hover_text_color'))): { ?>
-.main-navigation ul ul li a:hover {
-	background: <?php echo get_theme_mod( 'drop_down_hover_background_color') ?>;
-	color: <?php echo get_theme_mod( 'drop_down_hover_text_color') ?>;
-}
-<?php } endif; ?>
-<?php if (null != (get_theme_mod( 'site_text_color') || get_theme_mod( 'site_background_color'))): { ?>
-.site { color: <?php echo get_theme_mod( 'site_text_color', '' ); ?>;
-	background: <?php echo get_theme_mod( 'site_background_color', '' ); ?>
-}
-<?php } endif; ?>
-		</style>
-<?php } endif; ?>
+<?php get_template_part( 'template-parts/content/modified_styles' ); ?>
 <?php get_template_part( 'template-parts/content/schema' ); ?>
 </head>
 
