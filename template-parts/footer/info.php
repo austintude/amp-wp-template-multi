@@ -193,7 +193,7 @@ $social_label = get_sub_field('social_label');
 
 
 		<div id="themeLogo" aria-label="custom logo link">
-		<img src="<?php echo get_theme_mod( 'footer_url_setting', '' ); ?>" <?php  if( get_theme_mod( 'footer-image-height') != null ):  { ?> style="height:<?php echo get_theme_mod( 'footer-image-height', '' );?>vh;"<?php } endif; ?>>
+		<img lightbox src="<?php echo get_theme_mod( 'footer_url_setting', '' ); ?>" <?php  if( get_theme_mod( 'footer-image-height') != null ):  { ?> style="height:<?php echo get_theme_mod( 'footer-image-height', '' );?>vh;"<?php } endif; ?>>
 	</div>
 	<div class="builtBy" style="body {font-size:auto} .builtBy {font-size:<?php echo get_theme_mod( 'footer_text_size', '.8' ); ?>rem;} .builtBy a{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:hover {color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:active{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:focus{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} .builtBy a:visited{color:<?php echo get_theme_mod( 'footer_anchor_text_color', '#fff' ); ?>;} ">
 		<?php echo get_theme_mod( 'footer_text_setting', '' ); ?>
