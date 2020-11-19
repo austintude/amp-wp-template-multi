@@ -59,7 +59,7 @@ namespace WP_Rig\WP_Rig;
 		<div class="leftBlock" vocab="http://schema.org/" typeof="LocalBusiness">
 			<div class="softBlock">
 		<div class="blockTitle">
-		<h4><?php echo $left_footer_grid_title; ?></h4>
+		<h3><?php echo $left_footer_grid_title; ?></h3>
 </div>
 
 
@@ -79,7 +79,7 @@ namespace WP_Rig\WP_Rig;
 </div>
 <div class="middleBlock">
 	<div class="blockTitle">
-		<h4><?php echo $middle_footer_grid_title; ?></h4>
+		<h3><?php echo $middle_footer_grid_title; ?></h3>
 </div>
 
 <div class="blockImages">
@@ -155,7 +155,7 @@ namespace WP_Rig\WP_Rig;
 </div>
 <div class="rightBlock">
 <div class="blockTitle">
-		<h4><?php echo $right_footer_grid_title; ?></h4>
+		<h3><?php echo $right_footer_grid_title; ?></h3>
 </div>
 <div class="blockImages">
 <?php  if( $social_link_dets != null ):  { ?>

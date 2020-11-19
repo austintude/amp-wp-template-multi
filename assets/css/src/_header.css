@@ -61,7 +61,7 @@ figure.header-image {
 		& .heroImg img {
 			display: block;
 			margin: 0 auto;
-			margin-top: -10rem;
+			margin-top: 0rem;
 			/* width: 100vw; */
 			height: 40rem;
 		}
