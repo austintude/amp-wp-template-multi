@@ -43,6 +43,28 @@
 	margin-right: <?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
 	width: calc(100vw - calc(<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw * 2));
 }
+@media screen and (max-width: 48em) {
+.single main#primary {
+		margin: 0 0 auto 0;
+		width: calc(100vw - calc(<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw * 2));
+
+		/* & .entry-footer,
+		& .comments-area,
+		& .primary-sidebar {
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 2.5rem 2em 0;
+		}
+		& .widget-area .widget {
+			margin-left: 0;
+			margin-right: 2rem;
+		}
+		& .site-main .post-navigation {
+			padding: 0 0 2em;
+			margin: 0 2.5rem 2em auto;
+		} */
+	}
+}
 .site .fullWidth {
 	margin-left: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
 	margin-right: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;

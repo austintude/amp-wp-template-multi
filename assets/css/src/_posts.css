@@ -49,10 +49,46 @@
 		margin-top: 0rem;
 	}
 }
-.single main {
+.single main#primary {
 	margin-top: 0;
 	& header,
 	& article {
 		width: 100vw;
+		/* @media (--narrow-menu-query) {
+		& .entry-header {
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 2.5rem auto auto;
+			& h1.entry-title {
+				margin: 1em 2.5rem 1em auto;
+			}
+		}
+		& .entry-content {
+			margin: 1.5em 2rem 0 auto;
+		}
+		& .entry-content>* {
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 2.5rem auto auto;
+		}
+	} */
 	}
+	/* @media (--narrow-menu-query) {
+		& .entry-footer,
+		& .comments-area,
+		& .primary-sidebar {
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 2.5rem 2em 0;
+		}
+		& .widget-area .widget {
+			margin-left: 0;
+			margin-right: 2rem;
+		}
+		& .site-main .post-navigation {
+			padding: 0 0 2em;
+			margin: 0 2.5rem 2em auto;
+		}
+	} */
+
 }
