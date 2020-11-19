@@ -52,7 +52,7 @@ figure.header-image {
 }
 .header-image {
 	& .heroImg img {
-		height: 18rem;
+		height: 15rem;
 	}
 	@media (--content-query) {
 		height: 38rem;
