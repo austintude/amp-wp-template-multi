@@ -16,3 +16,9 @@
 .wp-block-cover.alignfull {
 	height: auto;
 }
+.wp-block-cover.alignwide {
+	height: auto;
+	@media (--content-query) {
+	height: auto;
+	}
+}
