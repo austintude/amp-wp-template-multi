@@ -1,9 +1,9 @@
 .multiWrapper {
-	margin-top: 4rem;
 	max-height: 70rem;
 	max-width: 100vw;
 	@media (--content-query) {
 	max-height: 40rem;
+	margin-top: 4rem;
 	}
 	& .wp-block-cover__inner-container>* {
 	z-index: 10;
