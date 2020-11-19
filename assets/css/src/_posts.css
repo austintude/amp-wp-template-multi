@@ -72,6 +72,9 @@
 			margin: 0 2.5rem auto auto;
 		}
 	} */
+	& .entry-content>* {
+		overflow-wrap: break-word
+	}
 	}
 	/* @media (--narrow-menu-query) {
 		& .entry-footer,
