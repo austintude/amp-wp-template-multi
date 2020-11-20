@@ -357,8 +357,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		$google_fonts = [
-			get_theme_mod( 'highlight-font-family' ) => [ '400', '400i', '700', '700i' ],
-			get_theme_mod( 'global_font_family' )     => [ '400', '400i', '600', '600i' ],
+			get_theme_mod( 'highlight-font-family', 'Roboto Condensed' ) => [ '400', '400i', '700', '700i' ],
+			get_theme_mod( 'global_font_family', 'Crimson Text' )     => [ '400', '400i', '600', '600i' ],
 		];
 
 		/**

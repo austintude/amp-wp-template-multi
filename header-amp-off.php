@@ -42,15 +42,6 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 <?php endwhile; wp_reset_query(); ?>
 <?php get_template_part( 'template-parts/content/modified_styles' ); ?>
 <?php get_template_part( 'template-parts/content/schema' ); ?>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPEE6H28W8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NPEE6H28W8');
-</script>
 </head>
 
 <body <?php body_class(); ?>>
