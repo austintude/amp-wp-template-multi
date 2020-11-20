@@ -51,12 +51,12 @@
 		position: absolute;
 		& ul#leftRow {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			grid-template-columns: 1fr 3fr;
 			font-size: .4rem;
-			place-items: baseline;
+			place-items: center;
 			& li {
 				font-size: .8rem;
-				padding-top: .3rem;
+				padding-top: 0;
 			}
 		}
 
