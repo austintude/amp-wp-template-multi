@@ -51,17 +51,22 @@ figure.header-image {
 }
 }
 .header-image {
+	& amp-img.amp-wp-enforced-sizes[layout=intrinsic]>img {
+		@media (--narrow-menu-query) {
+		object-fit:cover;
+		}
+		@media (--content-query) {
+		object-fit: cover;
+		}
+	}
 	& .heroImg img {
 		height: 15rem;
-		margin-top:-.6rem;
-		@media (--content-query) {
-		margin-top:0;
-		}
 	}
 	@media (--content-query) {
 		height: 38rem;
 		display: grid;
 		margin: 0;
+	grid-area: hero;
 		& .heroImg img {
 			display: block;
 			margin: 0 auto;
@@ -70,7 +75,8 @@ figure.header-image {
 			height: 40rem;
 		}
 & amp-img.amp-wp-enforced-sizes[layout=responsive]>img {
-			height: 40rem;
+	object-fit:cover;
+		height: 40rem;
 		& .heroImg {
 			grid-area: hero;
 			z-index: 1;
@@ -81,9 +87,6 @@ figure.header-image {
 					width: 100vw;
 				}
 			}
-	}
-	@media (--content-query) {
-		object-fit: cover;
 	}
 		}
 
@@ -99,9 +102,6 @@ figure.header-image {
 				width: 100vw;
 			}
 		}
-}
-@media (--content-query) {
-	object-fit: cover;
 }
 	}
 	& .heroImg {
@@ -121,8 +121,7 @@ figure.header-image {
 		z-index: 2;
 		opacity: .3;
 	}
-	display: grid;
-	grid-area: hero;
+
 }
 }
 .header-image.no_clip {

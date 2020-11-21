@@ -72,8 +72,8 @@ $social_link_dets	= get_field('social_link_dets');
 <ul id="leftRow" >
 <?php  if( $contact_us_phone != null ):  { ?>
 	<li>
-		<a href="tel:<?php echo $contact_us_phone_link; ?>">Phone:
-			<!-- <span class="strong" property="telephone"> -->
+		<a href="tel:<?php echo $contact_us_phone_link; ?>">
+					<!-- <span class="strong" property="telephone"> -->
 			<?php echo $contact_us_phone; ?>
 			<!-- </span> -->
 		</a>
