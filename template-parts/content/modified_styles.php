@@ -92,6 +92,13 @@
 }
 	}
 <?php } endif; ?>
+<?php if (null != get_theme_mod( 'desktop_hero_height_adj')) : { ?>
+	@media screen and (min-width: 48.1em) {
+		.header-image, .header-image.polygon, .header-image.wave { {
+	height: <?php echo get_theme_mod( 'desktop_hero_height_adj', '30' ); ?>rem;
+}
+	}
+<?php } endif; ?>
 <?php  if( get_theme_mod( 'footer-image-height') != null ):  { ?>
 	.site-footer .baseBlock #themeLogo img {
 		height:<?php echo get_theme_mod( 'footer-image-height', '' );?>vh;

@@ -237,7 +237,7 @@ figure.header-image {
 
 	}
 	@media (--sidebar-query) {
-		margin-top: 5rem;
+		margin-top: 8rem;
 	}
 	@media (--ipad-landscape-plus-menu-query-max) {
 		margin-top: 2rem;

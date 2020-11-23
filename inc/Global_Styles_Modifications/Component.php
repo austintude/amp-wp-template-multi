@@ -126,6 +126,11 @@ $wp_customize->add_setting('global_styles_options',
 	'default' => '',
       'transport' => 'refresh',
   ]);
+  $wp_customize->add_setting('desktop_hero_height_adj',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
   $wp_customize->add_setting('desktop_logo_height_adj',
   [
 	'default' => '',
@@ -193,6 +198,14 @@ $wp_customize->add_control( 'main_margins_mobile',
 	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
 	'label' => __( '"Mobile" Left & Right Margins' ),
 	'description' => __( 'Set the size of the Left & Right margins for mobile devices. *side note- if you add margins here but wish to remove them for special blocks, add the class fullWidth to the element in the Additional CSS field in the corresponding Gutenberg block.' )
+  ]
+);
+$wp_customize->add_control( 'desktop_hero_height_adj',
+  [
+	'type' => 'number',
+	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
+	'label' => __( 'Dektop Hero height adjustment' ),
+	'description' => __( 'Set the height for the hero image on tablet and desktop devices.' )
   ]
 );
 $wp_customize->add_control( 'desktop_logo_height_adj',
