@@ -110,8 +110,11 @@ figure.header-image {
 		width:100vw;
 		amp-carousel {
 			width: 100vw;
-			& amp-img {
+			& img {
 				width: 100vw;
+				@media (--content-query) {
+				margin: 5rem auto 0;
+				}
 			}
 		}
 		/* height: 40rem; */
