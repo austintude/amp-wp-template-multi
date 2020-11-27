@@ -43,9 +43,7 @@ $hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
 		</div>
 	<?php } endif; ?>
 	<?php if (null != get_theme_mod( 'hero_carousel_toggle') ) : { ?>
-		<!-- <?php
-			get_template_part( 'template-parts/header/hero-amp-carousel-hero-cta' );
-		?> -->
+
 		<?php } else : ?>
 	<?php
 					get_template_part( 'template-parts/content/ctaHero' );

@@ -9,7 +9,7 @@ display: grid;
 grid-template-rows: 1fr;
 grid-template-areas: "hero";
 @media (--mobile-landscape-menu-query) {
-	height: 35rem;
+	height: 18rem;
 }
 }
 
