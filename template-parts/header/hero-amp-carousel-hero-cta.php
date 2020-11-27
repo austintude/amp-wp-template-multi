@@ -1,9 +1,10 @@
 
 
-<div class="oneHeroButton">
+<div class="heroButtons oneHeroButton  <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
+<!--  -->
  <!-- ## Autoplay -->
   <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
-  <amp-carousel width="1600" height="1200" layout="intrinsic" type="slides" autoplay delay="2000" role="region" aria-label="Carousel with autoplay">
+  <amp-carousel width="1600" height="200" layout="intrinsic" type="slides" autoplay delay="5100" role="region" aria-label="Carousel with autoplay">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
@@ -18,6 +19,7 @@ $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
 ?>
+
 <?php  if( $hero_carousel_button_text != null ): { ?>
 <div class="ctaHero">
 <div class="ctaButtonLink">

@@ -158,7 +158,7 @@ figure.header-image {
 		position: absolute;
 	}
 	& amp-carousel {
-		margin-top: 5rem;
+		margin-top: 4rem;
 		@media (--mobile-landscape-menu-query) {
 			margin-top: 1rem;
 		}

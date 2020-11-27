@@ -67,51 +67,10 @@ class Component implements Component_Interface {
 
   $wp_customize->add_setting('carousel_img_settings',
   [
-	'default' => ''
+	'default' => '',
+	'transport' => 'refresh',
 ]);
-
-  $wp_customize->add_control('hero_carousel_toggle',
-  [
-	  'description' => esc_html__( 'Display Hero Carousel menu bar in desktop view : **IMPORTANT**, if you select this option, you must RELOAD the Customizer for the new Carousel Images Section to be viewable' ),
-	  'label' => __( 'Hero Carousel Bar' ),
-      'section' => 'header_image',
-      'priority' => 5, // Optional. Order priority to load the control. Default: 10
-      'type' => 'select',
-      'choices' => [ // Optional.
-         '' => __( 'No Carousel' ),
-		 'heroCarousel' => __( 'Yes Carousel' ),
-  ]
-  ]);
-
-  if (get_theme_mod( 'hero_carousel_toggle') != null) : {
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'carousel_img_select', [
-		'label' => 'Edit My Image',
-		'settings'  => 'carousel_img_settings',
-		'section'   => 'hero_carousel_settings_section'
-	 ] ));
-  }
-endif;
-
-if (get_theme_mod( 'hero_carousel_toggle') == '') :  {
-	$wp_customize->add_setting('hero_text_color',
-	[
-	  'default' => '#f7f7f7',
-		'transport' => 'refresh',
-		'sanitize_callback' => 'sanitize_hex_color'
-	]);
-	$wp_customize->add_setting('hero_tagline_text_color',
-	[
-	  'default' => '#f7f7f7',
-		'transport' => 'refresh',
-		'sanitize_callback' => 'sanitize_hex_color'
-	]);
-	$wp_customize->add_setting('hero_shadow_color',
-	[
-	  'default' => '#333',
-		'transport' => 'refresh',
-		'sanitize_callback' => 'sanitize_hex_color'
-	]);
-	$wp_customize->add_setting('hero_text_grid_toggle',
+$wp_customize->add_setting('hero_text_grid_toggle',
 	[
 	  'default' => '10',
 		'transport' => 'refresh',
@@ -126,7 +85,18 @@ if (get_theme_mod( 'hero_carousel_toggle') == '') :  {
 	'default' => '10',
       'transport' => 'refresh',
   ]);
-
+  $wp_customize->add_control('hero_carousel_toggle',
+  [
+	  'description' => esc_html__( 'Display Hero Carousel menu bar in desktop view : **IMPORTANT**, if you select this option, you must RELOAD the Customizer for the new Carousel Images Section to be viewable' ),
+	  'label' => __( 'Hero Carousel Bar' ),
+      'section' => 'header_image',
+      'priority' => 5, // Optional. Order priority to load the control. Default: 10
+      'type' => 'select',
+      'choices' => [ // Optional.
+         '' => __( 'No Carousel' ),
+		 'heroCarousel' => __( 'Yes Carousel' ),
+  ]
+  ]);
 	  $wp_customize->add_control('hero_text_grid_toggle',
 	  [
 		'label' => __( 'Site Title Grid/No Grid (Default)' ),
@@ -162,6 +132,37 @@ $wp_customize->add_control('hero_tagline_grid_area',
 		 'right' => __( 'Right Grid' )
 	  ]
 ]);
+
+
+  if (get_theme_mod( 'hero_carousel_toggle') != null) : {
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'carousel_img_select', [
+		'label' => 'Edit My Image',
+		'settings'  => 'carousel_img_settings',
+		'section'   => 'hero_carousel_settings_section'
+	 ] ));
+  }
+endif;
+
+if (get_theme_mod( 'hero_carousel_toggle') == '') :  {
+	$wp_customize->add_setting('hero_text_color',
+	[
+	  'default' => '#f7f7f7',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color'
+	]);
+	$wp_customize->add_setting('hero_tagline_text_color',
+	[
+	  'default' => '#f7f7f7',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color'
+	]);
+	$wp_customize->add_setting('hero_shadow_color',
+	[
+	  'default' => '#333',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color'
+	]);
+
 
 
 

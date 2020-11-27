@@ -4,9 +4,9 @@
     position: fixed;
     left: 0;
     z-index: 15;
-    background: rgba(255,255,255,.8);
+    /* background: rgba(255,255,255,.8); */
 	padding: .5rem .5rem;
-	border-radius: 5rem;
+	/* border-radius: 5rem; */
 	top: auto;
 	max-width: 8rem;
 	@media (--content-query) {
@@ -17,12 +17,12 @@
 	position: fixed;
 	left: 1.3em;
 	z-index: 15;
-	background: transparent;
+	/* background: transparent; */
 	border-radius: 0;
 	max-width: 12rem;
 	}
 }
 footer .custom-logo {
 	left: 0;
-	background: transparent;
+	/* background: transparent; */
 }

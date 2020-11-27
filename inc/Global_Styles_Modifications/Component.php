@@ -205,7 +205,7 @@ $wp_customize->add_control( 'desktop_hero_height_adj',
 	'type' => 'number',
 	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
 	'label' => __( 'Dektop Hero height adjustment' ),
-	'description' => __( 'Set the height for the hero image on tablet and desktop devices.' )
+	'description' => __( 'Set the height for the hero image on tablet and desktop devices. Desfault is 30' )
   ]
 );
 $wp_customize->add_control( 'desktop_logo_height_adj',

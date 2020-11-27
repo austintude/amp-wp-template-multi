@@ -55,3 +55,29 @@ left: 3%;
  }
  }
 }
+.titleTagWrapper .heroButtons {
+	/* position: relative;
+	text-align: left;
+	width: 100vw;
+	margin-top: 2rem;
+	z-index: 3;
+	& .amp-carousel-slide {
+		height: 15rem;
+		top: 0rem;
+		position: absolute;
+	} */
+	@media (--content-query) {
+	/* max-width: 20rem; */
+	}
+	& amp-carousel {
+		margin-top: -4rem;
+		@media (--content-query) {
+		margin-top: 1rem;
+		max-width: 20rem;
+	}
+		@media (--mobile-landscape-menu-query) {
+			margin-top: 1rem;
+		}
+	}
+
+}

@@ -49,7 +49,7 @@ function austintatious_plugin_manager() {
 			'name'    => '**Advanced Custom Fields Pro**',
 			'slug'    => 'advanced-custom-fields-pro',
 			'version' => '5.8+',
-			// 'url'     => 'https://github.com/austintude/wprig-wp-options/raw/master/plugins/advanced-custom-fields-pro.zip', // Only for non wp.org plugins.
+			'url'     => 'https://github.com/austintude/wprig-wp-options/raw/master/plugins/advanced-custom-fields-pro.zip', // Only for non wp.org plugins.
 		),
 		array(
 			'name'    => '**AMP**',
