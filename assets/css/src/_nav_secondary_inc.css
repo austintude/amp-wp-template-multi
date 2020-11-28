@@ -69,6 +69,7 @@
 			margin: auto 1rem;
 			text-align: center;
 			direction: rtl;
+			place-items: center;
 			& li {
 				font-size: .8rem;
 				padding-top: .1rem;

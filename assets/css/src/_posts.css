@@ -50,11 +50,12 @@
 	}
 }
 .single main#primary {
-	margin-top: 0;
+	margin-top: -5rem;
 	@media (--narrow-menu-query) {
 	& header,
 	& article {
 		width: 100vw;
+		margin-top: 2rem;
 	}
 		/* @media (--narrow-menu-query) {
 		& .entry-header {
@@ -81,22 +82,4 @@
 		overflow-wrap: break-word
 	}
 	}
-	/* @media (--narrow-menu-query) {
-		& .entry-footer,
-		& .comments-area,
-		& .primary-sidebar {
-			padding-left: 0;
-			padding-right: 0;
-			margin: 0 2.5rem 2em 0;
-		}
-		& .widget-area .widget {
-			margin-left: 0;
-			margin-right: 2rem;
-		}
-		& .site-main .post-navigation {
-			padding: 0 0 2em;
-			margin: 0 2.5rem 2em auto;
-		}
-	} */
-
 }

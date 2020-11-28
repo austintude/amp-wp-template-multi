@@ -57,8 +57,8 @@ else : ?>
 endif;
 ?>
 
-		</div><!-- ctaButtonLink -->
-</div> <!-- ctaHero -->
+		</div>
+</div>
 </div>
 		<?php
 }
