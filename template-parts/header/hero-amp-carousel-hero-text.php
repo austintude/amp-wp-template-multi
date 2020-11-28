@@ -5,7 +5,7 @@
   <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
   <!-- <div class="showOnDesktop">
 	  <h1>Pickle</h1> -->
-  <amp-carousel width="1600" height="500" layout="responsive" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(min-width: 48.1em)">
+  <amp-carousel width="1600" height="500" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(min-width: 48.1em)">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
@@ -72,7 +72,7 @@ endif;
 
 
 
-	<amp-carousel width="1600" height="500" layout="responsive" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 48em) and (min-width: 26.5rem)">
+	<amp-carousel width="1600" height="500" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 48em) and (min-width: 26.5rem)">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
@@ -139,7 +139,7 @@ endif;
 
 
 	<!-- Show on Mobile -->
-	<amp-carousel width="1600" height="1200" layout="responsive" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 26.49em)">
+	<amp-carousel width="1600" height="1200" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 26.49em)">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
