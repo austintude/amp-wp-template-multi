@@ -141,6 +141,25 @@
 	background: <?php echo get_theme_mod( 'site_background_color', '' ); ?>
 }
 <?php } endif; ?>
+<?php if( get_theme_mod( 'hero_clip_select') = 10 ): { ?>
+	.page main#primary {
+    margin-top: 4rem;
+}
+@media screen and (min-width: 48.1em)  {
+	.page main#primary {
+		margin-top: -7rem;
+		}
+	}
+.home.page main#primary {
+		margin-top: 0;
+}
+@media screen and (min-width: 48.1em)  {
+	.home.page main#primary {
+		margin-top: -7rem;
+		}
+	}
+
+	<?php } endif; ?>
 <?php } endif; ?>
 		</style>
 <?php } endif; ?>

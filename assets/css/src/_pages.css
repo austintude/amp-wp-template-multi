@@ -2,16 +2,17 @@
 	& main#primary {
     margin-top: 4rem;
 	position: relative;
-	@media (--content-query) {
+		@media (--content-query) {
 	margin-top: -7rem;
 	}
+
 }
 }
 .home.page {
 	& main#primary {
 		margin-top: 0;
 		position: relative;
-		@media (--content-query) {
+				@media (--content-query) {
 		margin-top: -7rem;
 		}
 	}
