@@ -59,6 +59,9 @@ figure.header-image {
 		object-fit: cover;
 		}
 	}
+	& .amp-carousel-button {
+		display: none;
+	}
 	& .heroImg img {
 		height: 15rem;
 	}
