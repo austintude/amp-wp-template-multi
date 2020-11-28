@@ -141,26 +141,21 @@
 	background: <?php echo get_theme_mod( 'site_background_color', '' ); ?>
 }
 <?php } endif; ?>
-<?php if( get_theme_mod( 'hero_clip_select') = 10 ): { ?>
-	.page main#primary {
-    margin-top: 4rem;
-}
+
+<?php } endif; ?>
+<?php if( get_theme_mod( 'hero_clip_select') == 10 ): { ?>
 @media screen and (min-width: 48.1em)  {
 	.page main#primary {
-		margin-top: -7rem;
+		margin-top: 0rem;
 		}
 	}
-.home.page main#primary {
-		margin-top: 0;
-}
 @media screen and (min-width: 48.1em)  {
 	.home.page main#primary {
-		margin-top: -7rem;
+		margin-top: 0rem;
 		}
 	}
 
 	<?php } endif; ?>
-<?php } endif; ?>
 		</style>
 <?php } endif; ?>
 
