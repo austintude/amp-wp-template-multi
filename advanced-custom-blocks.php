@@ -9,11 +9,12 @@ function my_acf_init() {
 		acf_register_block(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
-			'description'		=> __('A custom testimonial block.'),
+			'description'		=> __('A chicken testimonial block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
+			'render_template'	=> 'template-parts/block/content-testimonial.php',
 			'category'			=> 'formatting',
 			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'testimonial', 'quote' ),
+			'keywords'			=> array( 'testimonial', 'poo' ),
 		));
 		// register a testimonial block
 		acf_register_block(array(
@@ -21,6 +22,7 @@ function my_acf_init() {
 			'title'				=> __('Block of Cards'),
 			'description'		=> __('A custom block for cards block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
+			'render_template'	=> 'template-parts/block/content-card-block.php',
 			'category'			=> 'formatting',
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'cards', 'block' ),

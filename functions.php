@@ -24,6 +24,8 @@ require get_template_directory() . '/inc/wordpress-shims.php';
 // Include Require Plugins Admin Message.
 require get_template_directory() . '/inc/Required_Plugins/Component.php';
 
+// Include Advanced Custom Blocks Admin Message.
+// require get_template_directory() . '/inc/Advanced_Custom_Blocks/Component.php';
 // Setup autoloader (via Composer or custom).
 if ( file_exists( get_template_directory() . '/vendor/autoload.php' ) ) {
 	require get_template_directory() . '/vendor/autoload.php';

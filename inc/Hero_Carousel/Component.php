@@ -122,7 +122,7 @@ $wp_customize->add_setting('hero_text_grid_toggle',
 ]);
 $wp_customize->add_control('hero_tagline_grid_area',
 [
-  'label' => __( 'Site Title Location' ),
+  'label' => __( 'Site Tagline Location' ),
   'section' => 'header_image',
   'priority' => 20, // Optional. Order priority to load the control. Default: 10
   'type' => 'select',

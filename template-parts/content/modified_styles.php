@@ -35,7 +35,7 @@
 		<?php if (null != get_theme_mod( 'color-link-active')) : { ?>
 			--color-link-active: <?php echo get_theme_mod( 'color-link-active') ?>;
 		<?php } endif; ?>
-	}
+		}
 <?php } endif; ?>
 <?php if (null != get_theme_mod( 'main_margins_mobile')) : { ?>
 .site main#primary {
@@ -155,7 +155,10 @@
 		}
 	}
 
+
+
 	<?php } endif; ?>
+
 		</style>
 <?php } endif; ?>
 

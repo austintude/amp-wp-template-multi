@@ -26,7 +26,10 @@
 	--color-theme-white: #ecf0f1;
 	--color-custom-daylight: #97c0b7;
 	--color-custom-sun: #eee9d1;
-
+	--button-background-color: #e6e6e6;
+	--button-txt-color: rgba(0, 0, 0, 0.8);
+	--button-hover-txt-color: rgba(0, 0, 0, 0.8);
+	--button-border-color: #ccc #ccc #bbb;
 	--color-link: #0073aa;
 	--color-link-visited: #333;
 	--color-link-active: #00a0d2;

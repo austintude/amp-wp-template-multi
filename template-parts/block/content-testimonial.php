@@ -11,11 +11,14 @@ $avatar = get_field('avatar');
 // create id attribute for specific styling
 $id = 'testimonial-' . $block['id'];
 
+// create additionnal class options from block additional css settings
+$add_class = $block['className'] ? '' . $block['className'] : '';
+
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
-<blockquote id="<?php echo $id; ?>" class="testimonial <?php echo $align_class; ?>">
+<blockquote id="<?php echo $id; ?>" class="testimonial<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
     <p><?php the_field('testimonial'); ?></p>
     <cite>
     	<img src="<?php echo $avatar['url']; ?>" alt="<?php echo $avatar['alt']; ?>" />
