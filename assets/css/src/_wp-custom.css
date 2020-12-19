@@ -22,3 +22,9 @@
 	height: auto;
 	}
 }
+
+.block-editor-page .block-editor-writing-flow {
+	& .acf-block-preview {
+	border: .5px solid rgba(0,0,0,.04);
+	}
+}

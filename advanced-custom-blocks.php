@@ -6,26 +6,66 @@ function my_acf_init() {
 	if( function_exists('acf_register_block') ) {
 
 		// register a testimonial block
-		acf_register_block(array(
-			'name'				=> 'testimonial',
-			'title'				=> __('Testimonial'),
-			'description'		=> __('A chicken testimonial block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'render_template'	=> 'template-parts/block/content-testimonial.php',
-			'category'			=> 'formatting',
-			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'testimonial', 'poo' ),
+		acf_register_block_type( array(
+			'title'				=> __( 'Testimonial Wrapper' ),
+			'name'				=> 'testimonial_wrapper',
+			'render_template'	=> 'template-parts/block/content-testimonial-wrapper.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
-		// register a testimonial block
-		acf_register_block(array(
-			'name'				=> 'card_block',
-			'title'				=> __('Block of Cards'),
-			'description'		=> __('A custom block for cards block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'render_template'	=> 'template-parts/block/content-card-block.php',
-			'category'			=> 'formatting',
-			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'cards', 'block' ),
+		acf_register_block_type( array(
+			'title'			=> __( 'Grid w/ InnerBlock' ),
+			'name'			=> 'grid_cards',
+			'render_template'	=> 'template-parts/block/content-grid-cards.php',
+			'mode'			=> 'preview',
+			'icon'			=> 'dashicons-schedule',
+			'supports'		=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Single Card' ),
+			'name'				=> 'single_card',
+			'render_template'	=> 'template-parts/block/content-single-card.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Animation Block' ),
+			'name'				=> 'animation_block',
+			'render_template'	=> 'template-parts/block/content-animation-block.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Custom Button' ),
+			'name'				=> 'custom_button',
+			'render_template'	=> 'template-parts/block/content-custom-button.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 	}
 }

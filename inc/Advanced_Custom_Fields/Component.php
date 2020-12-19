@@ -14,7 +14,7 @@
  *
  * */
 
- if( function_exists('acf_add_local_field_group') ):
+if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array(
 		'key' => 'group_5f61132ea0e4c',
@@ -225,346 +225,16 @@
 	));
 
 	acf_add_local_field_group(array(
-		'key' => 'group_5f456f8ece332',
-		'title' => 'Block Hook',
-		'fields' => array(
-			array(
-				'key' => 'field_5f4570eb8bcf2',
-				'label' => 'Card Block',
-				'name' => 'card_block',
-				'type' => 'repeater',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'collapsed' => '',
-				'min' => 0,
-				'max' => 0,
-				'layout' => 'table',
-				'button_label' => '',
-				'sub_fields' => array(
-					array(
-						'key' => 'field_5f4571208bcf3',
-						'label' => 'card_content',
-						'name' => 'card_content',
-						'type' => 'wysiwyg',
-						'instructions' => '',
-						'required' => 0,
-						'conditional_logic' => 0,
-						'wrapper' => array(
-							'width' => '',
-							'class' => '',
-							'id' => '',
-						),
-						'default_value' => '',
-						'tabs' => 'all',
-						'toolbar' => 'full',
-						'media_upload' => 1,
-						'delay' => 0,
-					),
-				),
-			),
-			array(
-				'key' => 'field_5f4571ee3bde2',
-				'label' => 'card_block_number',
-				'name' => 'card_block_number',
-				'type' => 'text',
-				'instructions' => 'could be number or letter or combination of both, but must not include spaces AND must be unique',
-				'required' => 1,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => 1,
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
-			),
-		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'elements',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => true,
-		'description' => '',
-	));
-
-	acf_add_local_field_group(array(
-		'key' => 'group_5f773f78048c2',
+		'key' => 'group_5fd960c754b5d',
 		'title' => 'Block of Cards',
 		'fields' => array(
-			array(
-				'key' => 'field_5f773fa187d25',
-				'label' => 'card_title',
-				'name' => 'card_title',
-				'type' => 'text',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
-			),
-			array(
-				'key' => 'field_5f773fb787d26',
-				'label' => 'card_subtitle',
-				'name' => 'card_subtitle',
-				'type' => 'text',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
-			),
-			array(
-				'key' => 'field_5f773fbf87d27',
-				'label' => 'card_content',
-				'name' => 'card_content',
-				'type' => 'text',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
-			),
-			array(
-				'key' => 'field_5f773fca87d28',
-				'label' => 'card_img',
-				'name' => 'card_img',
-				'type' => 'image',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'return_format' => 'array',
-				'preview_size' => 'medium',
-				'library' => 'all',
-				'min_width' => '',
-				'min_height' => '',
-				'min_size' => '',
-				'max_width' => '',
-				'max_height' => '',
-				'max_size' => '',
-				'mime_types' => '',
-			),
-			array(
-				'key' => 'field_5fd2468b23685',
-				'label' => 'Same Size',
-				'name' => 'same_size',
-				'type' => 'true_false',
-				'instructions' => 'Do you want the cards in this grid to all be stretch to a consistent height?',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => 'Default is YES. If you want the cards to be inconsistent heights in this grid, you must deselect this feature.',
-				'default_value' => 1,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-			array(
-				'key' => 'field_5fd1129fc9d54',
-				'label' => 'New Card',
-				'name' => 'new_card',
-				'type' => 'flexible_content',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'layouts' => array(
-					'layout_5fd113176604a' => array(
-						'key' => 'layout_5fd113176604a',
-						'name' => 'wysiwig',
-						'label' => 'WYSIWIG',
-						'display' => 'block',
-						'sub_fields' => array(
-							array(
-								'key' => 'field_5fd11408c9d56',
-								'label' => 'whateva',
-								'name' => 'whateva',
-								'type' => 'wysiwyg',
-								'instructions' => '',
-								'required' => 0,
-								'conditional_logic' => 0,
-								'wrapper' => array(
-									'width' => '',
-									'class' => '',
-									'id' => '',
-								),
-								'default_value' => '',
-								'tabs' => 'all',
-								'toolbar' => 'full',
-								'media_upload' => 1,
-								'delay' => 0,
-							),
-							array(
-								'key' => 'field_5fd2cb47ee9a2',
-								'label' => 'card_has_cta_button',
-								'name' => 'card_has_cta_button',
-								'type' => 'true_false',
-								'instructions' => '',
-								'required' => 0,
-								'conditional_logic' => 0,
-								'wrapper' => array(
-									'width' => '',
-									'class' => '',
-									'id' => '',
-								),
-								'message' => '',
-								'default_value' => 0,
-								'ui' => 0,
-								'ui_on_text' => '',
-								'ui_off_text' => '',
-							),
-							array(
-								'key' => 'field_5f773fd087d29',
-								'label' => 'card_cta',
-								'name' => 'card_cta',
-								'type' => 'text',
-								'instructions' => '',
-								'required' => 0,
-								'conditional_logic' => array(
-									array(
-										array(
-											'field' => 'field_5fd2cb47ee9a2',
-											'operator' => '==',
-											'value' => '1',
-										),
-									),
-								),
-								'wrapper' => array(
-									'width' => '',
-									'class' => '',
-									'id' => '',
-								),
-								'default_value' => '',
-								'placeholder' => '',
-								'prepend' => '',
-								'append' => '',
-								'maxlength' => '',
-							),
-							array(
-								'key' => 'field_5f773fdd987be',
-								'label' => 'card_cta_link',
-								'name' => 'card_cta_link',
-								'type' => 'text',
-								'instructions' => '',
-								'required' => 0,
-								'conditional_logic' => array(
-									array(
-										array(
-											'field' => 'field_5fd2cb47ee9a2',
-											'operator' => '==',
-											'value' => '1',
-										),
-									),
-								),
-								'wrapper' => array(
-									'width' => '',
-									'class' => '',
-									'id' => '',
-								),
-								'default_value' => '',
-								'placeholder' => '',
-								'prepend' => '',
-								'append' => '',
-								'maxlength' => '',
-							),
-							array(
-								'key' => 'field_5f774001987bf',
-								'label' => 'card_cta_is_lightbox',
-								'name' => 'card_cta_is_lightbox',
-								'type' => 'text',
-								'instructions' => 'default is empty unless is lightbox then YES',
-								'required' => 0,
-								'conditional_logic' => array(
-									array(
-										array(
-											'field' => 'field_5f773fdd987be',
-											'operator' => '!=empty',
-										),
-									),
-								),
-								'wrapper' => array(
-									'width' => '',
-									'class' => '',
-									'id' => '',
-								),
-								'default_value' => '',
-								'placeholder' => '',
-								'prepend' => '',
-								'append' => '',
-								'maxlength' => '',
-							),
-						),
-						'min' => '',
-						'max' => '',
-					),
-				),
-				'button_label' => 'Add Row',
-				'min' => '',
-				'max' => '',
-			),
 		),
 		'location' => array(
 			array(
 				array(
 					'param' => 'block',
 					'operator' => '==',
-					'value' => 'acf/card-block',
+					'value' => 'all',
 				),
 			),
 		),
@@ -1893,6 +1563,73 @@
 	));
 
 	acf_add_local_field_group(array(
+		'key' => 'group_5fda76981afee',
+		'title' => 'Custom Button',
+		'fields' => array(
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/custom-button',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5fd94ebb1cb5e',
+		'title' => 'Grid w/ InnerBlock',
+		'fields' => array(
+			array(
+				'key' => 'field_5fda73412856f',
+				'label' => 'Same Size',
+				'name' => 'same_size',
+				'type' => 'true_false',
+				'instructions' => 'Do you want the cards in this grid to all be stretched to a consistent height?',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => 'Default is YES. If you want the cards to be inconsistent heights in this grid, you must deselect this feature.',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/grid-cards',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
 		'key' => 'group_5eceb8453d4a9',
 		'title' => 'Guest Reviews Block',
 		'fields' => array(
@@ -2419,7 +2156,31 @@
 				array(
 					'param' => 'block',
 					'operator' => '==',
-					'value' => 'acf/card-block',
+					'value' => 'acf/custom-button',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5fd9664292980',
+		'title' => 'Single Card',
+		'fields' => array(
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/grid-cards',
 				),
 			),
 		),
@@ -2615,4 +2376,4 @@
 		'description' => '',
 	));
 
- 	endif;
+	endif;

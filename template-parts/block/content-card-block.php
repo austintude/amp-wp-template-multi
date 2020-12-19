@@ -23,6 +23,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
 <section id="<?php echo $id; ?>" class="gridCardLoop newCard<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
+
 <?php // Check value exists.
 if( have_rows('new_card') ):
 
@@ -35,6 +36,8 @@ if( have_rows('new_card') ):
 			?>
 			<div <?php if(null != $same_size): ?>class="cardContent"<?php endif; ?>>
 				<div  <?php if(null == $same_size): ?>class="cardContent"<?php endif; ?>>
+					<InnerBlocks  />
+
 					<?php the_sub_field('whateva'); ?>
 					<?php if(null != $card_has_cta_button): ?>
 					<button <?php if(null != ($button_background_color || $box_shadow_color) ): { ?>style="

@@ -14,6 +14,7 @@
 	--hvr-box-shadow:  rgba(0, 0, 0, 0);
 	--hvr-background-color: rgba(32, 152, 209, 0.75);
 	--hvr-button-txt-color: #ffffff;
+	--hvr-button-hover-txt-color: #ffffff;
 	--hvr-box-shadow-glow:  rgba(0, 0, 0, 0.6);
 	--hvr-shadow-box-shadow:  rgba(0, 0, 0, 0.5);
 	--hvr-outset-box-shadow:  rgba(0, 0, 0, 0.6);
@@ -21,6 +22,17 @@
 	--hvr-radial-background-pt1: rgba(0, 0, 0, 0.35);
 	--hvr-radial-background-pt2: rgba(0, 0, 0, 0);
 	--hvr-curl-box-shadow: rgba(0, 0, 0, 0.4);
+}
+.acf-button-block {
+	& a {
+		color: var(--hvr-button-txt-color);
+		text-decoration: none;
+	}
+	& a:hover,
+	& a:focus,
+	& a:active {
+		color: var(--hvr-button-hover-txt-color);
+	}
 }
 .hvr-grow {
 	display: inline-block;
