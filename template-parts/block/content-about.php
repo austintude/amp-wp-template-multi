@@ -11,6 +11,8 @@ $button_hover_effect_options = get_field('button_hover_effect_options');
 $button_background_color =  get_field('button_background_color');
 $box_shadow_color =  get_field('box_shadow_color');
 $button_hover_color =  get_field('button_hover_color');
+$full_width_toggle =  get_field('full_width_toggle');
+
 
 // create id attribute for specific styling
 $id = 'newCard-' . $block['id'];
@@ -22,7 +24,7 @@ $add_class = $block['className'] ? '' . $block['className'] : '';
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
-<section id="<?php echo $id; ?>" class="gridCardLoop newCard<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
+<section id="<?php echo $id; ?>" class="gridCardLoop newCard<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; if (!empty($full_width_toggle)) : echo 'fullWidth'; endif; ?>">
 
 
 			<div <?php if(null != $same_size): ?>class="cardContent"<?php endif; ?>>

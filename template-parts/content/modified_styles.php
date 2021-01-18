@@ -70,6 +70,11 @@
 	margin-right: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
 	min-width: 100vw;
 }
+.site .fullWidthMobile {
+	margin-left: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
+	margin-right: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
+	min-width: 100vw;
+}
 <?php } endif; ?>
 <?php if (null != get_theme_mod( 'main_margins')) : { ?>
  @media screen and (min-width: 48.1em) {
@@ -79,6 +84,11 @@
 	width: calc(100vw - calc(<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw * 2));
 	}
 	.site .fullWidth {
+	margin-left: -<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
+	margin-right: -<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
+	min-width: 100vw;
+}
+.site .fullWidthDesktop {
 	margin-left: -<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
 	margin-right: -<?php echo get_theme_mod( 'main_margins', '2' ); ?>vw;
 	min-width: 100vw;

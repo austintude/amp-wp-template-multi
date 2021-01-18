@@ -67,6 +67,54 @@ function my_acf_init() {
 				'jsx' 			=> true,
 			]
 		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Multi Use Block' ),
+			'name'				=> 'multi_use',
+			'render_template'	=> 'template-parts/block/content-multi-use-block.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Has Side Bar' ),
+			'name'				=> 'has_side_bar',
+			'render_template'	=> 'template-parts/block/content-has-side-bar.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Side Bar Menu Items' ),
+			'name'				=> 'side_bar_block_items',
+			'render_template'	=> 'template-parts/block/content-side-bar-menu-items.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Side Bar Block Item' ),
+			'name'				=> 'side_bar_block_item',
+			'render_template'	=> 'template-parts/block/content-side-bar-block-item.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
 	}
 }
 function my_acf_block_render_callback( $block ) {

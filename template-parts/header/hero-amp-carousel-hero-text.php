@@ -26,10 +26,10 @@ $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
 ?>
   <div>
-	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color, '#fff'; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color, '#000'; ?>;">
+	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>;">
 	<?php echo $hero_carousel_h1; ?>
 	  </h1>
-	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color, '#fff'; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color, '#000'; ?>;">
+	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>;">
 	  <?php echo $hero_carousel_h2; ?>
 	</h2>
 
