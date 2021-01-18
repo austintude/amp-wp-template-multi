@@ -12,7 +12,13 @@
 
 // vars
 $hero_carousel_h1 = get_field('hero_carousel_h1');
+$hero_carousel_h1_font_size = get_field('hero_carousel_h1_font_size');
+$hero_carousel_h1_font_size_tablet = get_field('hero_carousel_h1_font_size_tablet');
+$hero_carousel_h1_font_size_mobile = get_field('hero_carousel_h1_font_size_mobile');
 $hero_carousel_h2 = get_field('hero_carousel_h2');
+$hero_carousel_h2_font_size = get_field('hero_carousel_h2_font_size');
+$hero_carousel_h2_font_size_tablet = get_field('hero_carousel_h2_font_size_tablet');
+$hero_carousel_h2_font_size_mobile = get_field('hero_carousel_h2_font_size_mobile');
 
 $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
@@ -24,12 +30,13 @@ $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
+
 ?>
   <div>
-	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>;">
+	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h1_font_size;?>rem;">
 	<?php echo $hero_carousel_h1; ?>
 	  </h1>
-	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>;">
+	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h2_font_size;?>rem;">
 	  <?php echo $hero_carousel_h2; ?>
 	</h2>
 
@@ -79,7 +86,13 @@ endif;
 
 // vars
 $hero_carousel_h1 = get_field('hero_carousel_h1');
+$hero_carousel_h1_font_size = get_field('hero_carousel_h1_font_size');
+$hero_carousel_h1_font_size_tablet = get_field('hero_carousel_h1_font_size_tablet');
+$hero_carousel_h1_font_size_mobile = get_field('hero_carousel_h1_font_size_mobile');
 $hero_carousel_h2 = get_field('hero_carousel_h2');
+$hero_carousel_h2_font_size = get_field('hero_carousel_h2_font_size');
+$hero_carousel_h2_font_size_tablet = get_field('hero_carousel_h2_font_size_tablet');
+$hero_carousel_h2_font_size_mobile = get_field('hero_carousel_h2_font_size_mobile');
 
 $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
@@ -93,10 +106,10 @@ $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
 ?>
   <div>
-	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color, '#000'; ?>;">
+	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h1_font_size_tablet;?>rem;">
 	<?php echo $hero_carousel_h1; ?>
 	  </h1>
-	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color, '#000'; ?>;">
+	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h2_font_size_tablet;?>rem;">
 	  <?php echo $hero_carousel_h2; ?>
 	</h2>
 
@@ -146,7 +159,13 @@ endif;
 
 // vars
 $hero_carousel_h1 = get_field('hero_carousel_h1');
+$hero_carousel_h1_font_size = get_field('hero_carousel_h1_font_size');
+$hero_carousel_h1_font_size_tablet = get_field('hero_carousel_h1_font_size_tablet');
+$hero_carousel_h1_font_size_mobile = get_field('hero_carousel_h1_font_size_mobile');
 $hero_carousel_h2 = get_field('hero_carousel_h2');
+$hero_carousel_h2_font_size = get_field('hero_carousel_h2_font_size');
+$hero_carousel_h2_font_size_tablet = get_field('hero_carousel_h2_font_size_tablet');
+$hero_carousel_h2_font_size_mobile = get_field('hero_carousel_h2_font_size_mobile');
 
 $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
@@ -160,10 +179,10 @@ $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
 ?>
   <div>
-	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color, '#000'; ?>;">
+	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h1_font_size_mobile;?>rem;">
 	<?php echo $hero_carousel_h1; ?>
 	  </h1>
-	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color, '#000'; ?>;">
+	  <h2 class="tagline <?php echo get_theme_mod( 'hero_tagline_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h2_font_size_mobile;?>rem;">
 	  <?php echo $hero_carousel_h2; ?>
 	</h2>
 
