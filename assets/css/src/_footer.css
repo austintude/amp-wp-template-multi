@@ -40,6 +40,7 @@
 		@media (--content-query) {
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 			grid-gap: 2rem;
+			padding-bottom: 2rem;
 			/* padding: 0 2rem; */
 			/* margin: 0 5rem 8rem; */
 		}
@@ -92,6 +93,7 @@
 		text-align: left;
 		padding-left: 2rem;
 		padding-right: 2rem;
+		place-items: center;
 		& amp-img {
 
 			/* width: 100%; */

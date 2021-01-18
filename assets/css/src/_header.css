@@ -159,7 +159,7 @@ figure.header-image {
 	margin-top: 2rem;
 	z-index: 3;
 	& .amp-carousel-slide {
-		height: 15rem;
+		/* height: 15rem; */
 		top: 0rem;
 		position: absolute;
 	}
