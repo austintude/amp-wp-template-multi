@@ -70,8 +70,9 @@
 			}
 		}
 		& #businessSocial {
-			grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
 			display: grid;
+			grid-gap: 1rem;
 		}
 		& img {
 			max-height: 6rem;
