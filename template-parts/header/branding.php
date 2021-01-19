@@ -20,12 +20,7 @@ $hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
 	&nbsp;
 </div>
 <?php the_custom_logo(); ?>
-<div class="titleTagWrapper
-<?php if (null != get_theme_mod( 'hero_text_grid_toggle') ) : { ?>
-	heroTextno_grid
-<?php } else : ?>
-	heroText<?php echo get_theme_mod( 'hero_text_grid_toggle', '' ); ?>
-<?php endif; ?>">
+<div class="titleTagWrapper	heroText<?php echo get_theme_mod( 'hero_text_grid_toggle', '' ); ?>">
 	<?php if( $hero_tagline_grid_area == $hero_title_grid_area ): { ?>
 		<div class="<?php echo get_theme_mod( 'hero_title_grid_area', 'center' ); ?>gridHero">
 	<?php } endif; ?>

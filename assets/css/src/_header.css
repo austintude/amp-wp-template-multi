@@ -164,7 +164,7 @@ figure.header-image {
 		position: absolute;
 	}
 	& amp-carousel {
-		margin-top: 4rem;
+		margin-top: 0rem;
 		@media (--mobile-landscape-menu-query) {
 			margin-top: 1rem;
 		}
@@ -253,7 +253,7 @@ figure.header-image {
 	}
 	@media (--content-query) {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 14% 1fr 14%;
 	grid-template-areas: "left center right";
 	width: 96vw;
     margin-left: auto;
