@@ -52,7 +52,9 @@
 		text-align: left;
 
 	}
-
+& .middleBlock .blockImages > * {
+    width: 80%;
+}
 	& .middleBlock,
 	& .rightBlock {
 		display: flex;
