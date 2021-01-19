@@ -24,6 +24,7 @@ use function remove_filter;
 use function is_feed;
 use function is_preview;
 use function wp_kses_hair;
+use WP_Customize_Image_Control;
 
 /**
  * Class for managing lazy-loading images.
@@ -123,7 +124,6 @@ $wp_customize->add_section( 'pop_up_box_options',[
    'default'        => '',
    'transport' => 'refresh'
   ]);
-
   $wp_customize->add_setting('pop_up_box_form_url',
   [
    'default'        => '',
@@ -211,14 +211,12 @@ $wp_customize->add_control('pop_up_box_title_setting',
 	'type' => 'color',
 	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
-  $wp_customize->add_control('pop_up_box_img',
-  [
-	'label'   => __( 'pop_up_box Image URL' ),
-	'section' => 'pop_up_box_settings_section',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-   'type'    => 'text',
-   'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
+
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'pop_up_box_img', [
+	'label' => 'Pop Up Box Image',
+	// 'settings'  => 'carousel_img_settings',
+	'section'   => 'pop_up_box_settings_section'
+ ] ));
   $wp_customize->add_control('pop_up_box_form_url',
   [
 	'label'   => __( 'pop_up_box form URL' ),
