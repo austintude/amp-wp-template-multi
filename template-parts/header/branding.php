@@ -21,7 +21,7 @@ $hero_title_grid_area = get_theme_mod( 'hero_title_grid_area');
 </div>
 <?php the_custom_logo(); ?>
 <div class="titleTagWrapper
-<?php if (null != get_theme_mod( 'hero_carousel_toggle') ) : { ?>
+<?php if (null != get_theme_mod( 'hero_text_grid_toggle') ) : { ?>
 	heroTextno_grid
 <?php } else : ?>
 	heroText<?php echo get_theme_mod( 'hero_text_grid_toggle', '' ); ?>
