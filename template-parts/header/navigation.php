@@ -55,7 +55,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 
 	<?php if (null != get_theme_mod( 'secondary_top_bar_toggle') ) : { ?>
-<div class="secondary-menu-container" style="color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>; #leftRow, #rightRow {font-size:<?php echo get_theme_mod( 'top_bar_text_size', '.8' ); ?>rem;} #leftRow a, #rightRow a{color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>;} #leftRow a:hover, #rightRow a:hover {color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>;} #leftRow a:active, #rightRow a:active{color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>;} #leftRow a:focus, #rightRow a:focus{color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>;} #leftRow a:visited, #rightRow a:visited{color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>;}">
+<div class="secondary-menu-container" style="color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>; ">
 <?php $contact_items_loop = new \WP_Query( array( 'post_type' => 'contact_items', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $contact_items_loop->have_posts() ) : $contact_items_loop->the_post();

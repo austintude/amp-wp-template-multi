@@ -64,11 +64,7 @@ class Component implements Component_Interface {
 	'default' => '10',
       'transport' => 'refresh',
   ]);
-  $wp_customize->add_setting('secondary_top_bar_toggle',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-  ]);
+
   $wp_customize->add_setting('site_font_selection_1',
   [
 	'default' => '',
@@ -83,77 +79,7 @@ class Component implements Component_Interface {
   [
    'default'        => '',
   ]);
-  $wp_customize->add_setting('top_bar_font_size',
-  [
-	'default' => '',
-      'transport' => 'refresh'
-  ]);
-  $wp_customize->add_setting('top_bar_text_color',
-  [
-	'default' => '#f7f7f7',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('top_bar_anchor_text_color',
-  [
-	'default' => '#f7f7f7',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('top_bar_background_color',
-  [
-	'default' => '#333',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('nav_bar_background_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('main_nav_text_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('main_nav_current_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('current_gradient_color_start',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('current_gradient_color_end',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('drop_down_background_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('drop_down_hover_background_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
-  $wp_customize->add_setting('drop_down_hover_text_color',
-  [
-	'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ]);
+
   $wp_customize->add_setting('hero_placement_select',
   [
 	'default' => '0',
@@ -171,18 +97,6 @@ class Component implements Component_Interface {
       'transport' => 'refresh',
   ]);
 
-$wp_customize->add_control('secondary_top_bar_toggle',
-  [
-	  'description' => esc_html__( 'Display secondary top menu bar in desktop view :' ),
-	  'label' => __( 'Secondary Top Bar' ),
-      'section' => 'theme_options',
-      'priority' => 10, // Optional. Order priority to load the control. Default: 10
-      'type' => 'select',
-      'choices' => [ // Optional.
-         '' => __( 'No Top Bar' ),
-		 'navSecondaryInc' => __( 'Yes Top Bar' ),
-  ]
-  ]);
   $wp_customize->add_control('site_font_selection_google_toggle',
   [
 	  'description' => esc_html__( 'Toggle on/off Google font changes from default fonts :' ),
@@ -195,101 +109,7 @@ $wp_customize->add_control('secondary_top_bar_toggle',
 		 'changeFonts' => __( 'Change Defaults' ),
   ]
   ]);
-  $wp_customize->add_control( 'top_bar_font_size',
-  [
-	'type' => 'number',
-	'section' => 'theme_options', // Add a default or your own section
-	'label' => __( 'Top Nav Bar Font-Size adjustment' )
-	  ]
-);
-  $wp_customize->add_control('top_bar_text_color',
-  [
-	'label' => __( 'top_bar Text Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('top_bar_anchor_text_color',
-  [
-	'label' => __( 'top_bar Anchor Text Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('top_bar_background_color',
-  [
-	'label' => __( 'top_bar Background Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('nav_bar_background_color',
-  [
-	'label' => __( 'Nav Bar Background Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('main_nav_text_color',
-  [
-	'label' => __( 'Main Nav Text Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('main_nav_current_color',
-  [
-	'label' => __( 'Main Nav Current Selected Page Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('current_gradient_color_start',
-  [
-	'label' => __( 'Current Selected Page Gradient Underline Starting Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('current_gradient_color_end',
-  [
-	'label' => __( 'Current Selected Page Gradient Underline Ending Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('drop_down_background_color',
-  [
-	'label' => __( 'Main Nav Dropdown Background Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('drop_down_hover_background_color',
-  [
-	'label' => __( 'Main Nav Dropdown Hover Background Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
-  $wp_customize->add_control('drop_down_hover_text_color',
-  [
-	'label' => __( 'Main Nav Dropdown Text Hover Color' ),
-	'section' => 'theme_options',
-	'priority' => 10, // Optional. Order priority to load the control. Default: 10
-	'type' => 'color',
-	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-  ]);
+
 
 $wp_customize->add_control('hero_video_select',
   [

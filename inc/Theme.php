@@ -149,6 +149,7 @@ class Theme {
 			new Custom_Background\Component(),
 			new Custom_Header\Component(),
 			new Custom_Logo\Component(),
+			new Custom_Nav_Styling\Component(),
 			new Post_Thumbnails\Component(),
 			// new Multi_Language\Component(),
 			new Customizer\Component(),
