@@ -196,6 +196,18 @@
 	.secondary-menu-container ul#rightRow li {
 		font-size:<?php echo get_theme_mod( 'top_bar_font_size', '' );?>rem;
 	}
+	.main-navigation .secondary-menu-container a {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
+	.main-navigation .secondary-menu-container a:active {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
+	.main-navigation .secondary-menu-container a:visited {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
+	.main-navigation .secondary-menu-container a:hover {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
 		<?php } endif; ?>
 <?php if (null != get_theme_mod( 'main_nav_text_color')) : { ?>
 		.main-navigation a {
