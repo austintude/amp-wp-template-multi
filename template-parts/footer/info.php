@@ -15,7 +15,7 @@ namespace WP_Rig\WP_Rig;
 	<div class="baseBlock" style="background:<?php echo get_theme_mod( 'footer_background_color', '#333' ); ?>; color: <?php echo get_theme_mod( 'footer_text_color', '#fff' ); ?>;">
 
 
-	<?php if( get_theme_mod( 'footer_map_toggle') != null ): { ?>
+	<?php if( get_theme_mod( 'footer_toggle') != null ): { ?>
 	<?php $contactfooterloop = new \WP_Query( array( 'post_type' => 'contact_items', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $contactfooterloop->have_posts() ) : $contactfooterloop->the_post();

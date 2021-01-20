@@ -38,19 +38,27 @@
 		}
 	}
 		@media (--content-query) {
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-template-columns: 1fr 1fr 1fr;
 			grid-gap: 2rem;
 			padding-bottom: 2rem;
+			grid-template-areas: "left middle right";
 			/* padding: 0 2rem; */
 			/* margin: 0 5rem 8rem; */
 		}
-
+& .leftBlock {
+	grid-area: left;
+}
+& .middleBlock {
+	grid-area: middle;
+}
+& .rightBlock {
+	grid-area: right;
+}
 	& .leftBlock {
 		display:flex;
 		display: grid;
 		grid-template-columns: 1fr;
 		text-align: left;
-
 	}
 & .middleBlock .blockImages > * {
     width: 100%;

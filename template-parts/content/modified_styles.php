@@ -188,27 +188,7 @@
 		height:<?php echo get_theme_mod( 'footer-image-height', '' );?>vh;
 }
 	<?php } endif; ?>
-	<?php if (null != get_theme_mod( 'top_bar_font_size')) : { ?>
-	.secondary-menu-container ul#leftRow li
-	{
-		font-size:<?php echo get_theme_mod( 'top_bar_font_size', '' );?>rem;
-	}
-	.secondary-menu-container ul#rightRow li {
-		font-size:<?php echo get_theme_mod( 'top_bar_font_size', '' );?>rem;
-	}
-	.main-navigation .secondary-menu-container a {
-		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
-	}
-	.main-navigation .secondary-menu-container a:active {
-		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
-	}
-	.main-navigation .secondary-menu-container a:visited {
-		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
-	}
-	.main-navigation .secondary-menu-container a:hover {
-		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
-	}
-		<?php } endif; ?>
+
 <?php if (null != get_theme_mod( 'main_nav_text_color')) : { ?>
 		.main-navigation a {
     color: <?php echo get_theme_mod( 'main_nav_text_color') ?>;
@@ -239,6 +219,134 @@
 <?php } endif; ?>
 
 <?php } endif; ?>
+<?php if ((null != get_theme_mod( 'secondary_top_bar')) || (null != get_theme_mod( 'secondary_top_bar_on_mobile'))) : { ?>
+	.secondary-menu-container ul#leftRow li
+	{
+		font-size:<?php echo get_theme_mod( 'top_bar_font_size', '' );?>rem;
+		color: <?php echo get_theme_mod( 'top_bar_text_color') ?>;
+	}
+	.secondary-menu-container ul#rightRow li {
+		font-size:<?php echo get_theme_mod( 'top_bar_font_size', '' );?>rem;
+		color: <?php echo get_theme_mod( 'top_bar_text_color') ?>;
+	}
+	.main-navigation .secondary-menu-container a {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
+	.main-navigation .secondary-menu-container a:active {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
+	.main-navigation .secondary-menu-container a:visited {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
+	.main-navigation .secondary-menu-container a:hover {
+		color: <?php echo get_theme_mod( 'top_bar_anchor_text_color') ?>;
+	}
+		<?php } endif; ?>
+		<?php $contactfooterloop = new \WP_Query( array( 'post_type' => 'contact_items', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+
+<?php while( $contactfooterloop->have_posts() ) : $contactfooterloop->the_post();
+
+			$total_footer_columns			= get_field('total_footer_columns');
+			$column_1_toggle			= get_field('column_1_toggle');
+			$column_2_toggle			= get_field('column_2_toggle');
+			$column_3_toggle			= get_field('column_3_toggle');
+			$total_footer_rows			= get_field('total_footer_rows');
+			$show_map_in_footer			= get_field('show_map_in_footer');
+			$show_address_in_footer			= get_field('show_address_in_footer');
+			$show_social_andor_contact_in_footer			= get_field('show_social_andor_contact_in_footer');
+
+			?>
+<?php if (null != $total_footer_columns) : { ?>
+		<?php if (1 == $column_1_toggle) : { ?>
+			.site-footer .topBlock .leftBlock {
+			grid-area: left;
+		}
+		<?php } endif; ?>
+		<?php if (2 == $column_1_toggle) : { ?>
+			.site-footer .topBlock .middleBlock {
+			grid-area: left;
+		}
+		<?php } endif; ?>
+		<?php if (3 == $column_1_toggle) : { ?>
+			.site-footer .topBlock .rightBlock {
+			grid-area: left;
+		}
+		<?php } endif; ?>
+		<?php if (1 == $column_2_toggle) : { ?>
+			.site-footer .topBlock .leftBlock {
+			grid-area: middle;
+		}
+		<?php } endif; ?>
+		<?php if (2 == $column_2_toggle) : { ?>
+			.site-footer .topBlock .middleBlock {
+			grid-area: middle;
+		}
+		<?php } endif; ?>
+		<?php if (3 == $column_2_toggle) : { ?>
+			.site-footer .topBlock .rightBlock {
+			grid-area: middle;
+		}
+		<?php } endif; ?>
+		<?php if (1 == $column_3_toggle) : { ?>
+			.site-footer .topBlock .leftBlock {
+			grid-area: right;
+		}
+		<?php } endif; ?>
+		<?php if (2 == $column_3_toggle) : { ?>
+			.site-footer .topBlock .middleBlock {
+			grid-area: right;
+		}
+		<?php } endif; ?>
+		<?php if (3 == $column_3_toggle) : { ?>
+			.site-footer .topBlock .rightBlock {
+			grid-area: right;
+		}
+		<?php } endif; ?>
+	@media screen and (min-width: 48.1em)  {
+		<?php if (1 == $total_footer_columns): { ?>
+			.site-footer .topBlock {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+			"left"
+			"middle"
+			"right";
+		}
+		<?php } endif; ?>
+		<?php if (2 == $total_footer_columns) : { ?>
+			.site-footer .topBlock {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+			"left middle"
+			"right right";
+		}
+		<?php } endif; ?>
+		<?php if (3 == $total_footer_columns) : { ?>
+			.site-footer .topBlock {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: "left middle right";
+		}
+		<?php } endif; ?>
+	}
+	.site-footer .topBlock .leftBlock, .site-footer .topBlock .middleBlock, .site-footer .topBlock .rightBlock {
+	display: none;
+}
+	<?php if (null != $show_map_in_footer) : { ?>
+		.site-footer .topBlock .leftBlock {
+	display: grid;
+}
+		<?php } endif; ?>
+		<?php if (null != $show_address_in_footer) : { ?>
+			.site-footer .topBlock .middleBlock {
+	display: grid;
+}
+		<?php } endif; ?>
+		<?php if (null != $show_social_andor_contact_in_footer) : { ?>
+			.site-footer .topBlock .rightBlock {
+	display: grid;
+}
+		<?php } endif; ?>
+	<?php } endif; ?>
+	<?php endwhile;  wp_reset_query(); ?>
 <?php if( get_theme_mod( 'hero_clip_select') == 10 ): { ?>
 @media screen and (min-width: 48.1em)  {
 	.page main#primary {

@@ -94,7 +94,7 @@ class Component implements Component_Interface {
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
   ]);
-  $wp_customize->add_setting('footer_map_toggle',
+  $wp_customize->add_setting('footer_toggle',
   [
 	'default' => '',
       'transport' => 'refresh',
@@ -169,20 +169,20 @@ class Component implements Component_Interface {
 	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
 
-  $wp_customize->add_control('footer_map_toggle',
+  $wp_customize->add_control('footer_toggle',
   [
-	  'description' => esc_html__( 'Display Google Map in footer : **IMPORTANT**, if you select this option, you must RELOAD the Customizer for the new Carousel Images Section to be viewable' ),
-	  'label' => __( 'Footer Map Option' ),
+	  'description' => esc_html__( 'Display Extra Contact Info in footer : **IMPORTANT**, if you select this option, you must RELOAD the Customizer for the new Carousel Images Section to be viewable' ),
+	  'label' => __( 'Footer Contact Option' ),
       'section' => 'footer_settings_section',
       'priority' => 5, // Optional. Order priority to load the control. Default: 10
       'type' => 'select',
       'choices' => [ // Optional.
-         '' => __( 'No Map in Footer' ),
-		 'heroCarousel' => __( 'Yes Map in Footer' ),
+         '' => __( 'No Contact Info in Footer' ),
+		 'heroCarousel' => __( 'Yes Contact Info in Footer' ),
   ]
   ]);
 
-  if (get_theme_mod( 'footer_map_toggle') != null) : {
+  if (get_theme_mod( 'footer_toggle') != null) : {
 
   }
 endif;
