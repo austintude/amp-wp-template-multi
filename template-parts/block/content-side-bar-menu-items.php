@@ -8,32 +8,7 @@
 namespace WP_Rig\WP_Rig;
 
 $side_bar_menu_items	= get_field('side_bar_menu_items');
-$custom_margins_toggle =  get_field('custom_margins_toggle');
-$custom_margins_top =  get_field('custom_margins_top');
-$custom_margins_bottom =  get_field('custom_margins_bottom');
-$custom_margins_right =  get_field('custom_margins_right');
-$custom_margins_left =  get_field('custom_margins_left');
-$custom_margins_mobile_toggle =  get_field('custom_margins_mobile_toggle');
-$custom_margins_top_mobile =  get_field('custom_margins_top_mobile');
-$custom_margins_bottom_mobile =  get_field('custom_margins_bottom_mobile');
-$custom_margins_right_mobile =  get_field('custom_margins_right_mobile');
-$custom_margins_left_mobile =  get_field('custom_margins_left_mobile');
-$custom_paddings_toggle =  get_field('custom_paddings_toggle');
-$custom_paddings_top =  get_field('custom_paddings_top');
-$custom_paddings_bottom =  get_field('custom_paddings_bottom');
-$custom_paddings_right =  get_field('custom_paddings_right');
-$custom_paddings_left =  get_field('custom_paddings_left');
-$custom_paddings_mobile_toggle =  get_field('custom_paddings_mobile_toggle');
-$custom_paddings_top_mobile =  get_field('custom_paddings_top_mobile');
-$custom_paddings_bottom_mobile =  get_field('custom_paddings_bottom_mobile');
-$custom_paddings_right_mobile =  get_field('custom_paddings_right_mobile');
-$custom_paddings_left_mobile =  get_field('custom_paddings_left_mobile');
-$font_adjustment_toggle =  get_field('font_adjustment_toggle');
-$font_size =  get_field('font_size');
-$line_height =  get_field('line_height');
-$font_weight =  get_field('font_weight');
-$text_decoration_toggle =  get_field('text_decoration_toggle');
-$text_decoration =  get_field('text_decoration');
+
 
 // create id attribute for specific styling
 $id = 'newAside-' . $block['id'];
@@ -43,41 +18,10 @@ $add_class = $block['className'] ? '' . $block['className'] : '';
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 ?>
+<?php include('acf-style-fields.php'); ?>
 <style scoped>
-	<?php if ((!empty($custom_margins_toggle)) || (!empty($custom_paddings_toggle)) ) : { ?>@media only screen and (min-width: 48.1rem) {#<?php echo $id; ?> { <?php if (!empty($custom_margins_top)) : echo 'margin-top:'; the_field('custom_margin_top');  echo 'rem; '; endif; if (!empty($custom_margins_right)) : echo 'margin-right:'; the_field('custom_margin_right');  echo 'rem; '; endif; if (!empty($custom_margins_bottom)) : echo 'margin-bottom:'; the_field('custom_margin_bottom');  echo 'rem; '; endif; if (!empty($custom_margins_left)) : echo 'margin-left:'; the_field('custom_margin_left');  echo 'rem; '; endif; ?> <?php if (!empty($custom_paddings_top)) : echo 'padding-top:'; the_field('custom_padding_top');  echo 'rem; '; endif; if (!empty($custom_paddings_right)) : echo 'padding-right:'; the_field('custom_padding_right');  echo 'rem; '; endif; if (!empty($custom_paddings_bottom)) : echo 'padding-bottom:'; the_field('custom_padding_bottom');  echo 'rem; '; endif; if (!empty($custom_paddings_left)) : echo 'padding-left:'; the_field('custom_padding_left');  echo 'rem; '; endif; ?>}}<?php } endif; ?>
-	<?php if ((!empty($custom_margins_mobile_toggle)) || (!empty($custom_paddings_mobile_toggle)) ) : { ?>@media only screen and (max-width: 48rem) {#<?php echo $id; ?> { <?php if (!empty($custom_margins_top_mobile)) : echo 'margin-top:'; the_field('custom_margin_top_mobile');  echo 'rem; '; endif; if (!empty($custom_margins_right_mobile)) : echo 'margin-right:'; the_field('custom_margin_right_mobile');  echo 'rem; '; endif; if (!empty($custom_margins_bottom_mobile)) : echo 'margin-bottom:'; the_field('custom_margin_bottom_mobile');  echo 'rem; '; endif; if (!empty($custom_margins_left_mobile)) : echo 'margin-left:'; the_field('custom_margin_left_mobile');  echo 'rem; '; endif; ?><?php if (!empty($custom_paddings_top_mobile)) : echo 'padding-top:'; the_field('custom_padding_top_mobile');  echo 'rem; '; endif; if (!empty($custom_paddings_right_mobile)) : echo 'padding-right:'; the_field('custom_padding_right_mobile');  echo 'rem; '; endif; if (!empty($custom_paddings_bottom_mobile)) : echo 'padding-bottom:'; the_field('custom_padding_bottom_mobile');  echo 'rem; '; endif; if (!empty($custom_paddings_left_mobile)) : echo 'padding-left:'; the_field('custom_padding_left_mobile');  echo 'rem; '; endif; ?>}}<?php } endif; ?>
-	<?php if (!empty($font_adjustment_toggle)) : { ?>
-		#<?php echo $id; ?> {
-			<?php if (!empty($font_size)) : {
-				echo 'font-size:';
-				the_field('font_size');
-				echo 'rem; ';
-			}
-				endif;
-				if (!empty($line_height)) : {
-					echo 'line-height:';
-					the_field('line_height');
-					echo 'rem; ';
-			}	endif;
-			if (!empty($text_decoration_toggle)) : {
-				foreach( $text_decoration_toggle as $text_decoration_toggles ): {
-					echo 'text-decoration:';
-					echo $text_decoration_toggles;
-					echo ' ';
-				}
-					endforeach;
-					echo '; ';
-					}
-					endif;
-					if (!empty($font_weight)) : {
-						echo 'font-weight:';
-						the_field('font_weight');
-						echo '; ';
-						}
-						endif; ?>
-		}
-
-	<?php } endif; ?>
+	<?php include('acf-style-fields/custom-margins.php'); ?>
+	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
 	</style>
 <div id="<?php echo $id; ?>" class="aSide <?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
 	<aside class="asideBlock">

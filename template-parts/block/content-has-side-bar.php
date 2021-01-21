@@ -32,6 +32,11 @@ $add_class = $block['className'] ? '' . $block['className'] : '';
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
+<?php include('acf-style-fields.php'); ?>
+<style scoped>
+	<?php include('acf-style-fields/custom-margins.php'); ?>
+	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
+	</style>
 <div class="blockWrapperStyle">
 
 <section id="<?php echo $id; ?>" class="blockWrapper <?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; if (!empty($full_width_toggle_mobile)) : echo 'fullWidthMobile'; endif; if (!empty($full_width_toggle_desktop)) : echo 'fullWidthDesktop'; endif;?>" >

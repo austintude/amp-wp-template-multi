@@ -18,6 +18,11 @@ $add_class = $block['className'] ? '' . $block['className'] : '';
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
+<?php include('acf-style-fields.php'); ?>
+<style scoped>
+	<?php include('acf-style-fields/custom-margins.php'); ?>
+	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
+	</style>
 <blockquote id="<?php echo $id; ?>" class="testimonial<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
     <p><?php the_field('testimonial'); ?></p>
     <cite>
@@ -25,9 +30,4 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
     	<span><?php the_field('author'); ?></span>
     </cite>
 </blockquote>
-<style type="text/css">
-	#<?php echo $id; ?> {
-		background: <?php the_field('background_color'); ?>;
-		color: <?php the_field('text_color'); ?>;
-	}
-</style>
+
