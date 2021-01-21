@@ -2921,15 +2921,15 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 
 	acf_add_local_field_group(array(
-		'key' => 'group_5ff4d2d09742e',
-		'title' => 'Custom Margins',
+		'key' => 'group_6009b37532d01',
+		'title' => 'Custom Font Attributes',
 		'fields' => array(
 			array(
-				'key' => 'field_5ff4d30e9e9ac',
-				'label' => 'Full Width Toggle',
-				'name' => 'full_width_toggle',
+				'key' => 'field_6009b3c8fc836',
+				'label' => 'Font Adjustment Toggle',
+				'name' => 'font_adjustment_toggle',
 				'type' => 'true_false',
-				'instructions' => '',
+				'instructions' => 'font-size is set in rems so they will adjust based on the global font-size settings',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -2944,16 +2944,106 @@ if( function_exists('acf_add_local_field_group') ):
 				'ui_off_text' => '',
 			),
 			array(
-				'key' => 'field_5ff4de859728a',
-				'label' => 'Full Width - Mobile',
-				'name' => 'full_width_toggle_mobile',
+				'key' => 'field_6009b390fc835',
+				'label' => 'Font Size',
+				'name' => 'font_size',
+				'type' => 'range',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6009b3c8fc836',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'min' => '',
+				'max' => 20,
+				'step' => '.01',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_6009b3e8fc837',
+				'label' => 'Line Height',
+				'name' => 'line_height',
+				'type' => 'range',
+				'instructions' => 'Usually set to the same number as the font-size',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6009b3c8fc836',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'min' => '',
+				'max' => 20,
+				'step' => '.01',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_6009b422fc838',
+				'label' => 'Font Weight',
+				'name' => 'font_weight',
+				'type' => 'radio',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6009b3c8fc836',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					100 => '100',
+					300 => '300',
+					400 => '400',
+					700 => '700',
+				),
+				'allow_null' => 0,
+				'other_choice' => 0,
+				'default_value' => '',
+				'layout' => 'vertical',
+				'return_format' => 'value',
+				'save_other_choice' => 0,
+			),
+			array(
+				'key' => 'field_6009b5a6fc83a',
+				'label' => 'Text Decoration Toggle',
+				'name' => 'text_decoration_toggle',
 				'type' => 'true_false',
 				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => array(
 					array(
 						array(
-							'field' => 'field_5ff4d30e9e9ac',
+							'field' => 'field_6009b3c8fc836',
 							'operator' => '==',
 							'value' => '1',
 						),
@@ -2971,16 +3061,16 @@ if( function_exists('acf_add_local_field_group') ):
 				'ui_off_text' => '',
 			),
 			array(
-				'key' => 'field_5ff4de9b9728b',
-				'label' => 'Full Width - Desktop',
-				'name' => 'full_width_toggle_desktop',
-				'type' => 'true_false',
-				'instructions' => '',
+				'key' => 'field_6009b455fc839',
+				'label' => 'Text Decoration',
+				'name' => 'text_decoration',
+				'type' => 'checkbox',
+				'instructions' => 'Combinations may create unusual effects. To add color to the operator, create a custom field with the hex (#000000).',
 				'required' => 0,
 				'conditional_logic' => array(
 					array(
 						array(
-							'field' => 'field_5ff4d30e9e9ac',
+							'field' => 'field_6009b5a6fc83a',
 							'operator' => '==',
 							'value' => '1',
 						),
@@ -2991,12 +3081,51 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
+				'choices' => array(
+					'none' => 'none',
+					'overline' => 'overline',
+					'underline' => 'underline',
+					'dotted' => 'dotted',
+					'line-through' => 'line-through',
+					'solid' => 'solid',
+					'double' => 'double',
+					'dashed' => 'dashed',
+					'wavy' => 'wavy',
+					'initial' => 'initial',
+					'inherit' => 'inherit',
+				),
+				'allow_custom' => 1,
+				'save_custom' => 1,
+				'default_value' => array(
+				),
+				'layout' => 'vertical',
+				'toggle' => 0,
+				'return_format' => 'value',
 			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'all',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5ff4d2d09742e',
+		'title' => 'Custom Margins',
+		'fields' => array(
 			array(
 				'key' => 'field_5ff4d37ad185f',
 				'label' => 'Custom Margins Desktop Toggle',
@@ -3481,7 +3610,49 @@ if( function_exists('acf_add_local_field_group') ):
 				array(
 					'param' => 'block',
 					'operator' => '==',
-					'value' => 'all',
+					'value' => 'acf/testimonial-wrapper',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/single-card',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/animation-block',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/multi-use',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/side-bar-block-items',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/side-bar-block-item',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/custom-button',
 				),
 			),
 		),
@@ -3983,7 +4154,174 @@ if( function_exists('acf_add_local_field_group') ):
 				array(
 					'param' => 'block',
 					'operator' => '==',
-					'value' => 'all',
+					'value' => 'acf/testimonial-wrapper',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/single-card',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/animation-block',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/custom-button',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/multi-use',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/side-bar-block-items',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/side-bar-block-item',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_6009d805ba0af',
+		'title' => 'Full Width Toggle',
+		'fields' => array(
+			array(
+				'key' => 'field_6009d805bf90a',
+				'label' => 'Full Width Toggle',
+				'name' => 'full_width_toggle',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
+				'key' => 'field_6009d805bfd13',
+				'label' => 'Full Width - Mobile',
+				'name' => 'full_width_toggle_mobile',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6009d805bf90a',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
+				'key' => 'field_6009d805c00f8',
+				'label' => 'Full Width - Desktop',
+				'name' => 'full_width_toggle_desktop',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6009d805bf90a',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/testimonial-wrapper',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/animation-block',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/multi-use',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/has-side-bar',
+				),
+			),
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/grid-cards',
 				),
 			),
 		),
@@ -4853,103 +5191,6 @@ if( function_exists('acf_add_local_field_group') ):
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'testimonial_quotes',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => true,
-		'description' => '',
-	));
-
-	acf_add_local_field_group(array(
-		'key' => 'group_5ff4f7664123c',
-		'title' => 'Toggle Full Width',
-		'fields' => array(
-			array(
-				'key' => 'field_5ff4f76647479',
-				'label' => 'Full Width Toggle',
-				'name' => 'full_width_toggle',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-			array(
-				'key' => 'field_5ff4f76647890',
-				'label' => 'Full Width - Mobile',
-				'name' => 'full_width_toggle_mobile',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => array(
-					array(
-						array(
-							'field' => 'field_5ff4f76647479',
-							'operator' => '==',
-							'value' => '1',
-						),
-					),
-				),
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-			array(
-				'key' => 'field_5ff4f76647c5c',
-				'label' => 'Full Width - Desktop',
-				'name' => 'full_width_toggle_desktop',
-				'type' => 'true_false',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => array(
-					array(
-						array(
-							'field' => 'field_5ff4f76647479',
-							'operator' => '==',
-							'value' => '1',
-						),
-					),
-				),
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'all',
 				),
 			),
 		),
