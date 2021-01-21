@@ -51,7 +51,7 @@
 		}
 & .leftBlock {
 	grid-area: left;
-	justify-items: center;
+	/* justify-items: center; */
 }
 & .middleBlock {
 	grid-area: middle;

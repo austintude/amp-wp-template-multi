@@ -152,7 +152,7 @@ endif;
 
 
 	<!-- Show on Mobile -->
-	<amp-carousel width="1600" height="1200" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 26.49em)">
+	<amp-carousel width="1600" height="900" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 26.49em)">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
