@@ -25,4 +25,7 @@ $line_height =  get_field('line_height');
 $font_weight =  get_field('font_weight');
 $text_decoration_toggle =  get_field('text_decoration_toggle');
 $text_decoration =  get_field('text_decoration');
+$text_transform =  get_field('text_transform');
+$font_variant_caps =  get_field('font_variant_caps');
+
 ?>
