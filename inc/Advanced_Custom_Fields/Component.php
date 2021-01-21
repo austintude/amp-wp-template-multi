@@ -1922,7 +1922,7 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array(
 				'key' => 'field_5f9868d536cfa',
-				'label' => 'Footer Positioning Spot 1 Title',
+				'label' => 'Map Section Title',
 				'name' => 'left_footer_grid_title',
 				'type' => 'text',
 				'instructions' => '',
@@ -1931,7 +1931,22 @@ if( function_exists('acf_add_local_field_group') ):
 					array(
 						array(
 							'field' => 'field_60088f171b856',
-							'operator' => '!=empty',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_60088f611b857',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_60088f851b858',
+							'operator' => '==',
+							'value' => '1',
 						),
 					),
 				),
@@ -1948,7 +1963,7 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array(
 				'key' => 'field_5f9868c436cf9',
-				'label' => 'Footer Positioning Spot 2 Title',
+				'label' => 'Address Section Title',
 				'name' => 'middle_footer_grid_title',
 				'type' => 'text',
 				'instructions' => '',
@@ -1957,7 +1972,22 @@ if( function_exists('acf_add_local_field_group') ):
 					array(
 						array(
 							'field' => 'field_60088f611b857',
-							'operator' => '!=empty',
+							'operator' => '==',
+							'value' => '2',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_60088f171b856',
+							'operator' => '==',
+							'value' => '2',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_60088f851b858',
+							'operator' => '==',
+							'value' => '2',
 						),
 					),
 				),
@@ -1974,7 +2004,7 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array(
 				'key' => 'field_5f9868bb36cf8',
-				'label' => 'Footer Positioning Spot 3 Title',
+				'label' => 'Social & Contact Form Title',
 				'name' => 'right_footer_grid_title',
 				'type' => 'text',
 				'instructions' => '',
@@ -1983,7 +2013,22 @@ if( function_exists('acf_add_local_field_group') ):
 					array(
 						array(
 							'field' => 'field_60088f851b858',
-							'operator' => '!=empty',
+							'operator' => '==',
+							'value' => '3',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_60088f611b857',
+							'operator' => '==',
+							'value' => '3',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_60088f171b856',
+							'operator' => '==',
+							'value' => '3',
 						),
 					),
 				),

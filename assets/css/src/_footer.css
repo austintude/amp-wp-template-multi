@@ -19,6 +19,10 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 0.5rem;
+		grid-template-areas:
+			"left"
+			"middle"
+			"right";
 		/* margin: 0 2rem 8rem; */
 		background: #fff;
 		color: #000;
@@ -47,12 +51,15 @@
 		}
 & .leftBlock {
 	grid-area: left;
+	justify-items: center;
 }
 & .middleBlock {
 	grid-area: middle;
+	justify-items: center;
 }
 & .rightBlock {
 	grid-area: right;
+	justify-items: center;
 }
 	& .leftBlock {
 		display:flex;
