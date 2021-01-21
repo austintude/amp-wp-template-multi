@@ -33,11 +33,11 @@ aside#secondary {
 		}
 
 	& li {
-		font-family: sans-serif;
-		text-transform: uppercase;
-		font-weight: 300;
+		/* font-family: sans-serif; */
+		/* text-transform: uppercase; */
+		/* font-weight: 300; */
 		list-style: none;
-		line-height: 2.5rem;
+		/* line-height: 2.5rem; */
 
 		& a {
 			text-decoration: none;
