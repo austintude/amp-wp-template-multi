@@ -27,6 +27,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 	<?php include('acf-style-fields/custom-margins.php'); ?>
 	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
 	</style>
+<?php wp_reset_query();?>
 <section id="<?php echo $id; ?>" class="gridCardLoop newCard<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
 
 <?php // Check value exists.
@@ -69,3 +70,4 @@ $button_hover_effect_options = get_field('button_hover_effect_options'); if( $bu
 
 </section>
 </style>
+<?php wp_reset_query();?>

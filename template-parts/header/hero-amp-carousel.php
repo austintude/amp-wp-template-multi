@@ -19,7 +19,7 @@ $hero_carousel_image = get_field('hero_carousel_image');
 // $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 // $hero_carousel_text_color = get_field('hero_carousel_text_color');
 ?>
-  <div><img layout="responsive" src="<?php echo $hero_carousel_image['url']; ?>" alt="<?php echo $hero_carousel_image['alt']; ?>"/>
+  <div><img layout="intrinsic" src="<?php echo $hero_carousel_image['url']; ?>" alt="<?php echo $hero_carousel_image['alt']; ?>"/>
 
 	  </div>
 	  <?php endwhile; wp_reset_query(); ?>
