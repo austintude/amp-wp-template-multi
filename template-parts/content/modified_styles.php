@@ -85,16 +85,16 @@
 
 
 			.secondary-menu-container ul#rightRow {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-			justify-content: space-around;
-			align-items: baseline;
-			grid-gap: 1.2rem;
-			margin: auto 1rem;
-			text-align: center;
-			direction: rtl;
-			place-items: center;
-			z-index: 2;
+			    display: grid;
+				grid-template-columns: repeat(auto-fill,minmax(10px,1fr));
+				justify-content: space-around;
+				align-items: baseline;
+				grid-gap: 1.6rem;
+				margin: auto 1rem;
+				text-align: center;
+				direction: rtl;
+				place-items: center;
+				z-index: 2;
 			}
 			.secondary-menu-container ul#rightRow li {
 				font-size: .8rem;
