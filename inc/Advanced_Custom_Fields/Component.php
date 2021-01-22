@@ -2524,6 +2524,168 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 
 	acf_add_local_field_group(array(
+		'key' => 'group_600b03ece7cba',
+		'title' => 'Custom Border Radius',
+		'fields' => array(
+			array(
+				'key' => 'field_600b03ecef0eb',
+				'label' => 'Custom Button Border Radius',
+				'name' => 'custom_button_border_radius',
+				'type' => 'true_false',
+				'instructions' => 'Click to customize the button\'s border radius',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
+				'key' => 'field_600b03ecef4ad',
+				'label' => 'Button Border Radius Top',
+				'name' => 'button_border_radius_top',
+				'type' => 'range',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_600b03ecef0eb',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'min' => 0,
+				'max' => 10,
+				'step' => '.1',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_600b03ecef897',
+				'label' => 'Button Border Radius Right',
+				'name' => 'button_border_radius_right',
+				'type' => 'range',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_600b03ecef0eb',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'min' => 0,
+				'max' => 10,
+				'step' => '.1',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_600b03ecefc78',
+				'label' => 'Button Border Radius Bottom',
+				'name' => 'button_border_radius_bottom',
+				'type' => 'range',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_600b03ecef0eb',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'min' => 0,
+				'max' => 10,
+				'step' => '.1',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_600b03ecf008d',
+				'label' => 'Button Border Radius Left',
+				'name' => 'button_border_radius_left',
+				'type' => 'range',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_600b03ecef0eb',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'min' => 0,
+				'max' => 10,
+				'step' => '.1',
+				'prepend' => '',
+				'append' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'cta_links',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'hero_carousel_images',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
 		'key' => 'group_5fda76981afee',
 		'title' => 'Custom Button',
 		'fields' => array(

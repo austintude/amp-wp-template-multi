@@ -42,6 +42,11 @@ $cta_text_color	= get_field('cta_text_color');
 $cta_unique_id	= get_field('cta_unique_id');
 $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_count = 0;
+$custom_button_border_radius	= get_field('custom_button_border_radius');
+$button_border_radius_top	= get_field('button_border_radius_top');
+$button_border_radius_right	= get_field('button_border_radius_right');
+$button_border_radius_bottom	= get_field('button_border_radius_bottom');
+$button_border_radius_left	= get_field('button_border_radius_left');
 ?>
 <?php  if( $cta_in_hero != '0' ): { ?>
 
@@ -49,7 +54,7 @@ $cta_count = 0;
 <div class="ctaButtonLink">
 
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
-			<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</button>
+			<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;<?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $ctahero_cta_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
 
@@ -64,7 +69,7 @@ $cta_count = 0;
   </amp-lightbox>
   <?php }
 else : ?>
-			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;" ><a href="<?php echo $ctahero_cta_url; ?>" style="color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</a></button>
+			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;<?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" ><a href="<?php echo $ctahero_cta_url; ?>" style="color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</a></button>
 <?php
 endif;
 ?>

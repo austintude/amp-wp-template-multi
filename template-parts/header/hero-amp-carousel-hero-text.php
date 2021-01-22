@@ -30,6 +30,11 @@ $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
+$custom_button_border_radius	= get_field('custom_button_border_radius');
+$button_border_radius_top	= get_field('button_border_radius_top');
+$button_border_radius_right	= get_field('button_border_radius_right');
+$button_border_radius_bottom	= get_field('button_border_radius_bottom');
+$button_border_radius_left	= get_field('button_border_radius_left');
 
 ?>
   <div>
@@ -47,7 +52,7 @@ $cta_unique_id	= get_field('cta_unique_id');
 <div class="ctaButtonLink">
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
 
-	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; color:<?php echo $hero_carousel_button_text_color; ?>;"><?php echo $hero_carousel_button_text; ?> »</button>
+	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
 
@@ -59,7 +64,7 @@ $cta_unique_id	= get_field('cta_unique_id');
   </amp-lightbox>
   <?php }
 else : ?>
-			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; color:<?php echo $hero_carousel_button_text_color; ?>;" ><a href="<?php echo $hero_carousel_button_link; ?>" style="color:<?php echo $hero_carousel_button_text_color; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
+			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" ><a href="<?php echo $hero_carousel_button_link; ?>" style="<?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
 <?php
 endif;
 ?>
@@ -104,6 +109,11 @@ $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
+$custom_button_border_radius	= get_field('custom_button_border_radius');
+$button_border_radius_top	= get_field('button_border_radius_top');
+$button_border_radius_right	= get_field('button_border_radius_right');
+$button_border_radius_bottom	= get_field('button_border_radius_bottom');
+$button_border_radius_left	= get_field('button_border_radius_left');
 ?>
   <div>
 	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h1_font_size_tablet;?>rem;">
@@ -120,7 +130,7 @@ $cta_unique_id	= get_field('cta_unique_id');
 <div class="ctaButtonLink">
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
 
-	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; color:<?php echo $hero_carousel_button_text_color; ?>;"><?php echo $hero_carousel_button_text; ?> »</button>
+	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
 
@@ -132,7 +142,7 @@ $cta_unique_id	= get_field('cta_unique_id');
   </amp-lightbox>
   <?php }
 else : ?>
-			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; color:<?php echo $hero_carousel_button_text_color; ?>;" ><a href="<?php echo $hero_carousel_button_link; ?>" style="color:<?php echo $hero_carousel_button_text_color; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
+			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" ><a href="<?php echo $hero_carousel_button_link; ?>" style="<?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
 <?php
 endif;
 ?>
@@ -177,6 +187,11 @@ $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $cta_lightbox_toggle	= get_field('cta_lightbox_toggle');
 $cta_unique_id	= get_field('cta_unique_id');
+$custom_button_border_radius	= get_field('custom_button_border_radius');
+$button_border_radius_top	= get_field('button_border_radius_top');
+$button_border_radius_right	= get_field('button_border_radius_right');
+$button_border_radius_bottom	= get_field('button_border_radius_bottom');
+$button_border_radius_left	= get_field('button_border_radius_left');
 ?>
   <div>
 	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h1_font_size_mobile;?>rem;">
@@ -193,7 +208,7 @@ $cta_unique_id	= get_field('cta_unique_id');
 <div class="ctaButtonLink">
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
 
-	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; color:<?php echo $hero_carousel_button_text_color; ?>;"><?php echo $hero_carousel_button_text; ?> »</button>
+	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
 
@@ -205,7 +220,7 @@ $cta_unique_id	= get_field('cta_unique_id');
   </amp-lightbox>
   <?php }
 else : ?>
-			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; color:<?php echo $hero_carousel_button_text_color; ?>;" ><a href="<?php echo $hero_carousel_button_link; ?>" style="color:<?php echo $hero_carousel_button_text_color; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
+			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" ><a href="<?php echo $hero_carousel_button_link; ?>" style="<?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
 <?php
 endif;
 ?>
