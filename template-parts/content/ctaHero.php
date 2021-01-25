@@ -47,6 +47,8 @@ $button_border_radius_top	= get_field('button_border_radius_top');
 $button_border_radius_right	= get_field('button_border_radius_right');
 $button_border_radius_bottom	= get_field('button_border_radius_bottom');
 $button_border_radius_left	= get_field('button_border_radius_left');
+$custom_id = 'customAdjustments-' . get_the_ID();
+
 ?>
 <?php  if( $cta_in_hero != '0' ): { ?>
 
@@ -69,7 +71,19 @@ $button_border_radius_left	= get_field('button_border_radius_left');
   </amp-lightbox>
   <?php }
 else : ?>
-			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;<?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" ><a href="<?php echo $ctahero_cta_url; ?>" style="color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</a></button>
+<?php
+$custom_margins_toggle =  get_field('custom_margins_toggle');
+$custom_padding_toggle =  get_field('custom_padding_toggle');
+$font_adjustment_toggle =  get_field('font_adjustment_toggle');
+if ((null != $custom_margins_toggle) || (null != $custom_padding_toggle) || (null != $font_adjustment_toggle)) : {
+include get_template_directory() . ('/template-parts/block/acf-style-fields.php'); ?>
+<style scoped>
+<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); ?>
+	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-font-adjustments-by-class.php'); ?>
+	</style>
+<?php wp_reset_postdata(); } endif;?>
+			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;<?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" >
+			<a href="<?php echo $ctahero_cta_url; ?>" id="<?php echo $custom_id; ?>" style="color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</a></button>
 <?php
 endif;
 ?>
