@@ -3353,6 +3353,34 @@ if( function_exists('acf_add_local_field_group') ):
 					'value' => 'all',
 				),
 			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'cta_links',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'contact_items',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'hero_carousel_images',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'testimonial_quotes',
+				),
+			),
 		),
 		'menu_order' => 0,
 		'position' => 'normal',
@@ -3897,6 +3925,27 @@ if( function_exists('acf_add_local_field_group') ):
 					'value' => 'acf/custom-button',
 				),
 			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'cta_links',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'hero_carousel_images',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'contact_items',
+				),
+			),
 		),
 		'menu_order' => 0,
 		'position' => 'normal',
@@ -4439,6 +4488,27 @@ if( function_exists('acf_add_local_field_group') ):
 					'param' => 'block',
 					'operator' => '==',
 					'value' => 'acf/side-bar-block-item',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'cta_links',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'contact_items',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'hero_carousel_images',
 				),
 			),
 		),
