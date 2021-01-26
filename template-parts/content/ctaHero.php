@@ -81,7 +81,7 @@ include get_template_directory() . ('/template-parts/block/acf-style-fields.php'
 <?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); ?>
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-font-adjustments-by-class.php'); ?>
 	</style>
-<?php wp_reset_postdata(); } endif;?>
+<?php } endif;?>
 			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $cta_color; ?>; color:<?php echo $cta_text_color; ?>;<?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" >
 			<a href="<?php echo $ctahero_cta_url; ?>" id="<?php echo $custom_id; ?>" style="color:<?php echo $cta_text_color; ?>;"><?php echo $ctahero_cta_text; ?> »</a></button>
 <?php
