@@ -1,10 +1,12 @@
- <!-- ## Autoplay -->
+<!-- ## Autoplay -->
   <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
   <!-- <div class="showOnDesktop">
 	  <h1>Pickle</h1> -->
-	  <amp-carousel width="1600" height="700" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(min-width: 48.1em)">
+  <amp-carousel width="1600" height="700" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(min-width: 48.1em)">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
+
 // vars
 $hero_carousel_h1 = get_field('hero_carousel_h1');
 $hero_carousel_h1_font_size = get_field('hero_carousel_h1_font_size');
@@ -14,6 +16,7 @@ $hero_carousel_h2 = get_field('hero_carousel_h2');
 $hero_carousel_h2_font_size = get_field('hero_carousel_h2_font_size');
 $hero_carousel_h2_font_size_tablet = get_field('hero_carousel_h2_font_size_tablet');
 $hero_carousel_h2_font_size_mobile = get_field('hero_carousel_h2_font_size_mobile');
+
 $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $hero_carousel_button_text = get_field('hero_carousel_button_text');
@@ -41,12 +44,13 @@ $custom_id = 'customAdjustments-' . get_the_ID();
 
 
 <?php  if( $hero_carousel_button_text != null ): { ?>
-	<div class="heroButtons oneHeroButton  <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
+
+	<div class="heroButtons oneHeroButton <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
 <div class="ctaHero">
 <div class="ctaButtonLink">
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
 
-	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
+	<button class="btn btn-lg btn-danger customAdjustments" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
 
@@ -58,7 +62,7 @@ $custom_id = 'customAdjustments-' . get_the_ID();
   </amp-lightbox>
   <?php }
 else : ?>
-<?php
+	<?php
 $custom_margins_toggle =  get_field('custom_margins_toggle');
 $custom_padding_toggle =  get_field('custom_padding_toggle');
 $font_adjustment_toggle =  get_field('font_adjustment_toggle');
@@ -68,12 +72,14 @@ include get_template_directory() . ('/template-parts/block/acf-style-fields.php'
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); ?>
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-font-adjustments-by-class.php'); ?>
 	</style>
-<?php } endif;?>
-			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" >
+<?php wp_reset_postdata(); } endif;?>
+			<button class="btn btn-lg btn-danger noLightBox " role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" >
 			<a href="<?php echo $hero_carousel_button_link; ?>" id="<?php echo $custom_id; ?>" style="<?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
+
 <?php
 endif;
 ?>
+
 		</div>
 </div>
 </div>
@@ -81,12 +87,19 @@ endif;
 }
 endif;
 ?>
+
 	  </div>
 	  <?php endwhile; wp_reset_query(); ?>
+
 	</amp-carousel>
+
+
+
 	<amp-carousel width="1600" height="500" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 48em) and (min-width: 26.5rem)">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
+
 // vars
 $hero_carousel_h1 = get_field('hero_carousel_h1');
 $hero_carousel_h1_font_size = get_field('hero_carousel_h1_font_size');
@@ -96,6 +109,7 @@ $hero_carousel_h2 = get_field('hero_carousel_h2');
 $hero_carousel_h2_font_size = get_field('hero_carousel_h2_font_size');
 $hero_carousel_h2_font_size_tablet = get_field('hero_carousel_h2_font_size_tablet');
 $hero_carousel_h2_font_size_mobile = get_field('hero_carousel_h2_font_size_mobile');
+
 $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $hero_carousel_button_text = get_field('hero_carousel_button_text');
@@ -112,7 +126,6 @@ $button_border_radius_right	= get_field('button_border_radius_right');
 $button_border_radius_bottom	= get_field('button_border_radius_bottom');
 $button_border_radius_left	= get_field('button_border_radius_left');
 $custom_id = 'customAdjustments-' . get_the_ID();
-
 ?>
   <div>
 	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h1_font_size_tablet;?>rem;">
@@ -124,12 +137,14 @@ $custom_id = 'customAdjustments-' . get_the_ID();
 
 
 <?php  if( $hero_carousel_button_text != null ): { ?>
-	<div class="heroButtons oneHeroButton  <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
+	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields.php'); ?>
+
+	<div class="heroButtons oneHeroButton <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
 <div class="ctaHero">
 <div class="ctaButtonLink">
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
 
-	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
+	<button class="btn btn-lg btn-danger customAdjustments" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
 
@@ -151,12 +166,14 @@ include get_template_directory() . ('/template-parts/block/acf-style-fields.php'
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); ?>
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-font-adjustments-by-class.php'); ?>
 	</style>
-<?php } endif;?>
+<?php wp_reset_postdata(); } endif;?>
 			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" >
 			<a href="<?php echo $hero_carousel_button_link; ?>" id="<?php echo $custom_id; ?>" style="<?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
+
 <?php
 endif;
 ?>
+
 		</div><!-- ctaButtonLink -->
 </div> <!-- ctaHero -->
 </div>
@@ -164,13 +181,19 @@ endif;
 }
 endif;
 ?>
+
 	  </div>
 	  <?php endwhile; wp_reset_query(); ?>
+
 	</amp-carousel>
+
+
 	<!-- Show on Mobile -->
 	<amp-carousel width="1600" height="1000" layout="intrinsic" type="slides" autoplay delay="5000" role="region" aria-label="Carousel with autoplay" media="(max-width: 26.49em)">
   <?php $herocarouselloop = new \WP_Query( array( 'post_type' => 'hero_carousel_images', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+
 <?php while( $herocarouselloop->have_posts() ) : $herocarouselloop->the_post();
+
 // vars
 $hero_carousel_h1 = get_field('hero_carousel_h1');
 $hero_carousel_h1_font_size = get_field('hero_carousel_h1_font_size');
@@ -180,6 +203,7 @@ $hero_carousel_h2 = get_field('hero_carousel_h2');
 $hero_carousel_h2_font_size = get_field('hero_carousel_h2_font_size');
 $hero_carousel_h2_font_size_tablet = get_field('hero_carousel_h2_font_size_tablet');
 $hero_carousel_h2_font_size_mobile = get_field('hero_carousel_h2_font_size_mobile');
+
 $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
 $hero_carousel_text_color = get_field('hero_carousel_text_color');
 $hero_carousel_button_text = get_field('hero_carousel_button_text');
@@ -195,10 +219,9 @@ $button_border_radius_top	= get_field('button_border_radius_top');
 $button_border_radius_right	= get_field('button_border_radius_right');
 $button_border_radius_bottom	= get_field('button_border_radius_bottom');
 $button_border_radius_left	= get_field('button_border_radius_left');
-$custom_id = 'customAdjustments-' . get_the_ID();
+$custom_id = 'customAdjustments-' . $block['id'];?>
 
-?>
-  <div>
+
 	<h1  class="site-title <?php echo get_theme_mod( 'hero_title_grid_area', '' ); ?>Hero" style="color: <?php echo $hero_carousel_text_color; ?>; text-shadow: 1px 1px <?php echo $hero_carousel_text_shadow_color; ?>; font-size:<?php echo $hero_carousel_h1_font_size_mobile;?>rem;">
 	<?php echo $hero_carousel_h1; ?>
 	  </h1>
@@ -208,12 +231,13 @@ $custom_id = 'customAdjustments-' . get_the_ID();
 
 
 <?php  if( $hero_carousel_button_text != null ): { ?>
-	<div class="heroButtons oneHeroButton  <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
+
+	<div class="heroButtons oneHeroButton <?php echo get_theme_mod( 'hero_cta_grid_area', '' ); ?>Hero">
 <div class="ctaHero">
 <div class="ctaButtonLink">
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
 
-	<button class="btn btn-lg btn-danger" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
+	<button class="btn btn-lg btn-danger customAdjustments" on="tap:my-lightbox<?php echo $cta_unique_id; ?>" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>"><?php echo $hero_carousel_button_text; ?> »</button>
 			<amp-lightbox id="my-lightbox<?php echo $cta_unique_id; ?>" layout="nodisplay">
     <div class="lightbox" on="tap:my-lightbox<?php echo $cta_unique_id; ?>.close" role="button" tabindex="0">
 
@@ -235,12 +259,14 @@ include get_template_directory() . ('/template-parts/block/acf-style-fields.php'
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); ?>
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-font-adjustments-by-class.php'); ?>
 	</style>
-<?php } endif;?>
+<?php wp_reset_postdata(); } endif;?>
 			<button class="btn btn-lg btn-danger noLightBox" role="button" tabindex="0" style="background:<?php echo $hero_carousel_button_color; ?>; <?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>; <?php if (null != $custom_button_border_radius) : echo 'border-radius:'; echo $button_border_radius_top; echo 'rem '; echo $button_border_radius_right; echo 'rem '; echo $button_border_radius_bottom; echo 'rem '; echo $button_border_radius_left; echo 'rem;'; endif; ?>" >
 			<a href="<?php echo $hero_carousel_button_link; ?>" id="<?php echo $custom_id; ?>" style="<?php if (null != $hero_carousel_button_text_color) : echo 'color:'; echo $hero_carousel_button_text_color; endif; ?>;"><?php echo $hero_carousel_button_text; ?> »</a></button>
+
 <?php
 endif;
 ?>
+
 		</div><!-- ctaButtonLink -->
 </div> <!-- ctaHero -->
 </div>
@@ -248,9 +274,14 @@ endif;
 }
 endif;
 ?>
+
 	  </div>
 	  <?php endwhile; wp_reset_query(); ?>
+
 	</amp-carousel>
+
+
 <!-- </div> -->
+
 	<!-- </div>
 </amp-carousel> -->

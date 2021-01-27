@@ -71,14 +71,14 @@ $custom_id = 'customAdjustments-' . get_the_ID();
   </amp-lightbox>
   <?php }
 else : ?>
-<?php
+	<?php
 $custom_margins_toggle =  get_field('custom_margins_toggle');
 $custom_padding_toggle =  get_field('custom_padding_toggle');
 $font_adjustment_toggle =  get_field('font_adjustment_toggle');
 if ((null != $custom_margins_toggle) || (null != $custom_padding_toggle) || (null != $font_adjustment_toggle)) : {
 include get_template_directory() . ('/template-parts/block/acf-style-fields.php'); ?>
 <style scoped>
-<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); ?>
+	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); ?>
 	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-font-adjustments-by-class.php'); ?>
 	</style>
 <?php } endif;?>
