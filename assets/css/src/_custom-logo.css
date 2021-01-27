@@ -9,7 +9,7 @@
 	/* border-radius: 5rem; */
 	top: auto;
 	max-width: 8rem;
-	@media (--mobile-nav-off-menu-query) {
+	@media (--content-query) {
 		padding: .5rem 2rem;
 	height: 3rem;
 	top: 0.2em;

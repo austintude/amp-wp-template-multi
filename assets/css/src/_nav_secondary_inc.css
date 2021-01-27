@@ -5,7 +5,7 @@
 	& #secondary-top-bar {
 		display: none;
 	}
-	@media (--mobile-nav-off-menu-query) {
+	@media (--content-query) {
 		& #secondary-top-bar {
 			top: 0;
 			height: 2rem;
@@ -32,7 +32,7 @@
 		}
 	}
 }
-@media (--mobile-nav-off-menu-query) {
+@media (--content-query) {
 	nav#site-navigation.navSecondaryInc {
 		display: grid;
 		grid-template-rows: 1fr 1fr;
