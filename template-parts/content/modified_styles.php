@@ -35,10 +35,14 @@
 		<?php if (null != get_theme_mod( 'color-link-active')) : { ?>
 			--color-link-active: <?php echo get_theme_mod( 'color-link-active') ?>;
 		<?php } endif; ?>
+
 		}
+		<?php if (null != get_theme_mod( 'custom-mobile-menu')) : { ?>
+			@custom-media --mobile-nav-off-menu-query screen and (min-width: <?php echo get_theme_mod( 'custom-mobile-menu') ?>em);
+		<?php } endif; ?>
 <?php } endif; ?>
 <?php if (null != get_theme_mod( 'secondary_top_bar_on_mobile') ) : { ?>
-	@media screen and (max-width: 48em) {
+	@media screen and (max-width: 52em) {
 	.navSecondaryInc #secondary-top-bar, .secondary-menu-container {
 		display: grid;
 		z-index: 4;

@@ -254,7 +254,7 @@ select {
 		display: block;
 	}
 
-@media (--content-query) {
+@media (--mobile-nav-off-menu-query) {
 
 	.nav--toggle-small .menu-toggle {
 		display: none;
@@ -389,7 +389,7 @@ select {
 	padding-left: 1em;
 }
 
-@media (--wide-menu-query) {
+@media (--mobile-nav-off-menu-query) {
 
 	.main-navigation ul li a {
 		padding: 0.4em 0.5em;

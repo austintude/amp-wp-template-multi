@@ -42,4 +42,7 @@
 	--font-size-regular: calc(var(--global-font-size) / 16 * 1rem);
 	--font-size-large: calc(36 / var(--global-font-size) * 1rem);
 	--font-size-larger: calc(48 / var(--global-font-size) * 1rem);
+
+	/* Custom media */
+	--mobile-nav-off-menu-query-custom: screen and (min-width: 52.1em);
 }
