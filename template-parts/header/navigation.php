@@ -67,6 +67,12 @@ $contact_us_city	= get_field('contact_us_city');
 $contact_us_zip	= get_field('contact_us_zip');
 $contact_us_state	= get_field('contact_us_state');
 $social_link_dets	= get_field('social_link_dets');
+$contact_us_street_menu_toggle	= get_field('contact_us_street_menu_toggle');
+$contact_us_street_suite_menu_toggle	= get_field('contact_us_street_suite_menu_toggle');
+$contact_us_city_menu_toggle	= get_field('contact_us_city_menu_toggle');
+$contact_us_state_menu_toggle	= get_field('contact_us_state_menu_toggle');
+$contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
+
 ?>
 
 <ul id="leftRow" >
@@ -82,20 +88,11 @@ $social_link_dets	= get_field('social_link_dets');
 endif;
 ?>
 	<li>
-		<!-- <span class="strong" property="address" typeof="PostalAddress"> -->
-			<!-- <span property="streetAddress"> -->
-				<?php echo $contact_us_street; ?>
-				<?php  if( $contact_us_phone != null ):  { ?> <?php echo $contact_us_street_suite; ?> <?php } endif; ?>
-			<!-- </span> -->
-			<!-- <span property="addressLocality"> -->
-				<?php echo $contact_us_city; ?>
-			<!-- </span> -->
-			,
-			<!-- <span property="addressRegion"> -->
-				<?php echo $contact_us_state; ?>
-			<!-- </span> -->
-				<?php echo $contact_us_zip; ?>
-		<!-- </span> -->
+			<?php  if( $contact_us_street_menu_toggle != null ):  { echo $contact_us_street; } endif; ?>
+				<?php  if( $contact_us_street_suite_menu_toggle != null ): { echo $contact_us_street_suite; } endif; ?>
+			<?php  if( $contact_us_city_menu_toggle != null ):  { echo $contact_us_city;  echo ', '; } endif; ?>
+			<?php  if( $contact_us_state_menu_toggle != null ):  { echo $contact_us_state; } endif; ?>
+			<?php  if( $contact_us_zip_menu_toggle != null ):  { echo $contact_us_zip; } endif; ?>
 	</li>
 </ul>
 <?php  if( $social_link_dets != null ):  { ?>

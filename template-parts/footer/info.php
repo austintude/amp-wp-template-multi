@@ -52,6 +52,11 @@ namespace WP_Rig\WP_Rig;
 			$second_contact_us_city	= get_field('second_contact_us_city');
 			$second_contact_us_state	= get_field('second_contact_us_state');
 			$second_contact_us_zip	= get_field('second_contact_us_zip');
+			$contact_us_street_menu_toggle	= get_field('contact_us_street_menu_toggle');
+$contact_us_street_suite_menu_toggle	= get_field('contact_us_street_suite_menu_toggle');
+$contact_us_city_menu_toggle	= get_field('contact_us_city_menu_toggle');
+$contact_us_state_menu_toggle	= get_field('contact_us_state_menu_toggle');
+$contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 			?>
 
 
@@ -93,17 +98,14 @@ namespace WP_Rig\WP_Rig;
 		- <em><?php echo $first_address_title; ?> </em>
 		<?php } endif; ?>
 	<br>
-	<span property="streetAddress"><?php echo $contact_us_street; ?>
+	<span property="streetAddress">
+	<?php  if( $contact_us_street_menu_toggle != null ):  { echo $contact_us_street; } endif; ?>
 	<br>
-	<?php if( $contact_us_street_suite != null ): { ?>
-
-<?php echo $contact_us_street_suite; ?>
-<br>
-<?php } endif; ?>
+				<?php  if( $contact_us_street_suite_menu_toggle != null ): { echo $contact_us_street_suite; } endif; ?>
+		<br>
 </span>
-	<span property="addressLocality"><?php echo $contact_us_city; ?></span>,
-
-	<span property="addressRegion"><?php echo $contact_us_state; ?></span> <?php echo $contact_us_zip; ?>
+<?php  if( $contact_us_city_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_city;  echo ', '; ?> </span> <?php } endif; ?>
+<?php  if( $contact_us_zip_menu_toggle != null ):  { ?><span property="addressRegion"><?php echo $contact_us_zip;  ?> </span> <?php } endif; ?>
 	<?php if( $physical_and_pobox != null ): { ?>
 		<br>
 		<br>

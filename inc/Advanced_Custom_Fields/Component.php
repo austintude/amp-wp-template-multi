@@ -1108,6 +1108,32 @@ if( function_exists('acf_add_local_field_group') ):
 				'maxlength' => '',
 			),
 			array(
+				'key' => 'field_601359678eaa2',
+				'label' => 'contact_us_street_menu_toggle',
+				'name' => 'contact_us_street_menu_toggle',
+				'type' => 'true_false',
+				'instructions' => 'Deselect if you do not wish for this information to be viewable on the website (secondary nav &/or footer)',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5eed2a6a0a083',
+							'operator' => '!=empty',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
 				'key' => 'field_5eed2a6a0a467',
 				'label' => 'contact_us_street_suite',
 				'name' => 'contact_us_street_suite',
@@ -1125,6 +1151,32 @@ if( function_exists('acf_add_local_field_group') ):
 				'prepend' => '',
 				'append' => '',
 				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_601359a88c5b2',
+				'label' => 'contact_us_street_suite_menu_toggle',
+				'name' => 'contact_us_street_suite_menu_toggle',
+				'type' => 'true_false',
+				'instructions' => 'Deselect if you do not wish for this information to be viewable on the website (secondary nav &/or footer)',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5eed2a6a0a467',
+							'operator' => '!=empty',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
 			),
 			array(
 				'key' => 'field_5eed2a6a0a84c',
@@ -1146,6 +1198,32 @@ if( function_exists('acf_add_local_field_group') ):
 				'maxlength' => '',
 			),
 			array(
+				'key' => 'field_60135a098c5b3',
+				'label' => 'contact_us_city_menu_toggle',
+				'name' => 'contact_us_city_menu_toggle',
+				'type' => 'true_false',
+				'instructions' => 'Deselect if you do not wish for this information to be viewable on the website (secondary nav &/or footer)',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5eed2a6a0a84c',
+							'operator' => '!=empty',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
 				'key' => 'field_5eed2a6a0ac34',
 				'label' => 'contact_us_state',
 				'name' => 'contact_us_state',
@@ -1165,6 +1243,32 @@ if( function_exists('acf_add_local_field_group') ):
 				'maxlength' => '',
 			),
 			array(
+				'key' => 'field_60135a448c5b4',
+				'label' => 'contact_us_state_menu_toggle',
+				'name' => 'contact_us_state_menu_toggle',
+				'type' => 'true_false',
+				'instructions' => 'Deselect if you do not wish for this information to be viewable on the website (secondary nav &/or footer)',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5eed2a6a0ac34',
+							'operator' => '!=empty',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
 				'key' => 'field_5eed2a6a0b017',
 				'label' => 'contact_us_zip',
 				'name' => 'contact_us_zip',
@@ -1182,6 +1286,32 @@ if( function_exists('acf_add_local_field_group') ):
 				'prepend' => '',
 				'append' => '',
 				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_60135a668c5b5',
+				'label' => 'contact_us_zip_menu_toggle',
+				'name' => 'contact_us_zip_menu_toggle',
+				'type' => 'true_false',
+				'instructions' => 'Deselect if you do not wish for this information to be viewable on the website (secondary nav &/or footer)',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5eed2a6a0b017',
+							'operator' => '!=empty',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
 			),
 			array(
 				'key' => 'field_5faebee38c8e1',
