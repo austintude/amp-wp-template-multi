@@ -105,6 +105,7 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 		<br>
 </span>
 <?php  if( $contact_us_city_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_city;  echo ', '; ?> </span> <?php } endif; ?>
+<?php  if( $contact_us_state_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_state;  echo ', '; ?> </span> <?php } endif; ?>
 <?php  if( $contact_us_zip_menu_toggle != null ):  { ?><span property="addressRegion"><?php echo $contact_us_zip;  ?> </span> <?php } endif; ?>
 	<?php if( $physical_and_pobox != null ): { ?>
 		<br>
