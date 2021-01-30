@@ -1,47 +1,51 @@
 <?php
 /**
- * Template part for aSide Block
+ * Block Name: Block of Cards
  *
- * @package wp_rig
+ * This is the template that displays the blcok of cards block.
  */
 
-namespace WP_Rig\WP_Rig;
-
-$side_bar_menu_items	= get_field('side_bar_menu_items');
-
+$button_hover_effects_toggle = get_field('button_hover_effects_toggle');
+$button_hover_effect_options = get_field('button_hover_effect_options');
+$button_background_color =  get_field('button_background_color');
+$box_shadow_color =  get_field('box_shadow_color');
+$button_hover_color =  get_field('button_hover_color');
 
 // create id attribute for specific styling
-$id = 'newAside-' . $block['id'];
+$id = 'newAccordion-' . $block['id'];
+
 // create additionnal class options from block additional css settings
 $add_class = $block['className'] ? '' . $block['className'] : '';
 
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
+
 ?>
 <?php include('acf-style-fields.php'); ?>
 <style scoped>
 	<?php include('acf-style-fields/custom-margins.php'); ?>
 	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
 	</style>
-<div id="<?php echo $id; ?>" class="aSide <?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
-	<aside class="asideBlock">
-	<?php
+
+<div class="customAccordion" id="<?php echo $id; ?>">
+<details>
+<?php
 		$template = array(
-			array('core/heading', array(
-				'level' => 2,
-				'content' => 'Update/Replace This Block ',
+			array( 'core/paragraph', array(
+				'content' => '<strong>Convert this block into /accordion-title block</strong> ',
 			)),
-			array( 'core/list', array(
-				'content' => '<a href="#menuitem1anchor">Menu Item 1</a> <br /> <small>Do not forget to update anchor links w matching anchor IDs </small>',
-			) )
+			array( 'core/paragraph', array(
+				'content' => '<strong>Convert this block into /accordion-content block</strong> ',
+			))
 		);
 
-		echo '<div class="' . $classes . '"' . $anchor . '>';
 			echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" />';
 			$form_id = get_option( 'options_be_release_info_form' );
 			if( !empty( $form_id ) && function_exists( 'wpforms_display' ) )
 				wpforms_display( $form_id, true, true );
-		echo '</div>';
 		?>
-	</aside>
-</div><!-- .sideBar -->
+
+</details>
+						</div>
+
+

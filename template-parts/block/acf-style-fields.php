@@ -27,5 +27,12 @@ $text_decoration_toggle =  get_field('text_decoration_toggle');
 $text_decoration =  get_field('text_decoration');
 $text_transform =  get_field('text_transform');
 $font_variant_caps =  get_field('font_variant_caps');
-
+$amp_fx = get_field('amp_fx');
+$data_parallax_factor = get_field('data_parallax_factor');
+$data_duration =  get_field('data_duration');
+$data_margin_start =  get_field('data_margin_start');
+$data_margin_end =  get_field('data_margin_end');
+$data_easing =  get_field('data_easing');
+$data_fly_in_distance =  get_field('data_fly_in_distance');
+$data_repeat =  get_field('data_repeat');
 ?>

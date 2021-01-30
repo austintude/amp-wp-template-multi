@@ -12,7 +12,7 @@ $box_shadow_color =  get_field('box_shadow_color');
 $button_hover_color =  get_field('button_hover_color');
 
 // create id attribute for specific styling
-$id = 'newCard-' . $block['id'];
+$id = 'newGrid-' . $block['id'];
 
 // create additionnal class options from block additional css settings
 $add_class = $block['className'] ? '' . $block['className'] : '';
@@ -26,8 +26,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 	<?php include('acf-style-fields/custom-margins.php'); ?>
 	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
 	</style>
-<?php wp_reset_query();?>
-<section id="<?php echo $id; ?>" class="gridCardLoop newCard<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
+<section id="<?php echo $id; ?>" class="gridCardLoop newGrid<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
 <InnerBlocks  />
 
 </section>

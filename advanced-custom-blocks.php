@@ -115,6 +115,42 @@ function my_acf_init() {
 				'jsx' 			=> true,
 			]
 		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Accordion Block Wrapper' ),
+			'name'				=> 'accordion_block_wrapper',
+			'render_template'	=> 'template-parts/block/content-accordion-block-wrapper.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Accordion Block Title' ),
+			'name'				=> 'accordion_title',
+			'render_template'	=> 'template-parts/block/content-accordion-block-title.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
+		acf_register_block_type( array(
+			'title'				=> __( 'Accordion Block Content' ),
+			'name'				=> 'accordion_content',
+			'render_template'	=> 'template-parts/block/content-accordion-block-content.php',
+			'mode'				=> 'preview',
+			'supports'			=> [
+				'align'			=> true,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
 	}
 }
 function my_acf_block_render_callback( $block ) {

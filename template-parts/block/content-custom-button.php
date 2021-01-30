@@ -30,7 +30,6 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 	<?php include('acf-style-fields/custom-margins.php'); ?>
 	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
 	</style>
-<?php wp_reset_query();?>
 <div id="<?php echo $id; ?>" class="ctaButtonLink <?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?>">
 <?php  if( $cta_lightbox_toggle != 0 ): { ?>
 <div>

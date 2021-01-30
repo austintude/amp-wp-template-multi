@@ -1,4 +1,4 @@
-<?php if (!empty($font_adjustment_toggle)) : { ?>
+<?php if (null != $font_adjustment_toggle) : { ?>
 		#<?php echo $id; ?> {
 			<?php if (!empty($font_size)) : {
 				echo 'font-size:';

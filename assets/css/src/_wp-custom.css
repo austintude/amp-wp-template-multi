@@ -28,7 +28,11 @@
 	& .acf-block-preview {
 	border: .5px solid rgba(0,0,0,.04);
 	}
+	& details textarea {
+		display: none;
+	}
 }
+
 
 & .block-editor-block-inspector {
 	& .acf-field.acf-field-range {
@@ -36,5 +40,6 @@
 		left: 2rem;
 	}
 }
+
 	}
 

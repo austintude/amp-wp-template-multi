@@ -17,6 +17,122 @@
 if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array(
+		'key' => 'group_60158cbc24312',
+		'title' => 'Accordion Marker',
+		'fields' => array(
+			array(
+				'key' => 'field_60158cc46e012',
+				'label' => 'Marker Customization Toggle',
+				'name' => 'marker_customization_toggle',
+				'type' => 'true_false',
+				'instructions' => 'Toggle this to customize the color, background, etc of the Accordion Arrow Marker',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
+				'key' => 'field_60158d026e013',
+				'label' => 'Marker Color',
+				'name' => 'marker_color',
+				'type' => 'color_picker',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_60158cc46e012',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+			),
+			array(
+				'key' => 'field_60158d236e014',
+				'label' => 'Marker Background Color',
+				'name' => 'marker_background_color',
+				'type' => 'color_picker',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_60158cc46e012',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+			),
+			array(
+				'key' => 'field_60158ddc10af0',
+				'label' => 'Marker Display',
+				'name' => 'marker_display',
+				'type' => 'true_false',
+				'instructions' => 'Turn on/off the display of the arrow marker. Default ON',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_60158cc46e012',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/accordion-title',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
 		'key' => 'group_5fdc0da2e559e',
 		'title' => 'AMP-fx',
 		'fields' => array(
@@ -4010,49 +4126,7 @@ if( function_exists('acf_add_local_field_group') ):
 				array(
 					'param' => 'block',
 					'operator' => '==',
-					'value' => 'acf/testimonial-wrapper',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/single-card',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/animation-block',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/multi-use',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/side-bar-block-items',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/side-bar-block-item',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/custom-button',
+					'value' => 'all',
 				),
 			),
 			array(
@@ -4575,49 +4649,7 @@ if( function_exists('acf_add_local_field_group') ):
 				array(
 					'param' => 'block',
 					'operator' => '==',
-					'value' => 'acf/testimonial-wrapper',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/single-card',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/animation-block',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/custom-button',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/multi-use',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/side-bar-block-items',
-				),
-			),
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/side-bar-block-item',
+					'value' => 'all',
 				),
 			),
 			array(
