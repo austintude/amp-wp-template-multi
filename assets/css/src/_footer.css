@@ -153,7 +153,8 @@
 		margin-bottom: 1rem;
 		max-width: 60vw;
     margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
+	text-align: center;
 		& img {
 			max-width: 100%;
     margin-left: auto;
@@ -161,7 +162,7 @@
 	position: relative;
 	@media (--content-query) {
 			height: 5vw;
-			text-align: center;
+
 	}
 		}
 	}
