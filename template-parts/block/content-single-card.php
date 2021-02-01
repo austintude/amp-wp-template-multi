@@ -5,7 +5,7 @@
  * This is the template that displays the blcok of cards block.
  */
 
-$same_size = get_field('same_size');
+
 $button_hover_effects_toggle = get_field('button_hover_effects_toggle');
 $button_hover_effect_options = get_field('button_hover_effect_options');
 $button_background_color =  get_field('button_background_color');
@@ -14,7 +14,7 @@ $button_hover_color =  get_field('button_hover_color');
 $amp_fx =  get_field('amp_fx');
 
 // create id attribute for specific styling
-$id = 'newCard-' . $block['id'];
+$id = 'newSingleCard-' . $block['id'];
 
 // create additionnal class options from block additional css settings
 $add_class = $block['className'] ? '' . $block['className'] : '';
@@ -28,8 +28,8 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 	<?php if ((null != $custom_padding_toggle) || (null != $custom_margins_toggle) || (null != $custom_margins_mobile_toggle) || (null != $custom_paddings_mobile_toggle)) : { include('acf-style-fields/custom-margins.php'); } endif; ?>
 	<?php if (null != $font_adjustment_toggle) : {  include('acf-style-fields/custom-font-adjustments.php'); } endif; ?>
 	</style>
-<div id="<?php echo $id; ?>" <?php if( null != $amp_fx ): ?>amp-fx="<?php foreach( $amp_fx as $amp_fxs ): ?><?php echo $amp_fxs; ?> <?php endforeach; ?>"<?php endif; ?> id="<?php echo $id; ?>"  <?php if( null != $data_parallax_factor ):?>data-parallax-factor="<?php the_field('data_parallax_factor');?>" <?php endif; ?>  <?php if( null != $data_duration ):?>data-duration="<?php the_field('data_duration');?>ms" <?php endif; ?> <?php if( null != $data_margin_start ):?>data-margin-start="<?php the_field('data_margin_start');?>%"<?php endif; ?> <?php if( null != $data_margin_end ):?>data-margin-end="<?php the_field('data_margin_end');?>%"<?php endif; ?> <?php if( null != $data_easing ): ?>data-easing="<?php the_field('data_easing'); ?>"<?php endif; ?> <?php if( null != $data_fly_in_distance ):?>data-fly-in-distance="<?php the_field('data_fly_in_distance');?>%"<?php endif; ?> <?php if( null != $data_repeat ): ?>data-repeat<?php endif; ?> class="<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?> <?php if(null != $same_size): ?>cardContent<?php endif; ?>" >
-	<div  <?php if(null == $same_size): ?>class="cardContent"<?php endif; ?>>
+<div id="<?php echo $id; ?>" <?php if( null != $amp_fx ): ?>amp-fx="<?php foreach( $amp_fx as $amp_fxs ): ?><?php echo $amp_fxs; ?> <?php endforeach; ?>"<?php endif; ?> id="<?php echo $id; ?>"  <?php if( null != $data_parallax_factor ):?>data-parallax-factor="<?php the_field('data_parallax_factor');?>" <?php endif; ?>  <?php if( null != $data_duration ):?>data-duration="<?php the_field('data_duration');?>ms" <?php endif; ?> <?php if( null != $data_margin_start ):?>data-margin-start="<?php the_field('data_margin_start');?>%"<?php endif; ?> <?php if( null != $data_margin_end ):?>data-margin-end="<?php the_field('data_margin_end');?>%"<?php endif; ?> <?php if( null != $data_easing ): ?>data-easing="<?php the_field('data_easing'); ?>"<?php endif; ?> <?php if( null != $data_fly_in_distance ):?>data-fly-in-distance="<?php the_field('data_fly_in_distance');?>%"<?php endif; ?> <?php if( null != $data_repeat ): ?>data-repeat<?php endif; ?> class="singleCardWrapper<?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; ?> <?php $same_size = get_field('same_size'); if(null == $same_size): ?>cardContent<?php endif; ?>" >
+	<div id="singleCard" <?php $same_size = get_field('same_size'); if(null != $same_size): ?>class="cardContent"<?php endif; ?>>
 		<?php
 		$template = array(
 			array('core/heading', array(

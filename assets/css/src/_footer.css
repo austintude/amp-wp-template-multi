@@ -161,12 +161,14 @@
 	position: relative;
 	@media (--content-query) {
 			height: 5vw;
+			text-align: center;
 	}
 		}
 	}
 	& .builtBy {
 		padding-top: .8rem;
 		width: 100vw;
+		text-align: center;
 	}
 }
 }

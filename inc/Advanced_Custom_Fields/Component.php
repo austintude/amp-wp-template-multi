@@ -3639,6 +3639,86 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 
 	acf_add_local_field_group(array(
+		'key' => 'group_6018609a68708',
+		'title' => 'Custom Grid Dimensions',
+		'fields' => array(
+			array(
+				'key' => 'field_601860a8b2888',
+				'label' => 'Customize Grid Dimensions Toggle',
+				'name' => 'customize_grid_dimensions_toggle',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
+				'key' => 'field_601860c2b2889',
+				'label' => 'Card Size',
+				'name' => 'card_size',
+				'type' => 'radio',
+				'instructions' => 'Select One - If \'Other\' Provide a number between 0 - 1000',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_601860a8b2888',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					20 => 'XX-Small (20)',
+					50 => 'X-Small (50)',
+					100 => 'Small (100)',
+					200 => 'Medium (200)',
+					300 => 'Large (300)',
+					400 => 'X-Large (400)',
+					500 => 'XX-Large (500)',
+				),
+				'allow_null' => 0,
+				'other_choice' => 1,
+				'save_other_choice' => 1,
+				'default_value' => '',
+				'layout' => 'vertical',
+				'return_format' => 'value',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/grid-cards',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
 		'key' => 'group_5ff4d2d09742e',
 		'title' => 'Custom Margins',
 		'fields' => array(
@@ -4810,49 +4890,6 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 
 	acf_add_local_field_group(array(
-		'key' => 'group_5fd94ebb1cb5e',
-		'title' => 'Grid w/ InnerBlock',
-		'fields' => array(
-			array(
-				'key' => 'field_5fda73412856f',
-				'label' => 'Same Size',
-				'name' => 'same_size',
-				'type' => 'true_false',
-				'instructions' => 'Do you want the cards in this grid to all be stretched to a consistent height?',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => 'Default is YES. If you want the cards to be inconsistent heights in this grid, you must deselect this feature.',
-				'default_value' => 1,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
-		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'block',
-					'operator' => '==',
-					'value' => 'acf/grid-cards',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => true,
-		'description' => '',
-	));
-
-	acf_add_local_field_group(array(
 		'key' => 'group_5eceb8453d4a9',
 		'title' => 'Guest Reviews Block',
 		'fields' => array(
@@ -5473,16 +5510,35 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 
 	acf_add_local_field_group(array(
-		'key' => 'group_5fd9664292980',
-		'title' => 'Single Card',
+		'key' => 'group_5fd94ebb1cb5e',
+		'title' => 'Single Grid Card',
 		'fields' => array(
+			array(
+				'key' => 'field_5fda73412856f',
+				'label' => 'Same Size',
+				'name' => 'same_size',
+				'type' => 'true_false',
+				'instructions' => 'Do you want the cards in this grid to not all be stretched to a consistent height?',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => 'Default is stretched (unticked)',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
 		),
 		'location' => array(
 			array(
 				array(
 					'param' => 'block',
 					'operator' => '==',
-					'value' => 'acf/grid-cards',
+					'value' => 'acf/single-card',
 				),
 			),
 		),
