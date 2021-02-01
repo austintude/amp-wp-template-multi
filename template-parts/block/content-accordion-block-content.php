@@ -23,8 +23,8 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 ?>
 <?php include('acf-style-fields.php'); ?>
 <style scoped>
-	<?php include('acf-style-fields/custom-margins.php'); ?>
-	<?php include('acf-style-fields/custom-font-adjustments.php'); ?>
+	<?php if ((null != $custom_padding_toggle) || (null != $custom_margins_toggle) || (null != $custom_margins_mobile_toggle) || (null != $custom_paddings_mobile_toggle)) : { include('acf-style-fields/custom-margins.php'); } endif; ?>
+	<?php if (null != $font_adjustment_toggle) : {  include('acf-style-fields/custom-font-adjustments.php'); } endif; ?>
 	</style>
 
 <section class="customAccordionSection" id="<?php echo $id; ?>">
