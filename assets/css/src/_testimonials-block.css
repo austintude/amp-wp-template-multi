@@ -21,6 +21,9 @@
 	& .wp-block-cover__inner-container> #testimonialsBlock {
 		max-width: 100vw;
 			}
+	& .hasAside .testimonialWrapper .wp-block-cover__inner-container {
+		width: 100%;
+	}
     & #testimonialsBlock {
 		margin-top: 0;
 		display: grid;

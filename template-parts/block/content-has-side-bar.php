@@ -37,7 +37,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 	<?php if ((null != $custom_padding_toggle) || (null != $custom_margins_toggle) || (null != $custom_margins_mobile_toggle) || (null != $custom_paddings_mobile_toggle)) : { include('acf-style-fields/custom-margins.php'); } endif; ?>
 	<?php if (null != $font_adjustment_toggle) : {  include('acf-style-fields/custom-font-adjustments.php'); } endif; ?>
 	</style>
-<div class="blockWrapperStyle">
+<div class="blockWrapperStyle hasAside">
 
 <section id="<?php echo $id; ?>" class="blockWrapper <?php if (!empty($block['align'])) : echo ' ' . $align_class; endif; if (!empty($block['className'])) : echo ' ' . $add_class; endif; if (!empty($full_width_toggle_mobile)) : echo 'fullWidthMobile'; endif; if (!empty($full_width_toggle_desktop)) : echo 'fullWidthDesktop'; endif;?>" >
 
