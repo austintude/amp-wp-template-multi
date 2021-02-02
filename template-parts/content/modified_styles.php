@@ -257,7 +257,7 @@
 
 			?>
 <?php if (null != $total_footer_columns) : { ?>
-		<?php if (1 == $column_1_toggle) : { ?>
+			<?php if (1 == $column_1_toggle) : { ?>
 			.site-footer .topBlock .leftBlock {
 			grid-area: left;
 		}

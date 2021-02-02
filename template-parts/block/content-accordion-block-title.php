@@ -36,7 +36,7 @@ if (!empty($marker_customization_toggle)) : {
 #<?php echo $id; ?> {
 	background: <?php echo $marker_background_color; ?>;
 }
-summary::-webkit-details-marker {
+summary#<?php echo $id; ?>::-webkit-details-marker {
 	/* margin-left: -5rem; */
 		color: <?php echo $marker_color; ?>;
 		/* color: black; */

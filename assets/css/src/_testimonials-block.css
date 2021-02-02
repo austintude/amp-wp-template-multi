@@ -480,12 +480,3 @@
         top: 0.25em;
     }
 }
-
-
-@media (--ipad-landscape-menu-query) {
-    .home {
-        & .site-footer {
-        margin-top: 3rem;
-    }
-}
-}
