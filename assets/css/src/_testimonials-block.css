@@ -319,9 +319,11 @@
 
 
 			& .quotes {
-				width: 90vw;
+				/* width: 90vw; */
+				width: auto;
 				@media (--content-query) {
-					width: 80vw;
+					/* width: 80vw; */
+					width: auto;
 				}
 			}
         }
