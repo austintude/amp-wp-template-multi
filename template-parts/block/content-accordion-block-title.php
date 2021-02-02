@@ -38,14 +38,14 @@ if (!empty($marker_customization_toggle)) : {
 }<?php if (null != $custom_margins_toggle) : { ?>
 @media only screen and (min-width: 48.1rem) {
 summary#<?php echo $id; ?> > * {
-	<?php if (!empty($custom_margins_top)) : echo 'margin-top:'; the_field('custom_margin_top');  echo 'rem; '; endif; if (!empty($custom_margins_bottom)) : echo 'margin-bottom:'; the_field('custom_margins_bottom');  echo 'rem; '; endif;?>
+	<?php if (!empty($custom_margins_top)) : echo 'margin-top:'; the_field('custom_margin_top');  echo 'rem; '; endif; if (!empty($custom_margins_bottom)) : echo 'margin-bottom:'; the_field('custom_margin_bottom');  echo 'rem; '; endif;?>
 }
 }
 <?php } endif;?>
-<?php if ((null != $custom_margins_mobile_toggle) || (null != $custom_paddings_mobile_toggle) ) : { ?>
+<?php if (null != $custom_margins_mobile_toggle) : { ?>
 	@media only screen and (max-width: 48rem) {
 		summary#<?php echo $id; ?> > * {
-	<?php if (!empty($custom_margins_top_mobile)) : echo 'margin-top:'; the_field('custom_margins_top_mobile');  echo 'rem; '; endif; if (!empty($custom_margins_bottom_mobile)) : echo 'margin-bottom:'; the_field('custom_margins_bottom_mobile');  echo 'rem; '; endif;?>
+	<?php if (!empty($custom_margins_top_mobile)) : echo 'margin-top:'; the_field('custom_margin_top_mobile');  echo 'rem; '; endif; if (!empty($custom_margins_bottom_mobile)) : echo 'margin-bottom:'; the_field('custom_margin_bottom_mobile');  echo 'rem; '; endif;?>
 }
 	}
 <?php } endif;?>
@@ -59,7 +59,7 @@ summary#<?php echo $id; ?>::-webkit-details-marker {
 	}
 <?php } endif; ?>
 	</style>
-<summary class="customAccordionTitle3" id="<?php echo $id; ?>">
+<summary class="customAccordionTitle" id="<?php echo $id; ?>">
 <?php
 		$template = array(
 			array('core/heading', array(
