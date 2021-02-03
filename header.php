@@ -29,7 +29,6 @@ namespace WP_Rig\WP_Rig;
 	?>
 
 	<?php wp_head(); ?>
-	<script src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js" async="" custom-element="amp-analytics"></script>
 	<?php $analyticsloop = new \WP_Query( array( 'post_type' => 'analytics', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 	<?php while( $analyticsloop->have_posts() ) : $analyticsloop->the_post();
