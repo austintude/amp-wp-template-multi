@@ -88,6 +88,10 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 </div>
 
 <div class="blockImages">
+<h3>
+	<?php echo $business_name; ?>
+
+	</h3>
 <section id="physical">
 <div id="phone">
 <?php if ($contact_us_phone_title != null): { ?>
@@ -113,15 +117,12 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 
         </div>
 <div id="address">
-	<address property="address" typeof="PostalAddress">
-	<h4>
-	<?php echo $business_name; ?>
-
-	<?php if( $physical_and_pobox != null ): { ?>
-		- <em><?php echo $first_address_title; ?> </em>
+<?php if( $physical_and_pobox != null ): { ?>
+		<h4><?php echo $first_address_title; ?></h4>
 		<?php } endif; ?>
-	</h4>
+	<address property="address" typeof="PostalAddress">
 		<h5>
+
 	<span property="streetAddress">
 	<?php  if( $contact_us_street_menu_toggle != null ):  { echo $contact_us_street; echo '<br>';} endif; ?>
 
@@ -130,9 +131,13 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 <?php  if( $contact_us_city_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_city;  echo ', '; ?> </span> <?php } endif; ?>
 <?php  if( $contact_us_state_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_state;  echo ' '; ?> </span> <?php } endif; ?>
 <?php  if( $contact_us_zip_menu_toggle != null ):  { ?><span property="addressRegion"><?php echo $contact_us_zip;  ?> </span> <?php } endif; ?>
-	<?php if( $physical_and_pobox != null ): { ?>
-			<em><?php echo '<br>';echo '<br>'; echo $second_address_title; echo '<br>'; ?> </em>
-	<span property="streetAddress"><?php echo '<br>'; echo $second_contact_us_street; ?>
+</h5>
+</address>
+<?php if( $physical_and_pobox != null ): { ?>
+			<h4><?php echo $second_address_title; ?></h4>
+<address>
+	<h5>
+	<span property="streetAddress"><?php echo $second_contact_us_street; ?>
 	<?php if( $second_contact_us_street_suite != null ): { ?>
 
 <?php echo $second_contact_us_street_suite; echo '<br>'; ?>
@@ -141,9 +146,11 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 	<span property="addressLocality"><?php echo $second_contact_us_city; ?></span>,
 
 	<span property="addressRegion"><?php echo $second_contact_us_state; ?></span> <?php echo $second_contact_us_zip; ?>
-		<?php } endif; ?>
-</h5>
+	</h5>
 </address>
+	<?php } endif; ?>
+
+
 </div>
 
 </section>
