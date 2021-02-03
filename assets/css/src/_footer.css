@@ -90,7 +90,8 @@
     display: grid;
     grid-template-rows: 5rem 1fr;
     grid-template-columns: 1fr;
-    grid-gap: .5rem;
+	grid-gap: .5rem;
+	align-items: baseline;
 		& .blockTitle {
 			& h5 {
 				font-size: 1rem;

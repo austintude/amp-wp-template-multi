@@ -89,51 +89,12 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 
 <div class="blockImages">
 <section id="physical">
-
-<div id="address">
-	<address property="address" typeof="PostalAddress">
-	<h5>
-	<?php echo $business_name; ?>
-	<?php if( $physical_and_pobox != null ): { ?>
-		- <em><?php echo $first_address_title; ?> </em>
-		<?php } endif; ?>
-	<br>
-	<span property="streetAddress">
-	<?php  if( $contact_us_street_menu_toggle != null ):  { echo $contact_us_street; } endif; ?>
-	<br>
-				<?php  if( $contact_us_street_suite_menu_toggle != null ): { echo $contact_us_street_suite; } endif; ?>
-		<br>
-</span>
-<?php  if( $contact_us_city_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_city;  echo ', '; ?> </span> <?php } endif; ?>
-<?php  if( $contact_us_state_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_state;  echo ' '; ?> </span> <?php } endif; ?>
-<?php  if( $contact_us_zip_menu_toggle != null ):  { ?><span property="addressRegion"><?php echo $contact_us_zip;  ?> </span> <?php } endif; ?>
-	<?php if( $physical_and_pobox != null ): { ?>
-		<br>
-		<br>
-		<em><?php echo $second_address_title; ?> </em>
-		<br>
-	<span property="streetAddress"><?php echo $second_contact_us_street; ?>
-	<br>
-	<?php if( $second_contact_us_street_suite != null ): { ?>
-
-<?php echo $second_contact_us_street_suite; ?>
-<br>
-<?php } endif; ?>
-</span>
-	<span property="addressLocality"><?php echo $second_contact_us_city; ?></span>,
-
-	<span property="addressRegion"><?php echo $second_contact_us_state; ?></span> <?php echo $second_contact_us_zip; ?>
-		<?php } endif; ?>
-</h5>
-</address>
-</div>
 <div id="phone">
 <?php if ($contact_us_phone_title != null): { ?>
 	<h5><?php echo $contact_us_phone_title; ?></h5>
 	<?php } endif;?>
 			<span property="telephone"><a href="tel:<?php echo $contact_us_phone_link; ?>" style="color: <?php echo $contact_footer_link_color; '#fff'; ?>;"><?php echo $contact_us_phone; ?></a></span>
 		</div>
-</section>
 <div id="hours">
 
 			<h5>
@@ -151,6 +112,39 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 				<?php } endif;?>
 
         </div>
+<div id="address">
+	<address property="address" typeof="PostalAddress">
+	<h5>
+	<?php echo $business_name; ?>
+	<?php if( $physical_and_pobox != null ): { ?>
+		- <em><?php echo $first_address_title; echo '<br>';?> </em>
+		<?php } endif; ?>
+	<span property="streetAddress">
+	<?php  if( $contact_us_street_menu_toggle != null ):  { echo $contact_us_street; echo '<br>';} endif; ?>
+
+				<?php  if( $contact_us_street_suite_menu_toggle != null ): { echo $contact_us_street_suite; echo '<br>'; } endif; ?>
+</span>
+<?php  if( $contact_us_city_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_city;  echo ', '; ?> </span> <?php } endif; ?>
+<?php  if( $contact_us_state_menu_toggle != null ):  { ?><span property="addressLocality">	<?php echo $contact_us_state;  echo ' '; ?> </span> <?php } endif; ?>
+<?php  if( $contact_us_zip_menu_toggle != null ):  { ?><span property="addressRegion"><?php echo $contact_us_zip;  ?> </span> <?php } endif; ?>
+	<?php if( $physical_and_pobox != null ): { ?>
+			<em><?php echo '<br>';echo '<br>'; echo $second_address_title; echo '<br>'; ?> </em>
+	<span property="streetAddress"><?php echo '<br>'; echo $second_contact_us_street; ?>
+	<?php if( $second_contact_us_street_suite != null ): { ?>
+
+<?php echo $second_contact_us_street_suite; echo '<br>'; ?>
+<?php } endif; ?>
+</span>
+	<span property="addressLocality"><?php echo $second_contact_us_city; ?></span>,
+
+	<span property="addressRegion"><?php echo $second_contact_us_state; ?></span> <?php echo $second_contact_us_zip; ?>
+		<?php } endif; ?>
+</h5>
+</address>
+</div>
+
+</section>
+
 
 
 
