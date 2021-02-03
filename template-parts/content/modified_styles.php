@@ -138,17 +138,19 @@
 			margin: 0 2.5rem 2em auto;
 		} */
 	}
-}
-.site .fullWidth {
+	.site .fullWidth {
 	margin-left: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
 	margin-right: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
 	min-width: 100vw;
 }
+
 .site .fullWidthMobile {
 	margin-left: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
 	margin-right: -<?php echo get_theme_mod( 'main_margins_mobile', '2' ); ?>vw;
 	min-width: 100vw;
 }
+}
+
 <?php } endif; ?>
 <?php if (null != get_theme_mod( 'main_margins')) : { ?>
  @media screen and (min-width: 48.1em) {
