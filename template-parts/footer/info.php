@@ -116,12 +116,12 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 	<address property="address" typeof="PostalAddress">
 	<h4>
 	<?php echo $business_name; ?>
-				</h4>
-	<h5>
+
 	<?php if( $physical_and_pobox != null ): { ?>
 		- <em><?php echo $first_address_title; ?> </em>
 		<?php } endif; ?>
-		<br>
+	</h4>
+		<h5>
 	<span property="streetAddress">
 	<?php  if( $contact_us_street_menu_toggle != null ):  { echo $contact_us_street; echo '<br>';} endif; ?>
 
