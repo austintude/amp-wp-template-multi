@@ -18,7 +18,7 @@ $review_count = 0;
 
 <section id="testimonialsBlock">
 
-    <ol class="testimonialsList testimonialsList">
+    <div class="testimonialsList testimonialsList">
         <!-- insert acf sub-repeater here -->
         <amp-carousel height="3"
 		width="12"
@@ -43,7 +43,7 @@ $review_count = $review_count + 1;
 
 ?>
 <?php  if( $testimonial_in_carousel >= 1 ): { ?>
-
+<ol>
             <li>
 			<script type="text/plain" target="amp-script" id="review_id_<?php echo $review_count; ?>">
 {
@@ -100,11 +100,12 @@ $review_count = $review_count + 1;
 
 
 			</li>
+</ol>
 			<?php } endif; ?>
             <?php endwhile; wp_reset_query();?>
             </amp-carousel>
 
-    </ol>
+</div>
     <!-- <div class="moreTestimonials">
     <button aria-label="<?php echo $ctablock_phone_text; ?>">
 				<a href="<?php echo $more_testimonials_link; ?>"><?php echo $more_testimonials_link_txt; ?></a>
