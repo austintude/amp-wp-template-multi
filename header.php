@@ -29,6 +29,8 @@ namespace WP_Rig\WP_Rig;
 	?>
 
 	<?php wp_head(); ?>
+	<link rel="preload" href="<?php the_header_image_tag(); ?>" as="image">
+
 	<?php $analyticsloop = new \WP_Query( array( 'post_type' => 'analytics', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 	<?php while( $analyticsloop->have_posts() ) : $analyticsloop->the_post();
