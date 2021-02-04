@@ -160,8 +160,20 @@ $wp_customize->add_control('hero_clip_select',
          '1' => __( 'No Clip' )
   ]
   ]);
-
-
+  $wp_customize->add_setting('hero_background_color',
+  [
+	  'default' => '',
+	  'transport' => 'refresh',
+  ]);
+  $wp_customize->add_control('hero_background_color',
+  [
+	'label' => __( 'Hero Background Color' ),
+	'description' => esc_html__( 'To aid in LCP speed. add a background color that offers sufficient contrast to your Hero Text color to preload the space prior to the hero image.' ),
+	'section' => 'header_image',
+	'priority' => 20, // Optional. Order priority to load the control. Default: 10
+	'type' => 'color',
+	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+	  ]);
   $wp_customize->add_setting('hero_cta_grid_area',
   [
 	'default' => '10',

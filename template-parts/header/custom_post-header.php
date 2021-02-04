@@ -12,6 +12,13 @@ if ( ! has_header_image() ) {
 }
 
 ?>
+<?php if (null != get_theme_mod( 'hero_background_color')) : { ?>
+<style scoped>
+	.header-image {
+		background: <?php echo get_theme_mod( 'hero_background_color'); ?>;
+	}
+	</style>
+<?php } endif;?>
 <?php if( get_theme_mod( 'hero_clip_select') < 4 ): { ?>
 <figure class="header-image no_clip heroImage<?php echo get_theme_mod( 'hero_placement_select'); ?>">
 

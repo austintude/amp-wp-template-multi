@@ -59,6 +59,7 @@ class Component implements Component_Interface {
 		  ]);
 
 		//adding setting for Hero Carousel text area
+
   $wp_customize->add_setting('hero_carousel_toggle',
   [
 	'default' => '',
@@ -162,10 +163,6 @@ if (get_theme_mod( 'hero_carousel_toggle') == '') :  {
 		'transport' => 'refresh',
 		'sanitize_callback' => 'sanitize_hex_color'
 	]);
-
-
-
-
 $wp_customize->add_control('hero_text_color',
 [
   'label' => __( 'Site Title Text Color' ),
