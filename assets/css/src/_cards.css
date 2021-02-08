@@ -1,5 +1,5 @@
 .gridCardLoop {
-    display: grid;
+	display: grid;
 	grid-gap: 2rem;
 	margin: auto 2vw auto auto;
 	/* width: 96vw; */
@@ -12,56 +12,57 @@
 		width: 90vw; */
 	}
 	@media (--sidebar-query) {
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	margin: 2rem auto;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		margin: 2rem auto;
 	}
 
 	& .cardContent {
-
-			/* text-align: center; */
+		/* text-align: center; */
+		font-weight: 300;
+		color: #4a4a4a;
+		background: #f9f7f7;
+		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.14),
+			0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+		display: grid;
+		/* align-self: flex-start; */
+		align-self: auto;
+		& figure {
+			margin: 0 0 0.5em 0;
+		}
+		& figure.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		& h3 {
+			font-size: 1.2rem;
 			font-weight: 300;
-			color: #4a4a4a;
-			background: #f9f7f7;
-			box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .14), 0 1px 1px -1px rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-			display: grid;
-			/* align-self: flex-start; */
-			align-self: auto;
-& figure {
-	margin: 0 0 .5em 0;
-}
-			& h3 {
-				font-size: 1.2rem;
-				font-weight: 300;
-				text-align: center;
-			}
+			text-align: center;
+		}
 
-			& p {
-				font-size: 1.1rem;
-				padding: 0 2rem;
-			}
-			@media (--wide-screen-query) {
+		& p {
+			font-size: 1.1rem;
+			padding: 0 2rem;
+		}
+		@media (--wide-screen-query) {
 			align-self: stretch;
-			}
-			& .wp-block-cover.has-background-dim {
-				background-color: broken;
-			}
 		}
-
-		& .cardtypeshort {
-			grid-row-end: span 1;
+		& .wp-block-cover.has-background-dim {
+			background-color: broken;
 		}
+	}
 
-		& .cardtypetall {
-			grid-row-end: span 2;
-		}
+	& .cardtypeshort {
+		grid-row-end: span 1;
+	}
 
-		& .cardtypeverytall {
-			grid-row-end: span 3;
-		}
+	& .cardtypetall {
+		grid-row-end: span 2;
+	}
 
-
+	& .cardtypeverytall {
+		grid-row-end: span 3;
+	}
 }
-
 
 .sectionCardsBlock {
 	display: grid;
@@ -70,14 +71,15 @@
 	width: 96vw;
 	grid-template-columns: 1fr;
 	@media (--sidebar-query) {
-	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 	}
 	& .sectionCard {
 		text-align: center;
 		font-weight: 300;
 		color: #4a4a4a;
 		background: #f9f7f7;
-		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 1px -1px rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+			0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 		padding: 1rem;
 		display: grid;
 		align-self: end;
@@ -92,7 +94,7 @@
 			font-size: 1.1rem;
 		}
 		@media (--wide-screen-query) {
-		align-self: stretch;
+			align-self: stretch;
 		}
 	}
 	@media (--content-query) {
@@ -102,49 +104,47 @@
 	}
 }
 
-
 .gridCardLoop.cardverysmall {
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .gridCardLoop.cardsmall {
-		@media (--sidebar-query) {
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	margin: 2rem auto;
+	@media (--sidebar-query) {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		margin: 2rem auto;
 	}
 }
 .gridCardLoop.cardsmall.custom {
 	@media (--sidebar-query) {
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
 }
 
 .gridCardLoop.card {
 	@media (--sidebar-query) {
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-margin: 2rem auto;
-}
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		margin: 2rem auto;
+	}
 }
 .gridCardLoop.card.custom {
 	@media (--sidebar-query) {
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-}
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
 }
 
 .gridCardLoop.cardmedium {
 	@media (--sidebar-query) {
-grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	}
 }
-}
-
 
 .gridCardLoop.cardlarge {
 	@media (--sidebar-query) {
-grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
-}
+		grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+	}
 }
 .gridCardLoop.cardxtralarge {
 	@media (--sidebar-query) {
-grid-template-columns: repeat(auto-fit, minmax(850px, 1fr));
-}
+		grid-template-columns: repeat(auto-fit, minmax(850px, 1fr));
+	}
 }
