@@ -30,6 +30,7 @@ namespace WP_Rig\WP_Rig;
 
 	<?php wp_head(); ?>
 
+
 	<?php $analyticsloop = new \WP_Query( array( 'post_type' => 'analytics', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 	<?php while( $analyticsloop->have_posts() ) : $analyticsloop->the_post();
@@ -52,6 +53,43 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 </head>
 
 <body <?php body_class(); ?>>
+<?php	/**
+	 * Gets the header images uploaded for the current theme.
+	 *
+	 * @since 3.2.0
+	 *
+	 * @return array
+	 */
+	function get_uploaded_header_images() {
+	        $header_images = array();
+
+	        // @todo Caching.
+	        $headers = get_posts(
+	                array(
+	                        'post_type'  => 'attachment',
+	                        'meta_key'   => '_wp_attachment_is_custom_header',
+	                        'meta_value' => get_option( 'stylesheet' ),
+	                        'orderby'    => 'none',
+	                        'nopaging'   => true,
+	                )
+	        );
+
+	        if ( empty( $headers ) ) {
+	                return array();
+	        }
+
+	        foreach ( (array) $headers as $header ) {
+					$url          = esc_url_raw( wp_get_attachment_url( $header->ID ) ); ?>
+					<div> <?php
+					echo $url;
+					?>
+					</div>
+					<?php
+	        }
+
+	        return $header_images;
+	}
+	?>
 <?php get_template_part( 'template-parts/content/analytics' ); ?>
 
 <?php wp_body_open(); ?>

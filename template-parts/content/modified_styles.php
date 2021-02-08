@@ -37,6 +37,25 @@
 		<?php } endif; ?>
 		}
 <?php } endif; ?>
+<?php if (null != get_theme_mod( 'hero_text_grid_toggle') ) : { ?>
+	<?php if ('center' != get_theme_mod( 'hero_title_grid_area') ) : { ?>
+		@media screen and (min-width: 48.1em) {
+			.titleTagWrapper.heroTextgrid {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+			.heroButtons {
+				top: 0;
+				align-self: center;
+			}
+			.titleTagWrapper.heroTextgrid .centerHero {
+			    grid-gap: 1rem;
+}
+		}
+	<?php } endif; ?>
+	<?php if ('center' != get_theme_mod( 'hero_title_grid_area') ) : { ?>
+
+		<?php } endif; ?>
+<?php } endif; ?>
 <?php if (null != get_theme_mod( 'secondary_top_bar_on_mobile') ) : { ?>
 	@media screen and (max-width: 48em) {
 	.navSecondaryInc #secondary-top-bar, .secondary-menu-container {
