@@ -133,6 +133,7 @@
 			}
 			.secondary-menu-container ul#rightRow li  img {
 					width: 1.5rem;
+					height: 1.5rem;
 				}
 
 				.titleTagWrapper {
