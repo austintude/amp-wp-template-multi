@@ -78,7 +78,7 @@ $contact_us_zip_menu_toggle	= get_field('contact_us_zip_menu_toggle');
 <ul id="leftRow" >
 <?php  if( $contact_us_phone != null ):  { ?>
 	<li>
-		<a href="tel:<?php echo $contact_us_phone_link; ?>">
+		<a href="tel:<?php echo $contact_us_phone_link; ?>" style="color:<?php echo get_theme_mod( 'top_bar_anchor_text_color', '#fff' ); ?>">
 					<!-- <span class="strong" property="telephone"> -->
 			<?php echo $contact_us_phone; ?>
 			<!-- </span> -->
