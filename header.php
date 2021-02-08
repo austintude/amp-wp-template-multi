@@ -49,7 +49,7 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 <?php get_template_part( 'template-parts/content/modified_styles' ); ?>
 <?php get_template_part( 'template-parts/content/schema' ); ?>
 <?php get_template_part( 'template-parts/header/in-head-analytics' ); ?>
-
+<link rel="preload" href="<?php the_header_image_tag(); ?>" as="image">
 </head>
 
 <body <?php body_class(); ?>>
@@ -94,6 +94,9 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+	<div>
+		<?php echo the_header_image_tag(); ?>
+	</div>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-rig' ); ?></a>
 
 	<header id="masthead" class="site-header">

@@ -131,7 +131,7 @@
 				padding-top: .1rem;
 				margin: 0;
 			}
-			.secondary-menu-container ul#rightRow li  img {
+			.secondary-menu-container ul#rightRow li img {
 					width: 1.5rem;
 					height: 1.5rem;
 				}
