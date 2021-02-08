@@ -52,8 +52,19 @@
 }
 		}
 	<?php } endif; ?>
-	<?php if ('center' != get_theme_mod( 'hero_title_grid_area') ) : { ?>
-
+	<?php if ('center' == get_theme_mod( 'hero_cta_grid_area') ) : { ?>
+		@media screen and (min-width: 48.1em) {
+			.titleTagWrapper.heroTextgrid {
+				grid-template-areas:
+				"left center right"
+				"left center right"
+				"left centerCTA right";
+			}
+			.titleTagWrapper.heroTextgrid .heroButtons.centerHero {
+				grid-area: centerCTA;
+				place-items: flex-start;
+			}
+		}
 		<?php } endif; ?>
 <?php } endif; ?>
 <?php if (null != get_theme_mod( 'secondary_top_bar_on_mobile') ) : { ?>
