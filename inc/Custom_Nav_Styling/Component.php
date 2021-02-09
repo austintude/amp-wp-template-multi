@@ -148,9 +148,10 @@ $wp_customize->add_setting('top_bar_style_options',
 	  'transport' => 'refresh',
   ]);
 
-  $wp_customize->add_setting('custom_mobile_menu',
+  $wp_customize->add_setting('tablet_menu_font_size',
   [
-   'default'        => ' ',
+   'default'        => '',
+   'transport' => 'refresh',
   ]);
 
   $wp_customize->add_control('secondary_top_bar_toggle',
@@ -282,12 +283,12 @@ $wp_customize->add_setting('top_bar_style_options',
 	'type' => 'color',
 	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
-  $wp_customize->add_control('custom_mobile_menu',
+  $wp_customize->add_control('tablet_menu_font_size',
   [
 	'type' => 'number',
-	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
-	'label' => __( 'Mobile Menu On/Off Toggle' ),
-	'description' => __( 'Set the width to trigger on/off the mobile menu. Default is 52.1em' )
+	'section' => 'custom_nav_styling_settings_section', // Add a default or your own section
+	'label' => __( 'Customize Main Menu Font Size on Tablet' ),
+	'description' => __( 'Set the font-size for tablet devices to better fit the smaller screen.' )
 	  ]);
 	}
 

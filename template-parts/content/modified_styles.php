@@ -37,6 +37,26 @@
 		<?php } endif; ?>
 		}
 <?php } endif; ?>
+<?php if (null != get_theme_mod( 'tablet_menu_font_size') ) : { ?>
+	@media screen and (min-width: 48.1em) and (max-width: 64em) {
+		.titleTagWrapper {
+    margin-top: 6rem;
+}
+		.secondary-menu-container {
+    margin: auto 5rem;
+    width: 90vw;
+}
+		.main-navigation {
+    right: .5rem;
+}
+		.main-navigation ul li {
+		font-size: <?php echo get_theme_mod( 'tablet_menu_font_size'); ?>rem;
+		}
+		.navSecondaryInc .custom-logo {
+    left: -2.5rem;
+	}
+	<?php } endif; ?>
+
 <?php if (null != get_theme_mod( 'hero_text_grid_toggle') ) : { ?>
 	<?php if ('center' != get_theme_mod( 'hero_title_grid_area') ) : { ?>
 		@media screen and (min-width: 48.1em) {
