@@ -55,6 +55,7 @@
 		.navSecondaryInc .custom-logo {
     left: -2.5rem;
 	}
+}
 	<?php } endif; ?>
 
 <?php if (null != get_theme_mod( 'hero_text_grid_toggle') ) : { ?>
