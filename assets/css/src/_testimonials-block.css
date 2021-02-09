@@ -108,7 +108,8 @@
 			}
 			& amp-carousel {
 				& .amp-carousel-slide {
-					height: 96%;
+					padding-top: 1rem;
+					height: 95%;
 					width: 94%;
 				}
 
@@ -439,7 +440,7 @@
 	}
 	& cite {
 		font-family: var(--highlight-font-family);
-		font-size: 2rem;
+		font-size: 1.1rem;
 		/* color: #fff; */
 	}
 	& .authorAndRating {
@@ -447,7 +448,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		@media (--content-query) {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 30%;
 		}
 		/* align-items: flex-end; */
 	}
@@ -455,8 +456,9 @@
 	& .testimonialsCard .testimonialsQuote {
 		display: grid;
 		text-transform: capitalize;
+		grid-template-columns: 1fr 1fr;
 		margin: 0;
-
+		place-items: flex-end;
 		& .authorImg img {
 			max-width: 8rem;
 			border-radius: 100%;

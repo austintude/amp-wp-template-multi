@@ -104,10 +104,6 @@ $wp_customize->add_setting('global_styles_options',
   [
    'default'        => ' ',
   ]);
-  $wp_customize->add_setting('custom-mobile-menu',
-  [
-   'default'        => ' ',
-  ]);
   $wp_customize->add_setting('global-font-size',
   [
    'default'        => '',
@@ -255,13 +251,6 @@ $wp_customize->add_control( 'desktop_logo_height_adj',
 	'label' => __( 'Global Active Link Color' ),
 	'section' => 'global_styles_modifications_settings_section',
 	'type' => 'color'
-	  ]);
-	  $wp_customize->add_control('custom-mobile-menu',
-  [
-	'type' => 'number',
-	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
-	'label' => __( 'Mobile Menu On/Off Toggle' ),
-	'description' => __( 'Set the width to trigger on/off the mobile menu. Default is 52.1em' )
 	  ]);
 
 	}

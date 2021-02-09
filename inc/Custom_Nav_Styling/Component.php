@@ -148,7 +148,10 @@ $wp_customize->add_setting('top_bar_style_options',
 	  'transport' => 'refresh',
   ]);
 
-
+  $wp_customize->add_setting('custom_mobile_menu',
+  [
+   'default'        => ' ',
+  ]);
 
   $wp_customize->add_control('secondary_top_bar_toggle',
   [
@@ -279,7 +282,13 @@ $wp_customize->add_setting('top_bar_style_options',
 	'type' => 'color',
 	'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
   ]);
-
+  $wp_customize->add_control('custom_mobile_menu',
+  [
+	'type' => 'number',
+	'section' => 'global_styles_modifications_settings_section', // Add a default or your own section
+	'label' => __( 'Mobile Menu On/Off Toggle' ),
+	'description' => __( 'Set the width to trigger on/off the mobile menu. Default is 52.1em' )
+	  ]);
 	}
 
 }

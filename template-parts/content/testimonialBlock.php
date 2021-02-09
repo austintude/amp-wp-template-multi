@@ -39,13 +39,20 @@ $testimonial_date = get_field('testimonial_date');
 $overall = get_field('overall');
 $testimonial_in_carousel	= get_field('testimonial_in_carousel');
 $star_rating	= get_field('star_rating');
-$review_count = $review_count + 1;
 
 ?>
-<?php  if( $testimonial_in_carousel >= 1 ): { ?>
-<ol>
+<?php  if( $testimonial_in_carousel >= 1 ): {
+	$custom_id = 'customAdjustments-' . get_the_ID();
+	?>
+	<?php include get_template_directory() . ('/template-parts/block/acf-style-fields.php'); ?>
+	<style scoped>
+	<?php if ((null != $custom_padding_toggle) || (null != $custom_margins_toggle) || (null != $custom_margins_mobile_toggle) || (null != $custom_paddings_mobile_toggle)) : { include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-margins-by-class.php'); } endif; ?>
+	<?php if (null != $font_adjustment_toggle) : {  include get_template_directory() . ('/template-parts/block/acf-style-fields/custom-font-adjustments-by-class.php'); } endif; ?>
+	</style>
+
+<ol id="<?php echo $custom_id; ?>">
             <li>
-			<script type="text/plain" target="amp-script" id="review_id_<?php echo $review_count; ?>">
+			<script type="text/plain" target="amp-script" id="review_id_<?php echo $custom_id; ?>">
 {
     "review" : [ {
     "@type" : "Review",
@@ -81,7 +88,7 @@ $review_count = $review_count + 1;
 							</div>
 							<div class="authorAndRating">
 							<cite class="testimonialsQuote">
-                    <?php echo $testimonial_author; ?>
+                    <?php echo $testimonial_author; ?> - <em><?php echo $description_of_work; ?></em>
                                         <div class="testimonialDate">
                         <?php echo $testimonial_date; ?>
                     </div>
@@ -106,9 +113,4 @@ $review_count = $review_count + 1;
             </amp-carousel>
 
 </div>
-    <!-- <div class="moreTestimonials">
-    <button aria-label="<?php echo $ctablock_phone_text; ?>">
-				<a href="<?php echo $more_testimonials_link; ?>"><?php echo $more_testimonials_link_txt; ?></a>
-</button>
-                    </div> -->
 </section>
