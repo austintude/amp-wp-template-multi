@@ -88,7 +88,7 @@ $star_rating	= get_field('star_rating');
 							</div>
 							<div class="authorAndRating">
 							<cite class="testimonialsQuote">
-                    <?php echo $testimonial_author; ?> - <em><?php echo $description_of_work; ?></em>
+                    <?php echo $testimonial_author; ?> <?php if (null != $description_of_work ) : ?> - <em><?php echo $description_of_work; ?></em> <?php endif; ?>
                                         <div class="testimonialDate">
                         <?php echo $testimonial_date; ?>
                     </div>
