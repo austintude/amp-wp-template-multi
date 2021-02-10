@@ -99,6 +99,7 @@
 			grid-column: 1/1;
 			grid-row: 2/3;
 			z-index: 3;
+			grid-gap: 0.5rem;
 			@media (--content-query) {
 				grid-template-columns: 1fr;
 				grid-column: 1/1;
@@ -254,7 +255,7 @@
 		padding-bottom: 3rem;
 		@media (--content-query) {
 			grid-template-columns: 1fr 5rem 1fr;
-			padding-bottom: 0;
+			padding-bottom: 3rem;
 		}
 		& .rating {
 			display: grid;
@@ -263,7 +264,7 @@
 	}
 	& .testimonialsList {
 		margin: 1rem 0;
-		grid-gap: 2rem;
+		/* grid-gap: 2rem; */
 		display: flex;
 		display: grid;
 		grid-template-columns: 1fr;
@@ -324,7 +325,7 @@
 
 		& .quotes {
 			/* width: 90vw; */
-			width: auto;
+			width: 90%;
 			@media (--content-query) {
 				/* width: 80vw; */
 				width: auto;
