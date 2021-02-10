@@ -453,7 +453,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		@media (--content-query) {
-			grid-template-columns: 1fr 30%;
+			grid-template-columns: 1fr 5%;
 		}
 		/* align-items: flex-end; */
 	}
