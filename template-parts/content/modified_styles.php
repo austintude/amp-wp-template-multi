@@ -42,6 +42,9 @@
 		.titleTagWrapper {
     margin-top: 6rem;
 }
+.titleTagWrapper.heroTextgrid {
+	margin-top: 6rem;
+}
 		.secondary-menu-container {
     margin: auto 5rem;
     width: 90vw;
