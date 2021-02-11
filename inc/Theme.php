@@ -162,6 +162,7 @@ class Theme {
 			new Archive_Content\Component(),
 			new Custom_Shortcodes\Component(),
 			new Advanced_Custom_Blocks\Component(),
+			new Website_Performance_Enhancements\Component(),
 		];
 
 		if ( defined( 'JETPACK__VERSION' ) ) {

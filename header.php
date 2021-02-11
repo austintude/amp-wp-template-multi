@@ -49,46 +49,13 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 <?php get_template_part( 'template-parts/content/modified_styles' ); ?>
 <?php get_template_part( 'template-parts/content/schema' ); ?>
 <?php get_template_part( 'template-parts/header/in-head-analytics' ); ?>
+<?php if (null != get_theme_mod( 'hero_image_url')) : { ?>
+<link rel="preload" as="image" href="<?php echo get_theme_mod( 'hero_image_url'); ?>" data-hero="<?php echo get_theme_mod( 'hero_image_url'); ?>">
+<?php } endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php	/**
-	 * Gets the header images uploaded for the current theme.
-	 *
-	 * @since 3.2.0
-	 *
-	 * @return array
-	 */
-	function get_uploaded_header_images() {
-	        $header_images = array();
 
-	        // @todo Caching.
-	        $headers = get_posts(
-	                array(
-	                        'post_type'  => 'attachment',
-	                        'meta_key'   => '_wp_attachment_is_custom_header',
-	                        'meta_value' => get_option( 'stylesheet' ),
-	                        'orderby'    => 'none',
-	                        'nopaging'   => true,
-	                )
-	        );
-
-	        if ( empty( $headers ) ) {
-	                return array();
-	        }
-
-	        foreach ( (array) $headers as $header ) {
-					$url          = esc_url_raw( wp_get_attachment_url( $header->ID ) ); ?>
-					<div> <?php
-					echo $url;
-					?>
-					</div>
-					<?php
-	        }
-
-	        return $header_images;
-	}
-	?>
 <?php get_template_part( 'template-parts/content/analytics' ); ?>
 
 <?php wp_body_open(); ?>

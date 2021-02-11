@@ -10,16 +10,8 @@
 
 // vars
 $hero_carousel_image = get_field('hero_carousel_image');
-// $hero_carousel_h1 = get_field('hero_carousel_h1');
-// $hero_carousel_h2 = get_field('hero_carousel_h2');
-// $hero_carousel_button_text = get_field('hero_carousel_button_text');
-// $hero_carousel_button_color = get_field('hero_carousel_button_color');
-// $hero_carousel_button_text_color = get_field('hero_carousel_button_text_color');
-// $hero_carousel_button_link = get_field('hero_carousel_button_link');
-// $hero_carousel_text_shadow_color = get_field('hero_carousel_text_shadow_color');
-// $hero_carousel_text_color = get_field('hero_carousel_text_color');
 ?>
-  <div><img layout="intrinsic" src="<?php echo $hero_carousel_image['url']; ?>" alt="<?php echo $hero_carousel_image['alt']; ?>"/>
+  <div><img data-hero layout="intrinsic" src="<?php echo $hero_carousel_image['url']; ?>" alt="<?php echo $hero_carousel_image['alt']; ?>"/>
 
 	  </div>
 	  <?php endwhile; wp_reset_query(); ?>
