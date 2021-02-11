@@ -50,7 +50,19 @@ $facebook_pixel_id	= get_field('facebook_pixel_id');
 <?php get_template_part( 'template-parts/content/schema' ); ?>
 <?php get_template_part( 'template-parts/header/in-head-analytics' ); ?>
 <?php if (null != get_theme_mod( 'hero_image_url')) : { ?>
-<link rel="preload" as="image" href="<?php echo get_theme_mod( 'hero_image_url'); ?>" data-hero="<?php echo get_theme_mod( 'hero_image_url'); ?>">
+<link rel="preload" as="image" href="<?php echo get_theme_mod( 'hero_image_url'); ?>" data-hero="">
+<?php } endif; ?>
+<?php if (null != get_theme_mod( 'image_url_1')) : { ?>
+<link rel="preload" as="image" href="<?php echo get_theme_mod( 'image_url_1'); ?>" data-hero="">
+<?php } endif; ?>
+<?php if (null != get_theme_mod( 'image_url_2')) : { ?>
+<link rel="preload" as="image" href="<?php echo get_theme_mod( 'image_url_2'); ?>" data-hero="">
+<?php } endif; ?>
+<?php if (null != get_theme_mod( 'image_url_3')) : { ?>
+<link rel="preload" as="image" href="<?php echo get_theme_mod( 'image_url_3'); ?>" data-hero="">
+<?php } endif; ?>
+<?php if (null != get_theme_mod( 'image_url_4')) : { ?>
+<link rel="preload" as="image" href="<?php echo get_theme_mod( 'image_url_4'); ?>" data-hero="">
 <?php } endif; ?>
 </head>
 

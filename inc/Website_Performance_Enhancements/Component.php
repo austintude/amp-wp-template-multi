@@ -70,6 +70,26 @@ class Component implements Component_Interface {
 	'default' => '',
       'transport' => 'refresh',
   ]);
+  $wp_customize->add_setting('image_url_1',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('image_url_2',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('image_url_3',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
+  $wp_customize->add_setting('image_url_4',
+  [
+	'default' => '',
+      'transport' => 'refresh',
+  ]);
   $wp_customize->add_control('website_performance_enhancements_toggle',
   [
 	  'description' => esc_html__( 'Activate Website Performance Enhancements' ),
@@ -85,7 +105,35 @@ class Component implements Component_Interface {
   $wp_customize->add_control('hero_image_url',
   [
    'label'   => 'Hero Image URL',
-   'description' => esc_html__( 'Copy/Paste the Hero Image URL (or first image used in the hero carousel) here for added Largest Contentful Paint (LCP) lift' ),
+   'description' => esc_html__( 'Copy/Paste the Hero Image URL (or first image used in the hero carousel) here for added Largest Contentful Paint (LCP) lift - if you are using an image optimizer/plugin, you may need to grab this from the browser inspect tools. If a srcset is used, preload the mobile version.' ),
+	'section' => 'website_performance_enhancements_settings_section',
+   'type'    => 'text',
+  ]);
+  $wp_customize->add_control('image_url_1',
+  [
+   'label'   => 'Above Fold Image URL 1',
+   'description' => esc_html__( 'Copy/Paste the Image URL (images that appear above the fold should be added) here for added Largest Contentful Paint (LCP) lift - if you are using an image optimizer/plugin, you may need to grab this from the browser inspect tools. If a srcset is used, preload the mobile version.' ),
+	'section' => 'website_performance_enhancements_settings_section',
+   'type'    => 'text',
+  ]);
+  $wp_customize->add_control('image_url_2',
+  [
+   'label'   => 'Above Fold Image URL 2',
+   'description' => esc_html__( 'Copy/Paste the Image URL (images that appear above the fold should be added) here for added Largest Contentful Paint (LCP) lift - if you are using an image optimizer/plugin, you may need to grab this from the browser inspect tools. If a srcset is used, preload the mobile version.' ),
+	'section' => 'website_performance_enhancements_settings_section',
+   'type'    => 'text',
+  ]);
+  $wp_customize->add_control('image_url_3',
+  [
+   'label'   => 'Above Fold Image URL 3',
+   'description' => esc_html__( 'Copy/Paste the Image URL (images that appear above the fold should be added) here for added Largest Contentful Paint (LCP) lift - if you are using an image optimizer/plugin, you may need to grab this from the browser inspect tools. If a srcset is used, preload the mobile version.' ),
+	'section' => 'website_performance_enhancements_settings_section',
+   'type'    => 'text',
+  ]);
+  $wp_customize->add_control('image_url_4',
+  [
+   'label'   => 'Above Fold Image URL 4',
+   'description' => esc_html__( 'Copy/Paste the Image URL (images that appear above the fold should be added) here for added Largest Contentful Paint (LCP) lift - if you are using an image optimizer/plugin, you may need to grab this from the browser inspect tools. If a srcset is used, preload the mobile version.' ),
 	'section' => 'website_performance_enhancements_settings_section',
    'type'    => 'text',
   ]);
