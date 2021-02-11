@@ -11,23 +11,19 @@
 
 // vars
 $hero_carousel_image = get_field('hero_carousel_image');
-
-// Thumbnail size attributes.
-$size = 'thumbnail';
-$thumb = $hero_carousel_image['sizes'][ 'thumbnail' ];
-$medium = $hero_carousel_image['sizes'][ 'medium' ];
-$large = $hero_carousel_image['sizes'][ 'large' ];
-$img_srcset = wp_get_attachment_image_srcset( $hero_carousel_image );
+$size = 'full'; // (thumbnail, medium, large, full or custom size)
+if( $hero_carousel_image ) {
+    echo wp_get_attachment_image( $hero_carousel_image, $size );
+}
 ?>
   <div><img data-hero layout="intrinsic"
   src="<?php echo esc_url($hero_carousel_image['url']); ?>"
-
-  srcset="<?php echo esc_attr( $large ); ?> 1240w,
-  <?php echo esc_attr( $medium ); ?> 620w,
-  <?php echo esc_attr( $thumb ); ?> 310w"
-  sizes="(min-width: 41.25em) 38.75em,
+  srcset="quilt_3/large.jpg  1240w,
+	        quilt_3/medium.jpg  620w,
+	        quilt_3/small.jpg   310w"
+	sizes="(min-width: 41.25em) 38.75em,
 	       calc(100vw - 2.5em)"
- alt="<?php echo esc_attr($hero_carousel_image['alt']); ?>"/>
+		    alt="<?php echo esc_attr($hero_carousel_image['alt']); ?>"/>
 
 	  </div>
 	  <?php endwhile; wp_reset_query(); ?>
