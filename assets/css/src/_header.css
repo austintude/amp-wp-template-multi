@@ -255,6 +255,7 @@ figure.header-image {
 	position: absolute;
 	text-align: left;
 	width: 100vw;
+	top: 2rem;
 	margin-top: 2rem;
 	z-index: 3;
 	& .amp-carousel-slide {
@@ -274,6 +275,7 @@ figure.header-image {
 	@media (--content-query) {
 		position: relative;
 		margin-top: -2rem;
+		top: 0;
 	}
 	@media (--sidebar-query) {
 		margin-top: 8rem;
