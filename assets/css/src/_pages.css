@@ -1,6 +1,8 @@
 .page {
 	& main#primary {
-		margin-top: 4rem;
+		/* margin-top: 4rem;  */
+		margin-top: 0;
+		top: 12rem;
 		position: relative;
 		@media (--content-query) {
 			margin-top: -7rem;
@@ -10,7 +12,8 @@
 .home.page {
 	& main#primary {
 		/* margin-top: 0; */
-		margin-top: 12rem;
+		margin-top: 0;
+		top: 12rem;
 		position: relative;
 		@media (--content-query) {
 			margin-top: -7rem;
