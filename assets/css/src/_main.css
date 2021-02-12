@@ -1,7 +1,9 @@
 main#primary {
-    margin-top: -5rem;
+	margin-top: 0;
+	top: 12rem;
 	position: relative;
 	@media (--content-query) {
 		margin-top: -7rem;
+		top: 0;
 	}
 }

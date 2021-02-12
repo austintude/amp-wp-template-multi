@@ -320,6 +320,7 @@ figure.header-image {
 	padding-top: 1rem;
 	padding-bottom: 0;
 	grid-area: hero;
+	min-height: 15rem;
 	& .site-title {
 		font-size: 2.4rem;
 		width: 100vw;
