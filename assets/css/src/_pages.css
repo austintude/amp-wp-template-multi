@@ -1,19 +1,19 @@
 .page {
 	& main#primary {
-    margin-top: 4rem;
-	position: relative;
+		margin-top: 4rem;
+		position: relative;
 		@media (--content-query) {
-	margin-top: -7rem;
+			margin-top: -7rem;
+		}
 	}
-
-}
 }
 .home.page {
 	& main#primary {
-		margin-top: 0;
+		/* margin-top: 0; */
+		margin-top: 12rem;
 		position: relative;
-				@media (--content-query) {
-		margin-top: -7rem;
+		@media (--content-query) {
+			margin-top: -7rem;
 		}
 	}
 }
