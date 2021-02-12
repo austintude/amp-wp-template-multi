@@ -6,6 +6,7 @@
 		position: relative;
 		@media (--content-query) {
 			margin-top: -7rem;
+			top: 0;
 		}
 	}
 }
@@ -17,6 +18,7 @@
 		position: relative;
 		@media (--content-query) {
 			margin-top: -7rem;
+			top: 0;
 		}
 	}
 }

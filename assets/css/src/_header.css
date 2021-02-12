@@ -258,6 +258,7 @@ figure.header-image {
 	top: 2rem;
 	margin-top: 2rem;
 	z-index: 3;
+	height: 12rem;
 	& .amp-carousel-slide {
 		/* height: 15rem; */
 		top: 0rem;
@@ -276,6 +277,7 @@ figure.header-image {
 		position: relative;
 		margin-top: -2rem;
 		top: 0;
+		height: auto;
 	}
 	@media (--sidebar-query) {
 		margin-top: 8rem;
