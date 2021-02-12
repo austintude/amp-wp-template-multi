@@ -46,9 +46,9 @@
 	& main#primary {
 		margin-top: 0rem;
 		top: 12rem;
-}
 	}
 }
+
 .single main#primary {
 	/* margin-top: -5rem; */
 	margin-top: 0;
@@ -56,7 +56,7 @@
 	@media (--content-query) {
 		top: 0;
 	}
-}
+
 	@media (--narrow-menu-query) {
 		& header,
 		& article {
