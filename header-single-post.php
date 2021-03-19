@@ -97,6 +97,8 @@ $trigger_event_name = get_sub_field('trigger_event_name');
 		<?php endwhile; ?>
 
 		"emptyForScriptCompliance": {
+			"on":"",
+			"request":""
 
         }
     }

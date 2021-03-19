@@ -3,10 +3,10 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
-		grid-gap:1rem;
+		grid-gap: 1rem;
 		grid-template-areas:
-		"summary marker - -"
-		"section section section section";
+			"summary marker - -"
+			"section section section section";
 		justify-content: center;
 		align-items: center;
 		& summary {
@@ -16,16 +16,15 @@
 			grid-template-columns: 1fr 25px;
 			align-items: center;
 			grid-gap: 1rem;
-			  padding: 0.3rem 1rem;
-	justify-content: center;
-	width: fit-content;
+			padding: 0.3rem 1rem;
+			justify-content: center;
+			width: fit-content;
 		}
-		& summary::-webkit-details-marker {
+		& summary::marker {
 			/* color: var(--color-link); */
-			grid-column:2/2;
-			grid-row:1/1;
+			grid-column: 2/2;
+			grid-row: 1/1;
 		}
-
 	}
 	details:nth-child(2) {
 		display: grid;
